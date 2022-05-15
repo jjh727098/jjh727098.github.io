@@ -1,0 +1,213 @@
+@import url(normalize.css);
+@import url(reset.css);
+@import url(all.min.css);
+
+:root {
+    --body-ff:'Noto Sans KR', sans-serif;
+    --body-fz:1rem;
+    --line-height:28px;
+    --primary-c :#5d2a8f;
+    --secondary-c :#ecab01;
+    --white : #fff;
+    --body-tc:#000;
+    --con-width : 1200px;
+    --title-color:#000;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*
+typopgraphy
+*/
+body{
+    font-family: var(--body-ff);
+    font-size: var(--body-fz);
+    line-height: var(--line-height);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--title-ff);
+    color: var(--title-color);
+}
+.main_tt{
+    font-size:calc(var(--body-fz)*3.25);
+    font-weight: 400;
+    line-height: calc(var(--line-height)*4);
+}
+.sub_tt{
+    font-size:calc(var(--body-fz)*1.25);
+    font-weight: 400;
+    color: var(--primary-c);
+}
+.content_tt{
+    font-size:calc(var(--body-fz)*1.875);
+    font-weight: 600;
+    text-align: center;
+}
+.content_desc{
+    width: 770px;
+    margin:0 auto var(--line-height);
+    text-align: center;
+}
+.content_sub_tt{
+    font-size:calc(var(--body-fz)*1.375);
+    font-weight: 600;
+}
+em{
+    color:var(--secondary-c);
+}
+.link{
+    color:var(--secondary-c);
+    text-decoration: underline;
+}
+.primary_bg {
+    background: var(--primary-c);
+}
+.secondary_bg {
+    background: var(--secondary-c);
+}
+.primary_color {
+    color: var(--primary-c);
+}
+.secondary_color {
+    color: var(--secondary-c);
+}
+.w_color {
+    color:var(--white);
+}
+.btn{
+    border-radius:3px;
+    display: inline-block;
+    font-size: calc(var(--body-fz)*.875);
+    vertical-align: bottom;
+}
+.primary.btn{
+    height: 53px;
+    line-height: 53px;
+    text-transform: uppercase;
+    font-family: var(--title-ff);
+    font-weight: 800;
+    padding: 0 40px;
+    box-shadow:inset 0 -3px 0 0 rgba(0,0,0,.4);
+    transition:0.5s;
+    overflow: hidden;    
+}
+.primary.btn:hover{
+    box-shadow:none;
+}
+.secondary.btn{
+    height: 32px;
+    line-height: 30px; 
+    border:1px solid var(--primary-c);
+    box-sizing: border-box;
+    padding: 0 18px;
+    color:var(--body-tc);
+}
+.secondary.btn:hover, .secondary.btn.active{
+    background: var(--primary-c);
+    color: var(--white);
+}
+
+/* ------------------------- LAYOUT ------------------------- */
+.container{
+    width: var(--con-width);
+    margin:0 auto;
+}
+.cf:after{
+    content:'';
+    display:block; 
+    clear:both;
+}
+.hidden {
+    display: none;
+}
+.con-pd{
+    padding: calc(var(--line-height)*3) 0;
+}
+.con-top-pd{
+    padding-top: calc(var(--line-height)*3);
+}
+.logo a{
+    width: 127px;
+    height: 45px;
+    background-image: url(../image/logo/logo_scroll.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-indent: -9999em;
+    display: block;
+}
+header{
+    background:linear-gradient(white 50px, rgba(255,255,255,0.5) 50px);
+    position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;	
+	height:50px; 
+	overflow:hidden;
+}
+header > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    gap: 60px;
+    width:960px; 
+    margin:0 auto;
+}
+
+header nav > ul > li {
+    float:left; 
+    line-height:50px; 
+    margin-right:40px; 
+    position: relative;
+}
+nav > ul > li ul{ 
+    width:100%;  
+    position: absolute;
+}
+nav > ul > li ul li{
+    white-space:nowrap;
+}
+
+/* footer{
+    height:107px;
+    background: #111;
+    display: flex;
+    align-items: center;
+}
+footer > div{
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer_menu{
+    display: flex;
+    gap:41px;
+    color: #959595;
+}
+footer .footer_menu a,
+footer p{
+    color: #959595;
+}
+footer .footer_menu a:hover{
+    color:var(--white);
+}
+footer .footer_menu li{
+    position: relative;
+}
+footer .footer_menu li:after{
+    content:'';
+    width:1px;
+    height:10px;
+    background: #4d4d4d;
+    position: absolute;
+    right:-20px;
+    top:50%;
+    transform:translateY(-50%);
+}
+footer .footer_menu li:last-child:after{
+    background: none;
+} */

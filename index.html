@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="css(flex,css변수) , script(jQuery) , 웹표준 준수하는 포트폴리오 반응형">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="css(flex,css변수) , script(jQuery) ">
+    <meta name="robots" content="all">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>강원랜드</title>
+
+    <meta name="author" content="jinwook jung">
+    <meta name="reply-to" content="jjh727098@gmail.com">
+    <meta name="grenerator" content="visual studio code">
+</head>
+<body>
+    <header>
+        <div class="container">
+        <h1 class="logo"><a href="#">강원랜드</a></h1>
+        <nav class="cf">
+            <ul>
+                <li>강원랜드
+                    <ul>
+                        <li>강원랜드 소개</li>
+                        <li>강원랜드</li>
+                        <li>인재채용</li>
+                    </ul>
+                </li>
+                <li>사업분야
+                    <ul>
+                        <li>호텔&콘도</li>
+                        <li>카지노</li>
+                        <li>워터월드</li>
+                        <li>스키</li>
+                        <li>골프</li>
+                    </ul>
+                </li>
+                <li>투자정보
+                    <ul>
+                        <li>공고</li>
+                        <li>공시정보</li>   
+                        <li>주식정보</li>
+                        <li>재무정보</li>
+                    </ul>
+                </li>
+                <li>홍보센터
+                    <ul>
+                        <li>소식</li>
+                        <li>보도자료</li>
+                        <li>웹진</li>
+                    </ul>
+                </li>
+                <li>고객센터
+                    <ul>
+                        <li>자주 묻는 질문</li>
+                        <li>고객의 소리</li>
+                        <li>찾아오시는 길</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="top_links">
+                <li class="log_in">
+                    <a href="#">로그인</a>
+                </li>
+                <li>
+                    <a href="" class="material-symbols-outline">search</a>
+                </li>
+                <li class=>
+                    <a href="" class="material-symbols-outline">hamburger</a>
+                </li>
+            </ul>
+    </nav>
+    </div>
+    </header>
+
+    <section class="banner container">
+        <h2 class="hidden">banner</h2>
+        <div class="Banner-slide-wrapper">
+            <ul class="Banner-slide-container">
+                <li class="Banner_slide1 active">
+                    <div class="contents">
+                        <h2>Slide 01 title</h2>
+                    </div>
+                </li>
+                <li class="Banner_slide2">
+                    <div class="contents">
+                        <h2>Slide 02 title</h2>
+                    </div>
+                </li>
+                <li class="Banner_slide3">
+                    <div class="contents">
+                        <h2>Slide 03 title</h2>
+                    </div>
+                </li>
+                <div class="indicator">
+                    <p class="pager">
+                        <a href="">0</a>
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                    </p>
+                </div>   
+        </div>
+    </section>
+
+    <section class="reservation container">
+        <h2 class="main_tt">예약하기</h2>
+        <span class="sub_tt">reservation</span>
+        <form action="#" name="">
+            <fieldset>
+                <legend class="hidden">바로 예약하기</legend>
+                <ul class="form_wrap">
+                    <li>
+                        <span>예약장소</span>
+                        <div>
+                            <button>예약장소 선택하기</button>
+                            <ul>
+                                <li>그랜드호텔</li>
+                                <li>팰리스호텔</li>
+                                <li>마운틴콘도</li>
+                                <li>밸리콘도</li>
+                                <li>힐콘도</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="">체크인</label>
+                        <div>
+                            <input type="text" name="check_in" id="check_in">
+                            <button>달력 열기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="">체크아웃</label>
+                        <div>
+                            <input type="text" name="check_out" id="check_out">
+                            <button>달력 열기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <button class="primary primary_bg btn w_color">예약하기</button>
+                        </div>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="Business_Areas container">
+        <h2 class="main_tt">사업분야</h2>
+        <span class="sub_tt">Business Areas</span>
+        <div class="slide-wrapper">
+            <ul class="slides">
+                <li class="slide1 active">
+                    <div class="contents">
+                        <h2>Slide 01 title</h2>
+                    </div>
+                </li>
+                <li class="slide2">
+                    <div class="contents">
+                        <h2>Slide 02 title</h2>
+                    </div>
+                </li>
+                <li class="slide3">
+                    <div class="contents">
+                        <h2>Slide 03 title</h2>
+                    </div>
+                </li>
+                <li class="slide4">
+                    <div class="contents">
+                        <h2>Slide 04 title</h2>
+                    </div>
+                </li>
+                <li class="slide5">
+                    <div class="contents">
+                        <h2>Slide 05 title</h2>
+                    </div>
+                </li>
+            </ul>
+            <p class="pager">
+                <a href="">0</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="Investment container">
+        <h2 class="main_tt">투자정보</h2>
+        <span class="sub_tt">Investment</span>
+        <div class="Investment_content">
+            <div class="sub_content">
+                <span class="sub_title">투자정보</span>
+                <h3>공고</h3>
+                <span>2022-04-30~2022-06-16</span>
+            </div>  
+            <div class="sub_content_img">
+                <img src="" alt="">
+            </div>
+            <div class="sub_content">
+                <span class="sub_title">투자정보</span>
+                <h3>제무정보</h3>
+                <span>2022-04-30~2022-06-16</span>
+            </div>  
+            <div class="sub_content_img">
+                <img src="" alt="">
+            </div>
+            <div class="sub_content">
+                <span class="sub_title">투자정보</span>
+                <h3>주식정보</h3>
+                <span>2022-04-30~2022-06-16</span>
+            </div>  
+            <div class="sub_content_img">
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="NewsRoom container">
+        <h2 class="main_tt">뉴스룸</h2>
+        <span class="sub_tt">News Room</span>
+        <div class="NewsRoom_wrap">
+            <div class="NewsRoom_img">
+                <img src="image/news/hotel.JPG" alt="">
+            </div>
+            <div class="NewsRoom_Content">
+                <p>강원랜드, ESG 친환경기업 그린어스로 선정</p>
+                <span>탄소중립, 폐기물 처리, 전기차 확대 등 저탄소 인프라 구축 노력 인정 받아</span>
+            </div>
+            <div class="NewsRoom_img">
+                <img src="image/news/cafe.JPG" alt="">
+            </div>
+            <div class="NewsRoom_Content">
+                <p>하이원리조트, 전통주점 ‘운암작가’ 오픈</p>
+                <span>하이원리조트(대표 이삼걸)가 한옥 베이커리 카페로 운영되던 ‘운암정’에 전통주 주점 ‘운암작가’를 오픈했다고 1일 밝혔다.</span>
+            </div>
+            <div class="NewsRoom_img">
+                <img src="image/news/golf.jpg" alt="">
+            </div>
+            <div class="NewsRoom_Content">
+                <p>하이원리조트, ‘하이원CC’ 2022년 시즌 개장</p>
+                <span>우리나라에서 가장 높은 곳에 있는 골프장으로 유명한 하이원CC가 겨우내 재정비를 마치고 오는 18일 개장한다.</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="infomation container">
+        <h2 class="main_tt">정보</h2>
+        <span class="sub_tt">infomation</span>
+        <div class="infomation_wrap">
+            <div>
+                <span>26700</span>
+            </div>
+            <div>
+                <span>2421</span>
+            </div>
+            <div>
+                <span>160</span>
+            </div>
+            <div>
+                <span>69756</span>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="container">
+        <div class="footer_contents">
+            <span>회사소개</span>
+            <span>인재채용</span>
+            <span>이용약관</span>
+            <span>개인정보 처리방침</span>
+            <span>영상정보기기 운영관리 방침</span>
+            <span>저작권 보호</span>
+            <span>이메일 무단수집 거부</span>
+            <span>PPL/광고 문의</span>
+            <span>전자입찰/공급업체 포털</span>
+        </div>
+        <div class="footer_contents1">
+            <span>하이원 그랜드호텔 : 강원도 정선군 사북읍 하이원길 265</span>
+            <span>하이원 팰리스호텔 : 강원도 정선군 고한읍 고한7길 399</span>
+            <span>대표번호 : 1588-7789</span>
+            <span>문의사항 : Webmaster@high1.com</span>
+        </div>
+        <div class="footer_contents2">
+            <span>사업자등록번호 : 225-81-10770, 225-85-02429</span>
+            <span>신고현황 : 통신판매업 신고 (제2021-강원정선-0079호, 제2006-00011호)</span>
+            <span>통신판매업 신고기관명 : 강원도 정선군청</span>
+        </div>
+        <div class="footer_logo">
+            <img src="image/logo/logo.png" alt="">
+            <img src="image/logo/safe.png" alt="">
+            <img src="image/logo/web.png" alt="">
+        </div>
+        <div class="footer_sns">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+
+    </footer>
+
+    <button><a href="#">Top</a></button>
+</body>
+</html>
