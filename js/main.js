@@ -6,7 +6,7 @@ $(function(){
     let menu = $header.find('nav>ul>li'),
 		headerHeight =  $header.outerHeight(),
 		newHeight = 0,
-		subMenu = menu.find('ul');
+		subMenu = menu.find('ul')
     
     $(window).scroll(function(){
         let sct = $(this).scrollTop();
