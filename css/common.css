@@ -131,14 +131,14 @@ em{
 .logo a{
     width: 127px;
     height: 45px;
-    background-image: url(../image/logo/logo_scroll.png);
+    background-image: url('../image/logo/logo.png');
     background-size: cover;
     background-repeat: no-repeat;
     text-indent: -9999em;
     display: block;
 }
-header{
-    background:linear-gradient(white 50px, rgba(255,255,255,0.5) 50px);
+.page-header{
+    background:linear-gradient(rgba(0,0,0, 0.5) 50px, rgba(255,255,255,0.5) 50px);
     position: absolute;
 	left: 0;
 	right: 0;
@@ -146,20 +146,20 @@ header{
 	height:50px; 
 	overflow:hidden;
 }
-header > div{
+.page-header > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header nav{
+.page-header nav{
     display: flex;
     gap: 60px;
     width:960px; 
     margin:0 auto;
 }
 
-header nav > ul > li {
+.page-header nav > ul > li {
     float:left; 
     line-height:50px; 
     margin-right:40px; 
@@ -172,6 +172,24 @@ nav > ul > li ul{
 nav > ul > li ul li{
     white-space:nowrap;
 }
+.page-header.active{
+    position: fixed;
+    background: var(--white);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    z-index:100;
+}
+
+.page-header.active nav ul li{
+    color:#8c8c8c;
+}
+.page-header.active nav ul li:hover{
+    color:var(--secondary-c);
+}
+.active .logo a {
+    background-image:url('../image/logo/logo_scroll.png');
+
+}
+
 
 /* footer{
     height:107px;

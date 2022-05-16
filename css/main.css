@@ -78,6 +78,31 @@
 .form_wra li{
     display: flex;
 }
+.select_wrap{
+    position: relative;
+
+}
+.select_wrap button{
+    outline: none;
+    border: #fff;
+    background: #fff;
+}
+
+.select_wrap button.active{
+    display: block;
+    width: 100%;
+
+}
+.select_list{
+    position: absolute;
+    top:100%;
+    display: none;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 10px;
+
+}
 
 
 /*-------------------------Business Areas---------------------------*/
