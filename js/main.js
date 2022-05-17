@@ -16,7 +16,6 @@ $(function(){
             $header.removeClass('active');
         }
     });
-
 /* -------------------------- slide --------------------------- */
     
     //     let slideWrapper = $('.Banner-slide-wrapper'),

@@ -101,7 +101,6 @@ em{
     background: var(--primary-c);
     color: var(--white);
 }
-
 /* ------------------------- LAYOUT ------------------------- */
 .container{
     width: var(--con-width);
