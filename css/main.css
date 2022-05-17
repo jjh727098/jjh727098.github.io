@@ -2,20 +2,19 @@
 
 
 /*----------------------------Banner---------------------------*/
-
-.Banner-slide-wrappper{
+.Banner-slide-wrapper{
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
-.Banner-slide-container{
+.Banner-slide-wrapper .Banner-slides{
     height: 100%;
+    width: 100%;
     position:absolute;
     left: 0;
     transition:left 0.4s ease-out;
-    display: flex;
-}
-.Banner-slide-wrappper li{
+} 
+.Banner-slide-wrapper li{
     position: relative;
     width: 100%;
     height: 100%;
@@ -26,11 +25,7 @@
     justify-content: center;
     align-items: center;
     z-index:0;
-}
-.Banner-slide-container .contents{
-    text-indent: -9999em;
-}
-
+} 
 .Banner_slide1{
     background-image: url(../image/banner_slide/slide1.png);
 }
@@ -71,16 +66,45 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: calc(var(--line-height)*3);
+    margin-bottom: calc(var(--line-height)*5);
 }
 .form_wrap{
     display: flex;
-}
-.form_wra li{
-    display: flex;
+    padding: 50px 40px;
+    border: solid 2px;
 }
 .select_wrap{
     position: relative;
-
+}
+.form_cell h3{
+    text-align: center;
+    line-height: calc(var(--line-height)*3);
+}
+.form_cell{
+    width: 25%;
+    position: relative;
+    padding: 0 40px;
+    border-left: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+.form_cell span{
+    color: var(--primary-c);
+}
+.form_cell label{
+    color: var(--primary-c);
+}
+.form_cell input{
+    border: none;
+    width: 80%;
+}
+.form_cell button{
+    background-image: url(../image/icons/date_icon.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 15px;
+    text-indent: -9999em;
+    vertical-align: middle;
 }
 .select_wrap button{
     outline: none;
@@ -91,7 +115,6 @@
 .select_wrap button.active{
     display: block;
     width: 100%;
-
 }
 .select_list{
     position: absolute;
@@ -101,14 +124,106 @@
     z-index: 2;
     width: 100%;
     padding: 10px;
-
 }
 
 
 /*-------------------------Business Areas---------------------------*/
 .Business_Areas{
+    background-image: url(../image/banner_slide/business.bg.png);
+    background-repeat: no-repeat;
+}
+.slide-wrapper{
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    overflow:hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+}
+.slides{
+    position:absolute;
+    height: 100px;	
+    width: 100%;
+    left:90%;
+    transform: translateX(-50%);	
+    display: flex;
+}
+.slides li{
+	position: relative;
+    width: 100%;
+    margin-right: 30px;	
+}
+.slides li:after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.slides li:hover:after{
+    display: none;
+}
+.slide1{
+    background-image: url(../image/slide/ski.png);
+    background-repeat: no-repeat;
+    width: 201px;
+    height: 401px;
+
+}
+.slide2{
+    background-image: url(../image/slide/waterworld.png);
+    background-repeat: no-repeat;
+    width: 201px;
+    height: 401px;
+}
+.slide3{
+    background-image: url(../image/slide/casino.png);
+    background-repeat: no-repeat;
+    width: 201px;
+    height: 401px;
+}
+.slide-wrapper .pager{
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap:10px;
+}
+.slide-wrapper .pager a{
+    width: 11px;
+    height: 11px;
+    background: rgba(255,255,255,.5);
+    border-radius:50%;
+    text-indent: -9999em;
+    border:2px solid transparent;
+    background-clip: padding-box
+}
+.slide-wrapper h2{
+    position: absolute;
+    top:0;
+    right: 0;
+    color: #fff;
+    font-size: calc(var(--body-fz)*2);
+}
+.slide-wrapper p{
+    position: absolute;
+    top:80%;
+    left:30%;
+    transform: translatex(-30%);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: calc(var(--line-height)*2);
+}
+.slide-wrapper span{
+    position: absolute;
+    top:80%;
+    left:80%;
+    transform: translate(-80%);
+    text-indent: -9999em;
+    background-image: url(../image/icons/plus.png);
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
 }

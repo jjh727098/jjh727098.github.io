@@ -13,7 +13,7 @@
         integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/vendor/modernizr.custom.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <title>강원랜드</title>
 
@@ -82,24 +82,14 @@
     </div>
     </header>
 
-    <section class="banner container">
-        <h2 class="hidden">banner</h2>
+    
         <div class="Banner-slide-wrapper">
-            <ul class="Banner-slide-container">
+            <ul class="Banner-slides">
                 <li class="Banner_slide1 active">
-                    <div class="contents">
-                        <h2>Slide 01 title</h2>
-                    </div>
                 </li>
                 <li class="Banner_slide2">
-                    <div class="contents">
-                        <h2>Slide 02 title</h2>
-                    </div>
                 </li>
                 <li class="Banner_slide3">
-                    <div class="contents">
-                        <h2>Slide 03 title</h2>
-                    </div>
                 </li>
                 <div class="indicator">
                     <p class="pager">
@@ -110,16 +100,21 @@
                         <a href="">4</a>
                     </p>
                 </div>   
+                </ul>
         </div>
-    </section>
 
     <section class="reservation container">
-        <h2 class="main_tt">예약하기</h2>
-        <span class="sub_tt">reservation</span>
+        <div class="title">
+            <h2 class="main_tt">예약하기</h2>
+            <span class="sub_tt">reservation</span>
+        </div>
         <form action="#" name="">
             <fieldset>
                 <legend class="hidden">바로 예약하기</legend>
                 <ul class="form_wrap">
+                    <li class="form_cell">
+                        <h3 class="content_sub_tt">바로 예약하기</h3>
+                    </li>
                     <li>
                         <span>예약장소</span>
                         <div class="select_wrap">
@@ -133,17 +128,17 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="form_cell">
                         <label for="">체크인</label>
-                        <div>
-                            <input type="text" name="check_in" id="check_in">
+                        <div class="calendar">
+                            <input type="text" name="check_in" id="check_in" placeholder="2022-05-17">
                             <button>달력 열기</button>
                         </div>
                     </li>
-                    <li>
+                    <li class="form_cell">
                         <label for="">체크아웃</label>
-                        <div>
-                            <input type="text" name="check_out" id="check_out">
+                        <div class="calendar">
+                            <input type="text" name="check_out" id="check_out" placeholder="2022-05-18">
                             <button>달력 열기</button>
                         </div>
                     </li>
@@ -157,34 +152,43 @@
         </form>
     </section>
 
-    <section class="Business_Areas container">
-        <h2 class="main_tt">사업분야</h2>
-        <span class="sub_tt">Business Areas</span>
+    <section class="Business_Areas">
+        <div class="container">
+            <div class="title">
+                <h2 class="main_tt">사업분야</h2>
+                <span class="sub_tt">Business Areas</span>
+            </div>
         <div class="slide-wrapper">
             <ul class="slides">
                 <li class="slide1 active">
                     <div class="contents">
-                        <h2>Slide 01 title</h2>
+                        <h2>01</h2>
+                        <p>스키장</p>
+                        <span>more</span>
                     </div>
                 </li>
                 <li class="slide2">
                     <div class="contents">
-                        <h2>Slide 02 title</h2>
+                        <h2>02</h2>
+                        <p>워터월드</p>
+                        <span>more</span>
                     </div>
                 </li>
                 <li class="slide3">
                     <div class="contents">
-                        <h2>Slide 03 title</h2>
+                        <h2>03</h2>
+                        <p>카지노</p>
+                        <span>more</span>
                     </div>
                 </li>
                 <li class="slide4">
                     <div class="contents">
-                        <h2>Slide 04 title</h2>
+                        <h2>04</h2>
                     </div>
                 </li>
                 <li class="slide5">
                     <div class="contents">
-                        <h2>Slide 05 title</h2>
+                        <h2>05</h2>
                     </div>
                 </li>
             </ul>
@@ -196,11 +200,14 @@
                 <a href="">4</a>
             </p>
         </div>
+    </div>
     </section>
 
     <section class="Investment container">
-        <h2 class="main_tt">투자정보</h2>
-        <span class="sub_tt">Investment</span>
+        <div class="title">
+            <h2 class="main_tt">투자정보</h2>
+            <span class="sub_tt">Investment</span>
+        </div>
         <div class="Investment_content">
             <div class="sub_content">
                 <span class="sub_title">투자정보</span>
@@ -230,8 +237,10 @@
     </section>
 
     <section class="NewsRoom container">
+        <div class="title">
         <h2 class="main_tt">뉴스룸</h2>
         <span class="sub_tt">News Room</span>
+    </div>
         <div class="NewsRoom_wrap">
             <div class="NewsRoom_img">
                 <img src="image/news/hotel.JPG" alt="">
@@ -259,8 +268,10 @@
     </section>
 
     <section class="infomation container">
+        <div class="title">
         <h2 class="main_tt">정보</h2>
         <span class="sub_tt">infomation</span>
+    </div>
         <div class="infomation_wrap">
             <div>
                 <span>26700</span>

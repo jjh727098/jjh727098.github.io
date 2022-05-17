@@ -17,7 +17,32 @@ $(function(){
         }
     });
 
+/* -------------------------- slide --------------------------- */
+    
+    //     let slideWrapper = $('.Banner-slide-wrapper'),
+    //     slides = slideWrapper.find('li'), 
+    //     slideCount = slides.length,
+    //     timer,
+    //     currentIndex = 0;
 
+    //     slides.eq(0).fadeIn();
+    //     function autoSlide(){
+    //         timer = setInterval(showNextSlide, 5000);
+    // }
+    
+    // function showNextSlide(){
+    //     let nextSlideIndex = (currentIndex + 1)%slideCount;
+    //     slides.eq(currentIndex).fadeOut(); 
+    //     slides.eq(nextSlideIndex).fadeIn();  
+    //     currentIndex = nextSlideIndex; 
+    // }
+    // slideWrapper.mouseenter(function(){
+    //     clearInterval(timer);
+    // })
+    // .mouseleave(function(){
+    //     autoSlide();
+    // });
+    
 
 }); //ready
     
