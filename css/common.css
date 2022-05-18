@@ -111,6 +111,7 @@ em{
     display:block; 
     clear:both;
 }
+
 .hidden {
     display: none;
 }
@@ -199,41 +200,23 @@ header.active .top_links li a{
     color: #000;
 }
 
-/* footer{
-    height:107px;
-    background: #111;
+/*----------------------- footer ---------------------------*/
+footer{
+    background: #000;
     display: flex;
     align-items: center;
+    height: 500px;
 }
-footer > div{
-    display: flex;
-    justify-content: space-between;
+
+
+footer button a{
+    position: fixed;
+    top:80%;
+    left:80%;
+    background-image: url(../image/icons/top.png);
+    border: none;
+    text-indent: -9999em ;
+    width: 57px;
+    height: 57px;
+    background-repeat: no-repeat;
 }
-footer .footer_menu{
-    display: flex;
-    gap:41px;
-    color: #959595;
-}
-footer .footer_menu a,
-footer p{
-    color: #959595;
-}
-footer .footer_menu a:hover{
-    color:var(--white);
-}
-footer .footer_menu li{
-    position: relative;
-}
-footer .footer_menu li:after{
-    content:'';
-    width:1px;
-    height:10px;
-    background: #4d4d4d;
-    position: absolute;
-    right:-20px;
-    top:50%;
-    transform:translateY(-50%);
-}
-footer .footer_menu li:last-child:after{
-    background: none;
-} */

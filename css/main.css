@@ -126,6 +126,7 @@
     padding: 10px;
 }
 
+
 /*-------------------------Business Areas---------------------------*/
 .Business_Areas{
     background-image: url(../image/banner_slide/business.bg.png);
@@ -225,4 +226,181 @@
     width: 48px;
     height: 48px;
     background-repeat: no-repeat;
+}
+
+/*-------------------------Investment---------------------------*/
+.Investment_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: calc(var(--line-height)*5);
+}
+
+.sub_content{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    padding-left: 20px;
+    margin-right: 70px;
+}
+.sub_content:nth-of-type(1){
+    background: var(--primary-c);
+}
+.sub_content:nth-of-type(2){
+    background: var(--secondary-c);
+}
+.sub_content:nth-of-type(3){
+    background: var(--primary-c);
+}
+.sub_content:nth-of-type(1) h3::after{
+    content: '';
+    background-image: url(../image/icons/person.png);
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top:40%;
+    transform: translate(-50%, -50%);
+    left:80%;
+}
+.sub_content:nth-of-type(2) h3::after{
+    content: '';
+    background-image: url(../image/icons/chart.png);
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top:40%;
+    transform: translate(-50%, -50%);
+    left:80%;
+}
+.sub_content:nth-of-type(3) h3::after{
+    content: '';
+    background-image: url(../image/icons/graph.png);
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top:40%;
+    transform: translate(-50%, -50%);
+    left:80%;
+}
+.sub_title{
+    color:  var(--secondary-c);
+}
+.sub_content:nth-of-type(2) .sub_title{
+    color: var(--primary-c);
+}
+.sub_content h3, span{
+    color: #fff;
+}
+.sub_content:nth-of-type(2) h3{
+    color: #000;
+}
+.sub_content:nth-of-type(2) span{
+    color: #000;
+}
+.sub_content h3{
+    padding: 20px 0;
+}
+.sub_content:hover:after{
+    content: '자세히보기';
+    padding-right: 60px;
+    position: absolute;
+    right: 0;
+    top:0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.sub_content:hover:before{
+    content: '';
+    width: 70px;
+    height: 28px;
+    background-image: url(../image/icons/look.icon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top:50%;
+    left:60%;
+    transform: translateX(-60%);
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/*------------------------- NewsRoom ---------------------------*/
+.NewsRoom_wrap{
+    background-image: url(../image/banner_slide/newsroom.bg.png);
+}
+
+.NewsRoom_wrap .container{
+    display: flex;
+}
+.NewsRoom_content{
+    margin-right: 70px;
+    position: relative;
+    margin-bottom: calc(var(--line-height)*5);
+}
+.NewsRoom_Content p{
+    position: absolute;
+    padding-left: 20px;
+    top:70%;
+    left:0;
+}
+.NewsRoom_Content span{
+    position: absolute;
+    padding: 0 40px;
+    top:80%;
+    left:0;
+    color: #000;
+}
+/*------------------------- infomation ---------------------------*/
+.infomation_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infomation_content{
+    width: 140px;
+    height: 130px;
+    border-radius: 100%;
+    border: 3px solid #000;
+    margin-right: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: calc(var(--line-height)*10);
+}
+.infomation_content span{
+    color: #000;
+}
+.infomation_content:nth-of-type(1) span:after{
+    content: '추가정보';
+    position: absolute;
+    top:100%;
+    left:30%;
+}
+.infomation_content:nth-of-type(2) span:after{
+    content: '대출억';
+    position: absolute;
+    top:100%;
+    left:40%;
+    transform: translateX(-20%);
+}
+.infomation_content:nth-of-type(3) span:after{
+    content: '채용인원';
+    position: absolute;
+    top:100%;
+    left:30%;
+}
+.infomation_content:nth-of-type(4) span:after{
+    content: '직원 평균보수';
+    position: absolute;
+    top:100%;
+    left:20%;
 }
