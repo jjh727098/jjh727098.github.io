@@ -125,6 +125,9 @@
     width: 100%;
     padding: 10px;
 }
+.form_wrap li:nth-of-type(5){
+    width: 25%;
+}
 
 
 /*-------------------------Business Areas---------------------------*/
@@ -238,10 +241,10 @@
 
 .sub_content{
     position: relative;
-    width: 300px;
+    width: 100%;
     height: 150px;
     padding-left: 20px;
-    margin-right: 70px;
+    margin: 0 30px;
 }
 .sub_content:nth-of-type(1){
     background: var(--primary-c);
@@ -335,28 +338,59 @@
 .NewsRoom_wrap{
     background-image: url(../image/banner_slide/newsroom.bg.png);
 }
-
-.NewsRoom_wrap .container{
-    display: flex;
-}
 .NewsRoom_content{
-    margin-right: 70px;
+    width: 100%;
     position: relative;
     margin-bottom: calc(var(--line-height)*5);
 }
-.NewsRoom_Content p{
-    position: absolute;
-    padding-left: 20px;
-    top:70%;
-    left:0;
+.NewsRoom_wrap > .container{
+    position:relative;
+    cursor: pointer;
+    height: 500px;
+    width: 300px;
 }
-.NewsRoom_Content span{
+.NewsRoom_content {
+    height: 100%;
+    width: 100%;  
     position: absolute;
-    padding: 0 40px;
-    top:80%;
+    transition:1s ease-in-out;
+    
+    transform:perspective(500px) ;
+}
+.NewsRoom_content:nth-child(1){
+    position:absolute;
+    right:-120%;
+}
+.NewsRoom_content:nth-child(3){
+    position:absolute;
+    left:-120%;
+}
+.NewsRoom_wrap > .container .NewsRoom_content:hover{
+    transform: perspective(500px) rotateY(180deg);
+}
+.container .NewsRoom_content:hover .NewsRoom_slideback{
+    opacity: 1;
+}
+
+.NewsRoom_img{
+    position: absolute;
     left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+.NewsRoom_slideback{
+    transform: rotateY(180deg);
+    background: #fff;
     color: #000;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
 }
+
+
 /*------------------------- infomation ---------------------------*/
 .infomation_wrap{
     display: flex;
@@ -368,7 +402,7 @@
     height: 130px;
     border-radius: 100%;
     border: 3px solid #000;
-    margin-right: 70px;
+    margin: 0 70px;
     display: flex;
     justify-content: center;
     align-items: center;
