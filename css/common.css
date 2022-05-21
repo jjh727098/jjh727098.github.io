@@ -201,7 +201,7 @@ header.active .top_links li a{
 }
 /*----------------------- sub header ---------------------------*/
 .sub_bg{
-    height: 100vh;
+    height: 427px;
     position: relative;
     }
     .sub_bg li{
@@ -215,12 +215,18 @@ header.active .top_links li a{
     height: 100%;
     padding-top: 100px;
     }
-    .sub_bg li h2, p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .sub_bg li h2{
+        text-align: center;
         color: #fff;
     }
+    .sub_bg li p{
+        text-align: center;
+        color: #fff;
+    }
+    .tac{
+        text-align: center;
+    }
+
 
 /*----------------------- footer ---------------------------*/
 footer{

@@ -1,5 +1,5 @@
 $(function(){
-    /* -------------------------- header --------------------------- */
+    /* -------------------------- header scroll --------------------------- */
     let $header = $('.page-header');
     let headerOst = $header.offset().top;
 
@@ -16,6 +16,21 @@ $(function(){
             $header.removeClass('active');
         }
     });
+
+    subMenu.each(function(){
+		if($(this).outerHeight()>newHeight){
+			newHeight = headerHeight + $(this).outerHeight();
+		}
+    });
+
+    menu.hover(
+        function(){		
+            $header.stop().animate({height:newHeight});
+        },
+        function(){
+            $header.stop().animate({height:headerHeight});
+        }
+    );
     
 /* -------------------------- slide --------------------------- */
     

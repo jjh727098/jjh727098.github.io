@@ -1,2 +1,230 @@
 @import url(common.css);
 
+/* ------------------------ question -------------------------*/
+.faq_wrap .faq_sub_title{
+    display: block;
+    margin-bottom: 50px;
+}
+.faq_wrap .faq_sub_title p{
+    color: #000;
+}
+.faq_tabs{
+    display: block;
+}
+.faq_tabs ul{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.faq_tabs ul li{
+    border: 1px solid #ebebeb;
+    padding: 20px 100px;
+}
+.faq_wrap .tabs_content{
+    text-align: left;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    margin-bottom: 70px;
+}
+.tabs_content h3{
+    padding: 28px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.tabs_content h3 span{
+    color: var(--primary-c);
+}
+.tabs_content div{
+    padding: 30px 60px;
+    display: none;
+}
+.tabs_content div p{
+    color: #000;
+}
+.tabs_content h3 svg{
+    float: right;
+    text-align: right;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+#tab-1{
+    display: none;
+}
+#tab-1.active{
+    display: block;
+}
+#tab-2{
+    display: none;
+}
+#tab-3{
+    display: none;
+}
+/* ------------------------ land -------------------------*/
+.landbg{
+    height: 821px;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+}
+.land_wrap_hotel{
+    background-image: url(../image/banner_slide/hotel.png);
+}
+.land_wrap_water{
+    background-image: url(../image/banner_slide/water.png);
+}
+.land_wrap_casino{
+    background-image: url(../image/banner_slide/casino.png);
+}
+.land_wrap_golf{
+    background-image: url(../image/banner_slide/golf.png);
+}
+.land_content a{
+    color: #fff;
+}
+.landbg .container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 170px;
+    align-items: flex-end;
+    text-align: left;
+}
+.landbg:nth-of-type(even) .container{ 
+    padding-left: 170px;
+    align-items: flex-start;
+    text-align: right;
+}
+.land_content{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.land_content h2{
+    color: #fff;
+}
+.land_content p{
+    padding-bottom: 30px;
+}
+.land_content svg{
+    padding-left: 10px;
+}
+/* ------------------------ hotel -------------------------*/
+.hotel_tabs ul{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.hotel_tabs ul li{
+    border: 1px solid #ebebeb;
+    padding: 20px 80px;
+}
+.hotel_tabs_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.grand{
+    width: 23.5%;
+}
+#hotel_tab-1{
+    display: none;
+}
+#hotel_tab-2.active{
+    display: block;
+}
+#hotel_tab-3{
+    display: none;
+}
+#hotel_tab-4{
+    display: none;
+}
+#hotel_tab-5{
+    display: none;
+}
+/* ------------------------ service -------------------------*/
+.service_content{
+    text-align: left;
+}
+.service_content h3{
+    margin-top: 30px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.service_content p{
+    border-bottom: 1px solid #ebebeb;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.service_content form label{
+    width: 15%;
+    line-height: calc(var(--line-height)*2);
+}
+.service_content form input{
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 1px solid #ebebeb;
+    padding: 0 15px;
+    line-height: calc(var(--line-height)*2);
+}
+.service_content label span{
+    color: red;
+}
+.service_content small span{
+    color: red;
+}
+.service_content span.error{
+    color: red;
+    line-height: calc(var(--line-height)*2);
+    padding-left: 20px;
+}
+.service_content textarea{
+    height: 500px;
+    width: 85%;
+    resize: none;
+    display: inline-block;
+}
+.service_content .wirte{
+    width: 50%;
+}
+.service_content .service_btn{
+    border-top: 2px solid #000;
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.service_btn button{
+    border: none;
+    padding: 20px 60px;
+    margin: 0 30px;
+    cursor: pointer;
+}
+.service_btn button:nth-child(1){
+    background: var(--primary-c);
+    color: #fff;
+}
+.service_btn button:nth-child(2){
+    background: #c2c2c2;
+    color: #000;
+}
+.service_content p:nth-child(3) span{
+        background: #c2c2c2;
+        color: #000;
+        border: 1px solid  #c2c2c2;
+        padding: 10px 20px;
+        cursor: pointer;
+}
+#adress_detail{
+    margin: 15px 15% 0;
+    width: 60%;
+    height: 50px;
+}
+#file{
+    padding: 20px 15px;
+    line-height: 20px;
+}
