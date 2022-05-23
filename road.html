@@ -15,7 +15,7 @@
     <script src="js/vendor/modernizr.custom.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-    <title>강원랜드</title>
+    <title>찾아오시는 길</title>
 
     <meta name="author" content="jinwook jung">
     <meta name="reply-to" content="jjh727098@gmail.com">
@@ -82,64 +82,46 @@
 </div>
 </header>
 
-<section class="land_wrap_hotel landbg">
-    <div class="container">
-        <div class="land_content">
-            <h2 class="main_tt">Hotel & Condo</h2>
-            <p class="sub_tt"><em>“아늑하고 편안한 특1급 호텔 품격과
-                편안함을 통한 고객감동”</em></p>
-            <div class="land_img">
-                <img src="image/banner_slide/hotel_sub1.png" alt="">
-                <img src="image/banner_slide/hotel_sub2.png" alt="">
-                <img src="image/banner_slide/hotel_sub3.png" alt="">
-            </div>
-            <a href="#">자세히보기<i class="fa-solid fa-angle-right"></i></a>
-        </div>
+<div class="sub_bg">
+        <li>
+            <h2 class="main_tt">오시는 길</h2>
+            <p>즐거운 삶과 더 나은 세상을 만드는 행복쉼터</p>
+        </li>
+</div>
+
+<section class="road_wrap tac">
+    <div class="road_sub_title">
+        <h2 class="main_tt">오시는 길</h2>
+        <p>강원랜드를 방문하시는 방법을 안내합니다.</p>
     </div>
-</section>
-<section class="land_wrap_water landbg">
-    <div class="container">
-        <div class="land_content">
-            <h2 class="main_tt">Water World</h2>
-            <p class="sub_tt"><em>"새로운 물의 세상이 열립니다"</em></p>
-            <div class="land_img">
-                <img src="image/banner_slide/water_sub1.png" alt="">
-                <img src="image/banner_slide/water_sub2.png" alt="">
-                <img src="image/banner_slide/water_sub3.png" alt="">
-            </div>
-            <a href="#">자세히보기<i class="fa-solid fa-angle-right"></i></a>
+        <div class="land_map">
+            <div id="map" style="width:100%;height:350px;"></div>
         </div>
-    </div>
-</section>
-<section class="land_wrap_casino landbg">
-    <div class="container">
-        <div class="land_content">
-            <h2 class="main_tt">Casino</h2>
-            <p class="sub_tt"><em>"국내 유일 국내 최대의 카지노
-                내 외국인이 함께 출입하는 건전한 게임"</em></p>
-            <div class="land_img">
-                <img src="image/banner_slide/casino_sub1.png" alt="">
-                <img src="image/banner_slide/casino_sub2.png" alt="">
-                <img src="image/banner_slide/casino_sub3.png" alt="">
-            </div>
-            <a href="#">자세히보기<i class="fa-solid fa-angle-right"></i></a>
+        <div class="land_map_ping">
+            <h3>주소: 대한민국 강원도 정선군 사북읍 하이원길 265</h3>
+            <p>대표전화:1588-7789</p>
         </div>
-    </div>
-</section>
-<section class="land_wrap_golf landbg">
-    <div class="container">
-        <div class="land_content">
-            <h2 class="main_tt">Golf</h2>
-            <p class="sub_tt"><em>"당신에게 골프를 권하는 특별한 이유"</em></p>
-            <div class="land_img">
-                <img src="image/banner_slide/golf_sub1.png" alt="">
-                <img src="image/banner_slide/golf_sub2.png" alt="">
-                <img src="image/banner_slide/golf_sub3.png" alt="">
+        <div class="transport">
+            <div class="train">
+                <h4>기차로 오시는 길</h4>
             </div>
-            <a href="#">자세히보기<i class="fa-solid fa-angle-right"></i></a>
+            <ul>
+                <li><span>증산역</span></li>
+                <li><span>고한역</span></li>
+                <li><span>사북역</span></li>
+                <li><span>정선역</span></li>
+            </ul>
+            <div class="bus">
+                <h4>버스로 오시는 길</h4>
+            </div>
+            <ul>
+                <li><span>동서울 터미널</span></li>
+                <li><span>부산 동부터미널</span></li>
+                <li><span>북부시외 버스터미널</span></li>
+            </ul>
         </div>
-    </div>
 </section>
+
 
 <footer>
     <div class="container">
@@ -182,8 +164,36 @@
         </ul>
     </nav>
 </div>
-<a href="#" id="go-top">top</a>
 </footer>
+
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=42ac1d735153f95f08bc8b9e73ee8278"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.2121937, 128.8207554), // 지도의 중심좌표
+        level: 4 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition, 
+    image: markerImage // 마커이미지 설정 
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);  
+</script>
 
 </body>
 </htmml>
