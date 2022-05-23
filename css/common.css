@@ -10,7 +10,7 @@
     --secondary-c :#ecab01;
     --white : #fff;
     --body-tc:#000;
-    --con-width : 1200px;
+    --con-width : 1170px;
     --title-color:#000;
 }
 /*
@@ -143,7 +143,7 @@ em{
     position: absolute;
 	left: 0;
 	right: 0;
-	top: 0;	
+	top: 0;
 	height:50px; 
 	overflow:hidden;
     z-index: 100;
@@ -156,7 +156,6 @@ em{
 
 .page-header nav{
     display: flex;
-    gap: 60px;
     width:960px; 
     color: #fff;
 }
@@ -167,7 +166,7 @@ em{
 .page-header nav > ul > li {
     float:left; 
     line-height:50px; 
-    margin-right:40px; 
+    margin-right: 50px;
     position: relative;
 }
 nav > ul > li ul{ 
@@ -246,6 +245,7 @@ footer{
 .footer_contents_main{
     display: flex;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 .footer_contents_adress{
     display: flex;
@@ -258,10 +258,12 @@ footer{
 }
 
 .footer_contents_adress span{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 .footer_contents_call span{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 .footer_logo{
     display: flex;

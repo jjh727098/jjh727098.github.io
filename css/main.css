@@ -128,7 +128,9 @@
 .form_wrap li:nth-of-type(5){
     width: 25%;
 }
-
+.form_wrap li:nth-child(2) label{
+    color: var(--primary-c);
+}
 
 /*-------------------------Business Areas---------------------------*/
 .Business_Areas{
@@ -219,7 +221,7 @@
     font-weight: 600;
     line-height: calc(var(--line-height)*2);
 }
-.slide-wrapper span{
+.slide-wrapper a{
     position: absolute;
     top:80%;
     left:80%;
@@ -306,32 +308,23 @@
 .sub_content h3{
     padding: 20px 0;
 }
-.sub_content:hover:after{
-    content: '자세히보기';
-    padding-right: 60px;
+.sub_content .hover_contents{
+    display: none;
+}
+.sub_content .hover_contents a{
+    color: #fff;
+}
+.sub_content:hover .hover_contents{
+    display: block;
+    content: '';
     position: absolute;
     right: 0;
     top:0;
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-.sub_content:hover:before{
-    content: '';
-    width: 70px;
-    height: 28px;
-    background-image: url(../image/icons/look.icon.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    top:50%;
-    left:60%;
-    transform: translateX(-60%);
-    transform: translateY(-50%);
-    z-index: 2;
+    text-align: center;
+    line-height: 150px;
 }
 
 /*------------------------- NewsRoom ---------------------------*/
@@ -413,28 +406,12 @@
 .infomation_content span{
     color: #000;
 }
-.infomation_content:nth-of-type(1) span:after{
-    content: '추가정보';
+.infomation_content h3{
     position: absolute;
     top:100%;
-    left:30%;
+    left:50%;
+    transform: translateX(-50%);
 }
-.infomation_content:nth-of-type(2) span:after{
-    content: '대출억';
-    position: absolute;
-    top:100%;
-    left:40%;
-    transform: translateX(-20%);
-}
-.infomation_content:nth-of-type(3) span:after{
-    content: '채용인원';
-    position: absolute;
-    top:100%;
-    left:30%;
-}
-.infomation_content:nth-of-type(4) span:after{
-    content: '직원 평균보수';
-    position: absolute;
-    top:100%;
-    left:20%;
+.infomation_content:nth-child(4) h3{
+    white-space: nowrap;
 }
