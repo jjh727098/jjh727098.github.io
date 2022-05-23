@@ -415,3 +415,6 @@
 .infomation_content:nth-child(4) h3{
     white-space: nowrap;
 }
+#map{
+    height: 600px;
+}
