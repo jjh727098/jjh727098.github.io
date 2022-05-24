@@ -98,35 +98,27 @@
                 을 반드시 입력하셔야 합니다.)
             </small>
         </h3>
-        <form action="#" method="post">
+        <form action="#" method="post" novalidate id="serviceform">
                 <p>
                     <label for="name">이름
                         <span>*</span>
                     </label>
-                    <input type="text" name="user_name" id="user_name" required minlength="2"
+                    <input type="text" name="username" id="name" required minlength="2"
                     aria-describedby="name_error" aria-invalid="true">
-                    <span id="name_error" class="error">
-                        <i class="fa-solid fa-exclamation"></i>
-                        필수 입력 사항입니다.
-                    </span>
                 </p>
                 <p>
                     <label for="phone">연락처
                         <span>*</span>
                     </label>
-                    <input type="text" name="user_phone" id="user_phone" required minlength="2" aria-describedby="name_error"
+                    <input type="text" name="userphone" id="phone" required minlength="2" aria-describedby="name_error"
                     placeholder="숫자만 입력해주세요.">
-                    <span id="name_error" class="error">
-                        <i class="fa-solid fa-exclamation"></i>
-                        필수 입력 사항입니다.
-                    </span>
                 </p>
                 <p>
                     <label for="adress">주소
                     </label>
                     <input type="text" name="post" id="post" required minlength="2" aria-describedby="name_error"
                     placeholder="우편번호">
-                    <input type="text" name="adress" id="adress">
+                    <input type="text" name="useradress" id="adress">
                     <span>주소검색</span>
                     <input type="text" name="adress" id="adress_detail" placeholder="상세 주소를 입력해주세요.">
                 </p>
@@ -134,40 +126,28 @@
                     <label for="email">이메일
                         <span>*</span>
                     </label>
-                    <input type="text" name="" id="" required minlength="2" aria-describedby="name_error"
+                    <input type="text" name="useremail" id="email" required minlength="2" aria-describedby="name_error"
                     placeholder="ex)kangwon@land.com">
-                    <span id="name_error" class="error">
-                        <i class="fa-solid fa-exclamation"></i>
-                        필수 입력 사항입니다.
-                    </span>
                 </p>
                 <p>
                     <label for="title">제목 
                         <span>*</span>
                     </label>
-                    <input type="text" name="title" id="title" required minlength="2" aria-describedby="name_error"
+                    <input type="text" name="usertitle" id="title" required minlength="2" aria-describedby="name_error"
                     class="wirte">
-                    <span id="name_error" class="error">
-                        <i class="fa-solid fa-exclamation"></i>
-                        필수 입력 사항입니다.
-                    </span>
                 </p>
                 <p>
                     <label for="content">내용
                         <span>*</span>
                     </label>
-                    <textarea name="content" id="content" required minlength="2" aria-describedby="name_error"
+                    <textarea name="usercontent" id="content" required minlength="2" aria-describedby="name_error"
                     class="wirte"></textarea>
-                    <span id="name_error" class="error">
-                        <i class="fa-solid fa-exclamation"></i>
-                        필수 입력 사항입니다.
-                    </span>
                 </p>
                 <p>
                     <label for="file">파일첨부
                         <span>*</span>
                     </label>
-                    <input type="file" name="file" id="file">
+                    <input type="file" name="userile" id="file">
                 </p>
                 <div class="service_btn">
                     <button type="submit" class="submit">등록</button>
@@ -220,5 +200,54 @@
 </div>
 </footer>
 
+
+<script src="js/jquery.validate.min.js"></script>
+<script>
+		
+    $("#serviceform").validate({
+        rules: {
+            // simple rule, converted to {required:true}
+            username:  {
+                required: true,
+                minlength: 2
+            },
+            useremail: {
+                required: true,
+                email: true
+            },
+            userphone:{
+                required: true
+            },
+            usertitle:{
+                required: true
+            },
+            usercontent:{
+                required: true
+            }
+        },
+        messages:{
+            username:{
+                required : '<i class="fa-solid fa-exclamation"></i> 필수 입력 사항입니다.',
+                minlength :'최소 2글자 이상 입력'
+            },
+            useremail: {
+                required:'<i class="fa-solid fa-exclamation"></i> 필수 입력 사항입니다.',
+                email: '이메일 형식에 맞춰 입력'
+            },
+            userphone: {
+                required:'<i class="fa-solid fa-exclamation"></i> 필수 입력 사항입니다.',
+            },
+            usertitle: {
+                required:'<i class="fa-solid fa-exclamation"></i> 필수 입력 사항입니다.',
+            },
+            usercontent: {
+                required:'<i class="fa-solid fa-exclamation"></i> 필수 입력 사항입니다.',
+            }
+        },
+        errorClass:'bad-input',
+        errorElement:'span'
+    });
+
+</script>
 </body>
 </htmml>

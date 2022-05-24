@@ -9,13 +9,16 @@
     <meta name="robots" content="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/sub.css">
+    <title>호텔&콘도</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
         integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/vendor/modernizr.custom.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-    <title>호텔&콘도</title>
+
 
     <meta name="author" content="jinwook jung">
     <meta name="reply-to" content="jjh727098@gmail.com">
@@ -36,7 +39,7 @@
             </li>
             <li>사업분야
                 <ul>
-                    <li>호텔&콘도</li>
+                    <li><a href="hotel.html">호텔&콘도</a></li>
                     <li>카지노</li>
                     <li>워터월드</li>
                     <li>스키</li>
@@ -95,122 +98,101 @@
         <h2 class="main_tt">객실안내</h2>
         <p>올드&뉴를 겸비한 휴식처</p>
     </div>
-    <div class="hotel_tabs">
-        <ul class="hotel_tabs_nav">
-            <li class="hotel_tab">
-                <a href="#hotel_tab-1">그랜드호텔</a>
-            </li>
-            <li class="hotel_tab">
-                <a href="#hotel_tab-2">펠리스호텔</a>
-            </li>
-            <li class="hotel_tab">
-                <a href="#hotel_tab-3">마운틴콘도</a>
-            </li>
-            <li class="hotel_tab">
-                <a href="#hotel_tab-4">밸리콘도</a>
-            </li>
-            <li class="hotel_tab">
-                <a href="#hotel_tab-5">힐콘도</a>
-            </li>
-        </ul>
-        <div id="hotel_tab-1" class="hotel_tabs_content active">
-            <div class="grand">
+    <div class="hotel_mixer">
+        <button type="button" data-filter="all">모두</button>
+		<button type="button" data-filter=".grand">그랜드호텔</button>
+		<button type="button" data-filter=".palace">펠리스호텔</button>
+		<button type="button" data-filter=".valley">밸리콘도</button>
+		<button type="button" data-filter=".hill">힐콘도</button>
+    </div>
+
+
+        <div class="mix-wrapper">
+            <div class="mix grand" data-order="1">
                 <img src="image/hotel_img/grand_1.png" alt="">
                 <p></p>
             </div>
-            <div class="grand">
+            <div class="mix grand" data-order="2">
                 <img src="image/hotel_img/grand_2.png" alt="">
                 <p></p>
             </div>
-            <div class="grand">
+            <div class="mix grand" data-order="3">
                 <img src="image/hotel_img/grand_3.png" alt="">
                 <p></p>
             </div>
-            <div class="grand">
+            <div class="mix grand" data-order="4">
                 <img src="image/hotel_img/grand_4.png" alt="">
                 <p></p>
             </div>
-            <div class="grand">
+            <div class="mix grand" data-order="5">
                 <img src="image/hotel_img/grand_5.png" alt="">
                 <p></p>
             </div>
-            <div class="grand">
+            <div class="mix grand" data-order="6">
                 <img src="image/hotel_img/grand_6.png" alt="">
                 <p></p>
             </div>
-        </div>
-        <div id="hotel_tab-2" class="hotel_tabs_content">
-            <div class="palace">
+            <div class="mix palace" data-order="7">
                 <img src="image/hotel_img/palace_1.png" alt="">
                 <p></p>
             </div>
-            <div class="palace">
+            <div class="mix palace" data-order="8">
                 <img src="image/hotel_img/palace_2.png" alt="">
                 <p></p>
             </div>
-            <div class="palace">
+            <div class="mix palace" data-order="9">
                 <img src="image/hotel_img/palace_3.png" alt="">
                 <p></p>
             </div>
-            <div class="palace">
+            <div class="mix palace" data-order="10">
                 <img src="image/hotel_img/palace_4.png" alt="">
                 <p></p>
             </div>
-            <div class="palace">
+            <div class="mix palace" data-order="11">
                 <img src="image/hotel_img/palace_5.png" alt="">
                 <p></p>
             </div>
-        </div>
-        <div id="hotel_tab-3" class="hotel_tabs_content">
-            <div class="mountain">
+            <div class="mix mountain" data-order="12">
                 <img src="image/hotel_img/mountain_1.png" alt="">
                 <p></p>
             </div>
-            <div class="mountain">
+            <div class="mix mountain" data-order="13">
                 <img src="image/hotel_img/mountain_2.png" alt="">
                 <p></p>
             </div>
-            <div class="mountain">
+            <div class="mix mountain" data-order="14">
                 <img src="image/hotel_img/mountain_3.png" alt="">
                 <p></p>
             </div>
-            <div class="mountain">
+            <div class="mix mountain" data-order="15">
                 <img src="image/hotel_img/mountain_4.png" alt="">
                 <p></p>
             </div>
-        </div>
-        <div id="hotel_tab-4" class="hotel_tabs_content">
-            <div class="valley">
+            <div class="mix valley" data-order="16">
                 <img src="image/hotel_img/vallery_1.png" alt="">
                 <p></p>
             </div>
-            <div class="valley">
+            <div class="mix valley" data-order="17">
                 <img src="image/hotel_img/vallery_2.png" alt="">
                 <p></p>
             </div>
-            <div class="valley">
+            <div class="mix valley" data-order="18">
                 <img src="image/hotel_img/vallery_3.png" alt="">
                 <p></p>
             </div>
-        </div>
-        <div id="hotel_tab-5" class="hotel_tabs_content">
-            <div class="hill">
+            <div class="mix hill" data-order="19">
                 <img src="image/hotel_img/hill.png" alt="">
                 <p></p>
             </div>
-            <div class="hill">
-                <img src="image/hotel_img/hill2.png" alt="">
+            <div class="mix hill" data-order="20">
+                <img src="image/hotel_img/hill_2.png" alt="">
                 <p></p>
             </div>
-            <div class="hill">
-                <img src="image/hotel_img/hill3.png" alt="">
+            <div class="mix hill" data-order="21">
+                <img src="image/hotel_img/hill_4.png" alt="">
                 <p></p>
             </div>
-            <div class="hill">
-                <img src="image/hotel_img/hill4.png" alt="">
-                <p></p>
-            </div>
-        </div>
+        </div> <!-- last -->
 </section>
 
 
@@ -256,6 +238,19 @@
     </nav>
 </div>
 </footer>
+
+<script src="js/mixitup.min.js"></script>
+<script>
+    var mixer = mixitup('.mix-wrapper',{
+        "animation": {
+            "duration": 250,
+            "nudge": true,
+            "reverseOut": false,
+            "effects": "fade scale(0.51) translateZ(-100px) rotateX(90deg)"
+        }
+    });
+
+</script>
 
 </body>
 </htmml>

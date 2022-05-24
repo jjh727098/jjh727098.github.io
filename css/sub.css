@@ -47,17 +47,33 @@
     padding: 0 20px;
     transition: 0.3s;
 }
-#tab-1{
-    display: none;
+
+.answer {
+	display:none;
 }
-#tab-1.active{
-    display: block;
+.question{
+	border-bottom:2px solid #ccc;
+	transition:0.35s;
 }
-#tab-2{
-    display: none;
+.question.ui-state-active{
+	border-bottom:2px solid var(--primary-c);
 }
-#tab-3{
-    display: none;
+.question .svg{
+	transform:rotate(0deg);
+	transition:0.35s;
+}
+.question.ui-state-active svg{
+	transform:rotate(180deg);
+}
+.qna_list{
+	width:80%;
+	margin:0 auto;
+}
+.tabs_nav li.ui-state-active{
+	background: var(--primary-c);
+}
+.tabs_nav li.ui-state-active a{
+    color: #fff;
 }
 /* ------------------------ land -------------------------*/
 .landbg{
@@ -108,40 +124,26 @@
     padding-left: 10px;
 }
 /* ------------------------ hotel -------------------------*/
-.hotel_tabs ul{
+.mix-wrapper{
     display: flex;
-    margin-bottom: 50px;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    margin:3em auto;
+    gap: 30px;
 }
-.hotel_tabs ul li{
+.mix{
+    width: 23%;
+    margin: 1em 1%;
+    padding: 5px;
+}
+.hotel_mixer button{
     border: 1px solid #ebebeb;
     padding: 20px 80px;
+    cursor: pointer;
 }
-.hotel_tabs_content{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: center;
-    margin-bottom: 70px;
-}
-.grand{
-    width: 23.5%;
-}
-#hotel_tab-1{
-    display: none;
-}
-#hotel_tab-2.active{
-    display: block;
-}
-#hotel_tab-3{
-    display: none;
-}
-#hotel_tab-4{
-    display: none;
-}
-#hotel_tab-5{
-    display: none;
+.hotel_mixer button.mixitup-control-active{
+    background: var(--primary-c);
+    color:#fff;
 }
 /* ------------------------ service -------------------------*/
 .service_content{
@@ -159,6 +161,7 @@
     padding-bottom: 15px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 .service_content form label{
     width: 15%;
@@ -228,6 +231,11 @@
     padding: 20px 15px;
     line-height: 20px;
 }
+span.bad-input{
+    color:red;
+    padding-left: 20px;
+    line-height: calc(var(--line-height)*2);
+}
 /* ------------------------- login -------------------------*/
 .login_wrap{
     width: 500px;
@@ -289,8 +297,21 @@
 .login_sns_link li:nth-of-type(4) a{
     background-position-x: -348px;
 }
-/* ------------------------- map -------------------------*/
-
+/* ------------------------- road -------------------------*/
 #map{
     height: 600px;
+}
+.road_wrap .container svg{
+    color: var(--primary-c);
+    width: 80px;
+    height: 60px;
+}
+.road_wrap h3{
+    color:#000;
+}
+.transport{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 30px 0;
 }
