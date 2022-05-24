@@ -59,5 +59,26 @@ $(function(){
     // });
     
 
+	$('.pager_slider').bxSlider({
+		controls:false,
+        auto:true,
+        autoHover:true,
+        autoControls:true
+	});
+
+    $('.slides').bxSlider({
+		minSlides:3,
+		maxSlides:3,
+		moveSlides:1,
+		slideWidth:300,
+		auto:true,
+        pager:true,
+		controls:true,
+		autoHover:true,
+		pause:1000,
+		speed:2000,
+		easing:'linear'
+	});
+
 }); //ready
     

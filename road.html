@@ -88,7 +88,8 @@
         <h2 class="main_tt">오시는 길</h2>
         <p>강원랜드를 방문하시는 방법을 안내합니다.</p>
     </div>
-            <div id="map"></div>
+    <div class="container">
+        <div id="map"></div>
         <div class="land_map_ping">
             <h3>주소: 대한민국 강원도 정선군 사북읍 하이원길 265</h3>
             <p>대표전화:1588-7789</p>
@@ -111,6 +112,7 @@
                 <li><span>부산 동부터미널</span></li>
                 <li><span>북부시외 버스터미널</span></li>
             </ul>
+        </div>
         </div>
 </section>
 
@@ -162,7 +164,7 @@
 
 <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a12cc38f657637b4d6d92597398c8a3c"></script>
 <script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+var mapContainer = document.getElementById('map'),
     mapOption = { 
         center: new kakao.maps.LatLng(37.2121937,128.8207554), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨

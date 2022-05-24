@@ -2,6 +2,34 @@
 
 
 /*----------------------------Banner---------------------------*/
+.slide_wrapper{
+    width:100%;
+    margin:0 auto;
+}
+.pager {
+    position: relative;
+}
+.pager .bx-controls {
+    position: absolute;
+    left: 0;right: 0; bottom:20px;
+}
+.pager .bx-controls .bx-pager{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.pager .bx-controls .bx-pager a{
+    width: 15px;
+    height: 15px;
+    background: rgba(255,255,255,.3);
+    border-radius:50%;
+    text-indent:-9999px;
+    display: block;
+}
+.pager .bx-controls .bx-pager a.active{
+    background: rgba(255,255,255,1);
+}
+
 .Banner-slide-wrapper{
     height: 100vh;
     overflow: hidden;
@@ -34,29 +62,6 @@
 }
 .Banner_slide3{
     background-image: url(../image/banner_slide/slide3.png);
-}
-.indicator {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    justify-content: center;
-    left: 50%;
-    transform:translateX(-50%);
-    gap:30px;
-    align-items: center;
-}
-.indicator .pager{
-    display: flex;
-    gap:10px;
-}
-.indicator .pager a{
-    width: 11px;
-    height: 11px;
-    background: rgba(255,255,255,.5);
-    border-radius:50%;
-    text-indent: -9999em;
-    border:2px solid transparent;
-    background-clip: padding-box
 }
 
 
@@ -138,24 +143,12 @@
     background-repeat: no-repeat;
 }
 .slide-wrapper{
-    width: 1000px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     position: relative;
-    overflow:hidden;
+    margin: 0 auto;
     display: flex;
-}
-.slides{
-    position:absolute;
-    height: 100px;	
-    width: 100%;
-    left:90%;
-    transform: translateX(-50%);	
-    display: flex;
-}
-.slides li{
-	position: relative;
-    width: 100%;
-    margin-right: 30px;	
+    justify-content: center;
 }
 .slides li:after{
     content: '';
@@ -169,46 +162,13 @@
 .slides li:hover:after{
     display: none;
 }
-.slide1{
-    background-image: url(../image/slide/ski.png);
-    background-repeat: no-repeat;
-    width: 201px;
-    height: 401px;
-
-}
-.slide2{
-    background-image: url(../image/slide/waterworld.png);
-    background-repeat: no-repeat;
-    width: 201px;
-    height: 401px;
-}
-.slide3{
-    background-image: url(../image/slide/casino.png);
-    background-repeat: no-repeat;
-    width: 201px;
-    height: 401px;
-}
-.slide-wrapper .pager{
-    position: absolute;
-    top:70%;
-    left:50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap:10px;
-}
-.slide-wrapper .pager a{
-    width: 11px;
-    height: 11px;
-    background: rgba(255,255,255,.5);
-    border-radius:50%;
-    text-indent: -9999em;
-    border:2px solid transparent;
-    background-clip: padding-box
+.slides li:nth-child(3) p{
+    color: #ebebeb;
 }
 .slide-wrapper h2{
     position: absolute;
     top:0;
-    right: 0;
+    right: 35%;
     color: #fff;
     font-size: calc(var(--body-fz)*2);
 }
@@ -221,13 +181,13 @@
     font-weight: 600;
     line-height: calc(var(--line-height)*2);
 }
-.slide-wrapper a{
+.slides div a{
     position: absolute;
-    top:80%;
-    left:80%;
-    transform: translate(-80%);
+    top:90%;
+    left:60%;
+    transform: translate(-50%, -50%);
     text-indent: -9999em;
-    background-image: url(../image/icons/plus.png);
+    background-image: url(../image/icons/plus_hover.png);
     width: 48px;
     height: 48px;
     background-repeat: no-repeat;
@@ -381,6 +341,9 @@
     opacity: 0;
     transition: 0.5s;
     text-align: center;
+}
+.NewsRoom_slideback a{
+    line-height: 150px;
 }
 
 

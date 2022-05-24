@@ -14,6 +14,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/vendor/modernizr.custom.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/main.js"></script>
     <title>강원랜드</title>
 
@@ -83,25 +84,14 @@
     </header>
 
     
-        <div class="Banner-slide-wrapper">
-            <ul class="Banner-slides">
-                <li class="Banner_slide1 active">
-                </li>
-                <li class="Banner_slide2">
-                </li>
-                <li class="Banner_slide3">
-                </li>
-                <div class="indicator">
-                    <p class="pager">
-                        <a href="">0</a>
-                        <a href="">1</a>
-                        <a href="">2</a>
-                        <a href="">3</a>
-                        <a href="">4</a>
-                    </p>
-                </div>   
-                </ul>
-        </div>
+            <div class="slide_wrapper pager">
+                <div class="pager_slider">
+                    <div><img src="image/banner_slide/slide1.png" alt=""></div>
+                    <div><img src="image/banner_slide/slide2.jpg" alt=""></div>
+                    <div><img src="image/banner_slide/slide3.png" alt=""></div>
+                </div>
+            </div>
+    
 
     <section class="reservation container">
         <div class="title">
@@ -150,49 +140,46 @@
                 <h2 class="main_tt">사업분야</h2>
                 <span class="sub_tt">Business Areas</span>
             </div>
-        <div class="slide-wrapper">
-            <ul class="slides">
-                <li class="slide1 active">
-                    <div class="contents">
+        <div class="slide-wrapper pager">
+            <div class="slides">
+                    <div>
+                        <img src="image/slide/ski.png" alt="">
                         <h2>01</h2>
                         <p>스키장</p>
                         <a href="#">more</a>
                     </div>
-                </li>
-                <li class="slide2">
-                    <div class="contents">
+                    <div>
                         <h2>02</h2>
                         <p>워터월드</p>
                         <a href="#">more</a>
+                        <img src="image/slide/waterworld.png" alt="">
                     </div>
-                </li>
-                <li class="slide3">
-                    <div class="contents">
+                    <div>
+                        <img src="image/slide/casino.png" alt="">
                         <h2>03</h2>
                         <p>카지노</p>
                         <a href="#">more</a>
                     </div>
-                </li>
-                <li class="slide4">
-                    <div class="contents">
+                    <div>
+                        <img src="image/slide/golf.png" alt="">
                         <h2>04</h2>
+                        <p>골프</p>
+                        <a href="#"></a>
                     </div>
-                </li>
-                <li class="slide5">
-                    <div class="contents">
+                    <div>
+                        <img src="image/slide/hotel.png" alt="">
                         <h2>05</h2>
+                        <p>호텔</p>
+                        <a href="#"></a>
                     </div>
-                </li>
-            </ul>
-            <p class="pager">
-                <a href="">0</a>
-                <a href="">1</a>
-                <a href="">2</a>
-                <a href="">3</a>
-                <a href="">4</a>
-            </p>
+                    <div>
+                        <img src="image/slide/cook.png" alt="">
+                        <h2>06</h2>
+                        <p>식당</p>
+                        <a href="#"></a>
+                    </div>
+            </div>   
         </div>
-    </div>
     </section>
 
     <section class="Investment container">
@@ -251,44 +238,51 @@
 
                 <div class="NewsRoom_content">
                     <div class="NewsRoom_img">
-                        <img src="image/news/hotel.png" alt="">
+                        <img src="image/news/hotel_news.png" alt="">
                     </div>
                     <div class="NewsRoom_slideback">
                         <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ut temporibus dicta vel!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ut temporibus dicta vel! Exercitationem ipsa quo laudantium numquam accusantium alias aliquam. Cupiditate, eius? Animi expedita aperiam a ea, officia explicabo.
-                    하이원리조트, ‘하이원CC’ 2022년 시즌 개장
-                        강원랜드, ESG 친환경기업 그린어스로 선정
-                        탄소중립, 폐기물 처리, 전기차 확대 등 저탄소 인프라 구축 노력 인정 받아
-                    </p>
+                            강원랜드, 2021년 사감위 건전화평가 최고등급 “A” 획득
+                            불법도박 감시, 중독예방 프로그램 시행 등 건전게임 노력 돋보여
+                            
+                            강원랜드(대표 이삼걸)는 ‘2021년 사행산업 시행기관 건전화평가’에서 최고등급인 A등급을 획득해 2018년부터 3년 연속 최고등급을 달성했다고 11일 밝혔다.
+                            
+                            ‘건전화 평가’는 사행산업 시행기관의 건전성 증대 및 부작용 해소 노력 등을 평가하는 것으로, 2010년부터 국무총리실 소속 사행산업통합감독위원회주관으로 실시되고 있다.
+                        </p>
+                    <a href="#">자세히보기</a>
                     </div>
                 </div>
 
                 <div class="NewsRoom_content">
                     <div class="NewsRoom_img">
-                        <img src="image/news/cafe.png" alt="">
+                        <img src="image/news/cafe_news.png" alt="">
                     </div>
                     <div class="NewsRoom_slideback">
                         <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ut temporibus dicta vel!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ut temporibus dicta vel! Exercitationem ipsa quo laudantium numquam accusantium alias aliquam. Cupiditate, eius? Animi expedita aperiam a ea, officia explicabo.
-                    하이원리조트, ‘하이원CC’ 2022년 시즌 개장
-                    우리나라에서 가장 높은 곳에 있는 골프장으로 유명한 하이원CC가 겨우내 재정비를 마치고 오는 18일 개장한다.하이원리조트, 전통주점 ‘운암작가’ 오픈
-                </p>
+                            “전통주 마시며 이야기에 취하다”
+                            하이원리조트, ‘운암정’에 전통주점 ‘운암작가’ 오픈
+                            
+                            하이원리조트(대표 이삼걸)가 한옥 베이커리 카페로 운영되던 ‘운암정’에 전통주 주점 ‘운암작가’를 오픈했다고 1일 밝혔다.
+                            
+                            전통 한식당이었던 운암정은 지난해 12월 리뉴얼을 통해 천혜의 자연경관과 한옥의 고즈넉함을 품은 베이커리 카페로 재단장 했으며, 이번에 전통주와 토속 안주를 즐길 수 있는 주점을 추가로 오픈했다.
+                        </p>
+                <a href="#">자세히보기</a>
                     </div>
                 </div>
 
             <div class="NewsRoom_content">
                 <div class="NewsRoom_img">
-                    <img src="image/news/golf.png" alt="">
+                    <img src="image/news/golf_news.png" alt="">
                 </div>
                 <div class="NewsRoom_slideback">
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ut temporibus dicta vel!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ut temporibus dicta vel! Exercitationem ipsa quo laudantium numquam accusantium alias aliquam. Cupiditate, eius? Animi expedita aperiam a ea, officia explicabo.
-                    하이원리조트, ‘하이원CC’ 2022년 시즌 개장
-                    우리나라에서 가장 높은 곳에 있는 골프장으로 유명한 하이원CC가 겨우내 재정비를 마치고 오는 18일 개장한다.
-                </p>
+                        우리나라에서 가장 높은 곳에 있는 골프장으로 유명한 하이원CC가 겨우내 재정비를 마치고 오는 18일 개장한다.
+
+                        하이원리조트가 운영하는 하이원CC는 해발 1,136m 탁 트인 고원에 조성된 골프장으로, 한여름에도 섭씨 25도를 넘지 않는 선선한 날씨와 천혜의 자연경관 속에서 라운딩을 즐길 수 있다. 파72, 전장 6,592m의 하이원CC는 18홀의 퍼블릭 골프장으로 누구나 이용 가능하다.
+
+                        이 밖에도, 하이원CC는 고객 만족도 제고를 위해 추석, 혹서기 등 시기별로 다양한 이벤트를 계획하고 있다.
+                    </p>
+                <a href="#">자세히보기</a>
                 </div>
             </div>
 
