@@ -85,6 +85,7 @@ em{
     padding: 0 40px;
     transition:0.5s;
     overflow: hidden;    
+    cursor: pointer;
 }
 .primary.btn:hover{
     box-shadow:none;
@@ -92,7 +93,7 @@ em{
 .secondary.btn{
     height: 32px;
     line-height: 30px; 
-    border:1px solid var(--primary-c);
+    border:1px solid var(--secondary-c);
     box-sizing: border-box;
     padding: 0 18px;
     color:var(--body-tc);
@@ -139,12 +140,12 @@ em{
     display: block;
 }
 .page-header{
-    background:linear-gradient(rgba(0,0,0, 0.5) 50px, rgba(255,255,255,0.5) 50px);
+    background:linear-gradient(rgba(0,0,0, 0.5) 70px, rgba(255,255,255,0.5) 70px);
     position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
-	height:50px; 
+	height:70px; 
 	overflow:hidden;
     z-index: 100;
 }
@@ -152,6 +153,7 @@ em{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 .page-header nav{
@@ -169,6 +171,10 @@ em{
     margin-right: 50px;
     position: relative;
 }
+.page-header nav > ul > li:nth-child(2){
+    position: unset;
+}
+
 nav > ul > li ul{ 
     width:100%;  
     position: absolute;
@@ -198,6 +204,161 @@ nav > ul > li ul li{
 header.active .top_links li a{
     color: #000;
 }
+.top_links li:nth-child(3){
+    cursor: pointer;
+}
+/*----------------------- search ---------------------------*/
+.header_search{
+    position: absolute;
+    left:50%;
+    width: 100%;
+    top: calc(30% - 110px);
+    transform: translateX(-50%);
+    z-index: 102;
+    display: none;
+}
+.header_search.active{
+    display: block;
+}
+.header_search span{
+    background: linear-gradient(#fff 5%, rgba(0,0,0,.8) 5%);
+    position: absolute;
+    text-indent: -9999em;
+    width: 100vw;
+    bottom: -5000%;
+    left: 0;
+    top:-100px;
+}
+.header_search input{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 85px;
+    text-align: center;
+    border: none;
+    left:20%;
+    border-bottom: 3px solid var(--secondary-c);
+}
+.header_search label{
+    opacity: 0;
+    position: absolute;
+    width: 1;
+    height: 1;
+    text-indent: -999em;
+}
+.header_search button{
+    position: absolute;
+    top:50%;
+    left: 65%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;    
+    background: transparent;
+}
+.header_search button svg{
+    width: 20px;
+    height: 20px;
+}
+
+.first.active{
+    transform: rotate(45deg);
+}
+.second.active{
+    transform: rotate(-45deg);
+}
+.top_links > li:nth-child(2) a svg.active{
+    opacity: 0;
+}
+.top_links > li:nth-child(2) a svg{
+    opacity: 1;
+}
+.top_links > li:nth-child(2) span.active{
+    opacity: 1;
+    position: absolute;
+    top:50%;
+    left:calc(70% + 70px);
+}
+.top_links > li:nth-child(2) span{
+    width: 20px;
+    background: #fff;
+    height: 3px;
+    transform-origin: center;
+    opacity: 0;
+    transition: transform 0.5s
+}
+
+/*----------------------- hamburger ---------------------------*/
+.toggle{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+    background: #fff;
+    animation: trans 1s forwards linear;
+    transform: translateY(-200%);
+}
+@keyframes trans{
+    100%{transform: translateY(0);}
+}
+.toggle.active{
+    display: block;
+}
+.flex_box{
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+.flex_box > div{
+    width: 13%;
+    padding-left: 5rem;
+    border-right: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex_box > div ul{
+    text-align: center;
+}
+.flex_box > div h2{
+    font-size: 30px;
+    line-height: calc(var(--line-height)*2);
+}
+.flex_box div li{
+    color: #c2c2c2;
+    border: none;
+}
+.text_box{
+    position: absolute;
+    top:40%;
+    transform: translate(-50%);
+}
+.close{
+    position: absolute;
+    z-index: 101;
+    cursor: pointer;
+    top: 10%;
+    left:95%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c2c2c2;
+}
+.close svg{
+    color: #000;
+    width: 50px;
+    height: 50px;
+}
+.site_map{
+    width: 15%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(140deg, var(--primary-c) 0%, var(--secondary-c) 100%)
+}
+.site_map p{
+    color: #fff;
+}
 /*----------------------- sub header ---------------------------*/
 .sub_bg{
     height: 427px;
@@ -211,7 +372,7 @@ header.active .top_links li a{
     left:0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 70%;
     padding-top: 100px;
     }
     .sub_bg li h2{
@@ -268,38 +429,36 @@ footer{
 .footer_logo{
     display: flex;
 }
+.footer_logo li{
+    background-repeat:no-repeat ;
+    text-indent: -9999em;
+    background-size: cover;
+    display: block;
+}
 .footer_logo li:nth-of-type(1){
     background-image: url(../image/logo/logo.png);
     width: 127px;
     height: 45px;
-    background-repeat:no-repeat ;
-    text-indent: -9999em;
+    position: relative;
+    top:10px;
 }
 .footer_logo li:nth-of-type(2){
     background-image: url(../image/logo/safe.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 130px;
-    height: 130px;
-    text-indent: -9999em;
-    display: block;
-    margin: 0 30px;
+    width: 70px;
+    height: 70px;
+    margin: 0 10px;
 }
 .footer_logo li:nth-of-type(3){
     background-image: url(../image/logo/web.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 180px;
-    height: 130px;
-    text-indent: -9999em;
-    display: block;
+    width: 100px;
+    height: 71px;
 }
 .footer_nav{
     display: flex;
 }
 .footer_sns{
     display: flex;
-    margin-left: 20px;
+    margin-left: 70px;
 }
 .footer_sns li a{
     background-image: url(../image/icons/ns.png);

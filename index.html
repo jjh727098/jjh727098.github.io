@@ -10,17 +10,14 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    />
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/vendor/modernizr.custom.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="js/main.js"></script>
     <title>강원랜드</title>
+
+
 
     <meta name="author" content="jinwook jung">
     <meta name="reply-to" content="jjh727098@gmail.com">
@@ -78,6 +75,8 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa-solid fa-magnifying-glass">search</i></a>
+                    <span class="first"></span>
+                    <span class="second"></span>
                 </li>
                 <li class=>
                     <a href="#"><i class="fa-solid fa-bars">hamburger</i></a>
@@ -86,6 +85,81 @@
     </nav>
     </div>
     </header>
+    <div class="header_search">
+        <span>search back</span>
+        <form action="#" method="post">
+            <label for="search">검색어 입력</label>
+            <input type="search" id="search" placeholder="검색어를 입력하세요." required  >
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+    <div class="toggle">
+        <div class="flex_box">
+            <div class="site_map">
+                <div class="site_box">
+                    <p class="sub_tt">site map</p>
+                </div>
+            </div>
+            <div class="land">
+                <div class="text_box">
+                    <h2 class="sub_tt">강원랜드</h2>
+                    <ul>
+                        <li>강원랜드 소개</li>
+                        <li><a href="land.html">강원랜드</a></li>
+                        <li>인재채용</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="business">
+                <div class="text_box">
+                    <h2 class="sub_tt">사업분야</h2>
+                    <ul>
+                        <li><a href="hotel.html">호텔&콘도</a></li>
+                        <li>카지노</li>
+                        <li>워터월드</li>
+                        <li>스키</li>
+                        <li>골프</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="investment">
+                <div class="text_box">
+                    <h2 class="sub_tt">투자정보</h2>
+                    <ul>
+                        <li>공고</li>
+                        <li>공시정보</li>   
+                        <li>주식정보</li>
+                        <li>재무정보</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="marketing">
+                <div class="text_box">
+                    <h2 class="sub_tt">홍보센터</h2>
+                    <ul>
+                        <li>소식</li>
+                        <li>보도자료</li>
+                        <li>웹진</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service">
+                <div class="text_box">
+                    <h2 class="sub_tt">고객센터</h2>
+                    <ul>
+                        <li><a href="question.html">자주 묻는 질문</a></li>
+                        <li><a href="service.html">고객의 소리</a></li>
+                        <li><a href="road.html">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <span><i class="fa-solid fa-xmark">close</i></span>
+        </div>
+    </div>
 
     
             <div class="slide_wrapper pager">
@@ -121,11 +195,11 @@
                     </li>
                     <li class="form_cell">
                         <label for="">체크인</label>
-                        <input type="date" name="check_in" id="check_in" placeholder="2022-05-17">
+                        <input type="date" name="check_in" id="check_in" placeholder="2022-05-17" required>
                     </li>
                     <li class="form_cell">
                         <label for="">체크아웃</label>
-                        <input type="date" name="check_out" id="check_out" placeholder="2022-05-18">
+                        <input type="date" name="check_out" id="check_out" placeholder="2022-05-18" required>
                         </div>
                     </li>
                     <li>
@@ -161,12 +235,12 @@
                     <div>
                         <img src="image/slide/casino.png" alt="">
                         <h2>03</h2>
-                        <p>카지노</p>
+                        <p class="casino_p">카지노</p>
                         <a href="#">more</a>
                     </div>
                     <div>
                         <img src="image/slide/golf.png" alt="">
-                        <h2>04</h2>
+                        <h2 id="golf_h2">04</h2>
                         <p>골프</p>
                         <a href="#"></a>
                     </div>
@@ -179,7 +253,7 @@
                     <div>
                         <img src="image/slide/cook.png" alt="">
                         <h2>06</h2>
-                        <p>식당</p>
+                        <p class="casino_p">식당</p>
                         <a href="#"></a>
                     </div>
             </div>   
@@ -302,23 +376,23 @@
         <div class="infomation_wrap animate__animated" data-effect="animate__fadeInDown">
             <ul class="counter_list">
             <li>
-                <span>#</span>
-                <h3 data-target="26700">0</h3>
+                <span >#</span>
+                <h3 class="counter">26700</h3>
                 <h4>추가정보</h4>
             </li>
             <li>
                 <span>#</span>
-                <h3 data-target="2421">0</h3>
+                <h3 class="counter">2421</h3>
                 <h4>대출억</h4>
             </li>
             <li>
                 <span>#</span>
-                <h3 data-target="160">0</h3>
+                <h3 class="counter">160</h3>
                 <h4>채용인원</h4>
             </li>
             <li>
                 <span>#</span>
-                <h3 data-target="69756">0</h3>
+                <h3 class="counter"">69756</h3>
                 <h4>직원 평균보수</h4>
             </li>
         </ul>
@@ -340,7 +414,7 @@
         <div class="footer_contents_main">
             <div class="footer_contents_adress">
                 <span>하이원 그랜드호텔 : 강원도 정선군 사북읍 하이원길 265</span>
-                <span>하이원 팰리스호텔 : 강원도 정선군 고한읍 고한7길 399</span>
+                <span>하이원 팰리스호텔 : 강원도 정선군 고한읍 고한길 399</span>
                 <span>대표번호 : 1588-7789</span>
                 <span>문의사항 : Webmaster@high1.com</span>
             </div>
@@ -367,6 +441,51 @@
     </div>
     <a href="#" id="go-top">top</a>
     </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/vendor/modernizr.custom.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.js"></script>
+
+    <script>
+    $('.counter').countUp({
+        'time': 10000,
+        'delay': 10
+    });
+
+    $('.pager_slider').bxSlider({
+		controls:false,
+        auto:true,
+        autoHover:true,
+        autoControls:true
+	});
+
+    $('.slides').bxSlider({
+		minSlides:1,
+		maxSlides:3,
+		moveSlides:1,
+		slideWidth:200,
+        slideMargin: 100,
+		auto:true,
+        pager:true,
+		controls:true,
+		autoHover:true,
+		speed:1000,
+        easing:'linear'
+	});
+
+
+    </script>
+    
+    <script src="js/main.js"></script>
+
+
 
 </body>
 </html>

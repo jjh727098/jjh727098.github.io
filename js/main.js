@@ -23,7 +23,7 @@ $(function(){
 		}
     });
 
-    menu.hover(
+    $('nav ul:nth-child(1)').hover(
         function(){		
             $header.stop().animate({height:newHeight});
         },
@@ -31,6 +31,22 @@ $(function(){
             $header.stop().animate({height:headerHeight});
         }
     );
+
+      /* -------------------------- search --------------------------- */
+    $('.top_links > li:nth-child(2)').click(function(){
+        $('.header_search').toggleClass('active'); 
+        $('.top_links > li:nth-child(2) a svg').toggleClass('active'); 
+        $('.top_links li:nth-child(2) span').toggleClass('active');
+    });
+
+
+      /* -------------------------- hamburger --------------------------- */
+    $('.top_links li:nth-child(3)').click(function(){
+        $('.toggle').fadeIn().addClass('active'); 
+    });
+    $('.toggle div:nth-child(2) span').click(function(){
+        $('.toggle').fadeOut().removeClass('active'); 
+    });
 
     /* -------------------------- scroll event animation --------------------------- */
     let animateTarget = document.querySelectorAll('[data-effect]');
@@ -46,58 +62,12 @@ $(function(){
                 item.classList.add(targetClass);  
             }
         });     
+
     });
 
+ /* ------------------------- land --------------------------- */
 
-/* -------------------------- scroll event number --------------------------- */
-let counters = document.querySelector('.infomation_conuters');
-let counterNums = counters.querySelectorAll('.counter_list h3');
-
-//counters가 화면 상단에서 떨어진 거리를 변수 courtersOST에 저장, 콘솔에서 확인
-let courtersOST = counters.offsetTop - 700;
-//윈도우에 스크롤이 생기면 그 양을 변수 winSCT에 저장, winSCT의 값이 courtersOST보다 크다면 할일
-let excuted = false;
-
-
-    window.addEventListener('scroll',()=>{
-        let winSCT = window.scrollY;
-    
-        if(winSCT>courtersOST){
-            if(!excuted){
-                counterNums.forEach(item=>{
-                    let targetNum = item.getAttribute('data-target');
-                    let speed = 30;
-                    let add = 5;
-    
-                    if(targetNum > 900){
-                        speed = 5;
-                        add = 2;
-                    }
-                    if(targetNum > 2000){
-                        speed = 1;
-                        add = 5;
-                    }
-                    let num = 0;
-                    
-                        let numAnime = setInterval(()=>{
-                            num += add;                       
-    
-                            if(num == targetNum || num > targetNum){
-                                num = targetNum;
-                                clearInterval(numAnime);
-                            }
-                            item.innerText =  num;
-                            
-                        }, speed);                 
-                    
-                });
-                excuted = true;
-            }
-        }
-    });
-
-
-    
+ $('.landbg').parallax({imageSrc: '/banner_slide/hotel.png'});
 /* -------------------------- slide --------------------------- */
     
     //     let slideWrapper = $('.Banner-slide-wrapper'),
@@ -125,24 +95,5 @@ let excuted = false;
     // });
     
 
-	$('.pager_slider').bxSlider({
-		controls:false,
-        auto:true,
-        autoHover:true,
-        autoControls:true
-	});
-
-    $('.slides').bxSlider({
-		minSlides:1,
-		maxSlides:3,
-		moveSlides:1,
-		slideWidth:300,
-		auto:true,
-        pager:true,
-		controls:true,
-		autoHover:true,
-		speed:1000,
-		easing:'linear'
-	});
 
 }); //ready

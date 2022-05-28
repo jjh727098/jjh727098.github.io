@@ -79,13 +79,11 @@
 .landbg{
     height: 821px;
     position: relative;
-    z-index: 1;
-    background-attachment: fixed;
 }
-.land_wrap_hotel{
+/* .land_wrap_hotel{
     background-image: url(../image/banner_slide/hotel.png);
-}
-.land_wrap_water{
+} */
+/* .land_wrap_water{
     background-image: url(../image/banner_slide/water.png);
 }
 .land_wrap_casino{
@@ -93,7 +91,7 @@
 }
 .land_wrap_golf{
     background-image: url(../image/banner_slide/golf.png);
-}
+} */
 .land_content a{
     color: #fff;
 }
@@ -111,8 +109,7 @@
 }
 .land_content{
     position: absolute;
-    top:50%;
-    transform: translateY(-50%);
+    top:30%;
 }
 .land_content h2{
     color: #fff;
@@ -123,6 +120,10 @@
 .land_content svg{
     padding-left: 10px;
 }
+#fp-nav ul li a span{
+    background: #fff;
+}
+
 /* ------------------------ hotel -------------------------*/
 .mix-wrapper{
     display: flex;
