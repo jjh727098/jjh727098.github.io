@@ -207,6 +207,26 @@ header.active .top_links li a{
 .top_links li:nth-child(3){
     cursor: pointer;
 }
+.page-header nav > ul > li{
+    position: relative;
+}
+.page-header nav > ul:nth-child(1) > li:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: var(--secondary-c);
+}
+.page-header nav > ul > li:hover:after{
+    width: 100%;
+    opacity: 1;
+}
 /*----------------------- search ---------------------------*/
 .header_search{
     position: absolute;
@@ -295,7 +315,7 @@ header.active .top_links li a{
     height: 100vh;
     z-index: 101;
     background: #fff;
-    animation: trans 1s forwards linear;
+    animation: trans 0.5s forwards linear;
     transform: translateY(-200%);
 }
 @keyframes trans{

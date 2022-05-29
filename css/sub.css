@@ -80,20 +80,9 @@
     height: 821px;
     position: relative;
 }
-/* .land_wrap_hotel{
-    background-image: url(../image/banner_slide/hotel.png);
-} */
-/* .land_wrap_water{
-    background-image: url(../image/banner_slide/water.png);
-}
-.land_wrap_casino{
-    background-image: url(../image/banner_slide/casino.png);
-}
-.land_wrap_golf{
-    background-image: url(../image/banner_slide/golf.png);
-} */
 .land_content a{
     color: #fff;
+    position: relative;
 }
 .landbg .container{
     display: flex;
@@ -122,6 +111,23 @@
 }
 #fp-nav ul li a span{
     background: #fff;
+}
+.land_content a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    margin: 5px 0 0;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    opacity: 0;
+    background-color: #fff;
+}
+.land_content a:hover:after{
+    width: 100%;
+    opacity: 1;
 }
 
 /* ------------------------ hotel -------------------------*/

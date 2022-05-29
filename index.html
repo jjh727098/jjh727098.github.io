@@ -85,6 +85,8 @@
     </nav>
     </div>
     </header>
+
+    <span class="target"></span>
     <div class="header_search">
         <span>search back</span>
         <form action="#" method="post">
@@ -218,7 +220,7 @@
                 <h2 class="main_tt">사업분야</h2>
                 <span class="sub_tt">Business Areas</span>
             </div>
-        <div class="slide-wrapper pager animate__animated" data-effect="animate__fadeInRight">
+        <div class="slides-wrapper pager animate__animated" data-effect="animate__fadeInRight">
             <div class="slides">
                     <div>
                         <img src="image/slide/ski.png" alt="">
@@ -260,7 +262,7 @@
         </div>
     </section>
 
-    <section class="Investment container">
+    <section class="Investment_wrap container">
         <div class="title">
             <h2 class="main_tt">투자정보</h2>
             <span class="sub_tt">Investment</span>
@@ -270,10 +272,10 @@
                 <span class="sub_title">투자정보</span>
                 <h3>공고</h3>
                 <span>2022-04-30~2022-06-16</span>
-
+                <span><i class="fa-solid fa-user"></i></span>
                 <div class="hover_contents">
                     <p>
-                        <a href="#">자세히보기</a>
+                        <a href="#">자세히보기<i class="fa-solid fa-magnifying-glass-plus"></i></a>
                     </p>
                 </div>
             </div>  
@@ -282,10 +284,10 @@
                 <span class="sub_title">투자정보</span>
                 <h3>제무정보</h3>
                 <span>2022-04-30~2022-06-16</span>
-
+                <span><i class="fa-solid fa-chart-simple"></i></span>
                 <div class="hover_contents">
                     <p>
-                        <a href="#">자세히보기</a>
+                        <a href="#">자세히보기<i class="fa-solid fa-magnifying-glass-plus"></i></a>
                     </p>
                 </div>
             </div>  
@@ -295,10 +297,10 @@
                 <span class="sub_title">투자정보</span>
                 <h3>주식정보</h3>
                 <span>2022-04-30~2022-06-16</span>
-
+                <span><i class="fa-solid fa-chart-line"></i></span>
                 <div class="hover_contents">
                     <p>
-                        <a href="#">자세히보기</a>
+                        <a href="#">자세히보기<i class="fa-solid fa-magnifying-glass-plus"></i></a>
                     </p>
                 </div>
             </div>  
@@ -376,23 +378,23 @@
         <div class="infomation_wrap animate__animated" data-effect="animate__fadeInDown">
             <ul class="counter_list">
             <li>
-                <span >#</span>
-                <h3 class="counter">26700</h3>
+                <span><i class="fa-solid fa-circle-info"></i></span>
+                <h3 class="counter main_tt">26700</h3>
                 <h4>추가정보</h4>
             </li>
             <li>
-                <span>#</span>
-                <h3 class="counter">2421</h3>
+                <span><i class="fa-solid fa-credit-card"></i></span>
+                <h3 class="counter main_tt">2421</h3>
                 <h4>대출억</h4>
             </li>
             <li>
-                <span>#</span>
-                <h3 class="counter">160</h3>
+                <span><i class="fa-solid fa-user"></i></span>
+                <h3 class="counter main_tt">160</h3>
                 <h4>채용인원</h4>
             </li>
             <li>
-                <span>#</span>
-                <h3 class="counter"">69756</h3>
+                <span><i class="fa-solid fa-sack-dollar"></i></span>
+                <h3 class="counter main_tt"">69756</h3>
                 <h4>직원 평균보수</h4>
             </li>
         </ul>
@@ -462,8 +464,7 @@
     $('.pager_slider').bxSlider({
 		controls:false,
         auto:true,
-        autoHover:true,
-        autoControls:true
+        autoHover:true
 	});
 
     $('.slides').bxSlider({
@@ -474,12 +475,11 @@
         slideMargin: 100,
 		auto:true,
         pager:true,
-		controls:true,
+        controls:true,
 		autoHover:true,
 		speed:1000,
         easing:'linear'
 	});
-
 
     </script>
     
