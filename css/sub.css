@@ -243,6 +243,12 @@ span.bad-input{
     padding-left: 20px;
     line-height: calc(var(--line-height)*2);
 }
+.service_wrap p input:focus{
+    box-shadow: 0px 0px 10px var(--primary-c) inset,0px 0px 5px rgba(200,200,200,0.5);   
+}
+.service_wrap p textarea:focus{
+    box-shadow: 0px 0px 10px var(--primary-c) inset,0px 0px 5px rgba(200,200,200,0.5);   
+}
 /* ------------------------- login -------------------------*/
 .login_wrap{
     width: 500px;
