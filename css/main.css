@@ -38,8 +38,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: calc(var(--line-height)*3);
-    margin-bottom: calc(var(--line-height)*5);
 }
 .form_wrap{
     display: flex;
@@ -207,7 +205,6 @@
 /*-------------------------Investment---------------------------*/
 .Investment_wrap{
     width: 100%;
-    margin-bottom: 200px;
 }
 .Investment_content{
     display: flex;

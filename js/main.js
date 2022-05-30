@@ -38,7 +38,7 @@ $(function(){
 		}
     });
 
-    $('nav ul:nth-child(1)').hover(
+    $('nav ul:nth-child(1) li').hover(
         function(){		
             $header.stop().animate({height:newHeight});
         },
