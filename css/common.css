@@ -250,7 +250,7 @@ header.active .top_links li a{
     width: 100vw;
     bottom: -5000%;
     left: 0;
-    top:-100px;
+    top:-60%;
 }
 .header_search input{
     position: relative;
@@ -299,7 +299,7 @@ header.active .top_links li a{
     opacity: 1;
     position: absolute;
     top:50%;
-    left:calc(70% + 70px);
+    left:calc(90% - 20px);
 }
 .top_links > li:nth-child(2) span{
     width: 20px;
