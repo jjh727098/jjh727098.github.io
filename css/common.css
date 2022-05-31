@@ -309,7 +309,6 @@ header.active .top_links li a{
     opacity: 0;
     transition: transform 0.5s
 }
-
 /*----------------------- hamburger ---------------------------*/
 .toggle{
     display: none;
