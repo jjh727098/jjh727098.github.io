@@ -299,7 +299,7 @@ header.active .top_links li a{
     opacity: 1;
     position: absolute;
     top:50%;
-    left:calc(90% - 20px);
+    left:calc(80% - 50px);
 }
 .top_links > li:nth-child(2) span{
     width: 20px;
