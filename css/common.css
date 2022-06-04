@@ -417,18 +417,19 @@ footer{
     align-items: center;
     height: 100%;
     position: relative;
-    color: #fff;
+}
+footer div span{
+    color: #ebebeb;
 }
 .footer_contents{
-    margin-top: 70px;
+    margin-top: 20px;
 }
 .footer_contents span{
     margin-right: 20px;
 }
 .footer_contents_main{
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .footer_contents_adress{
     display: flex;
@@ -439,14 +440,16 @@ footer{
     display: flex;
     flex-direction: column;
 }
-
+.footer_contents span{
+    font-size: 14px;
+}
 .footer_contents_adress span{
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 .footer_contents_call span{
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 .footer_logo{
     display: flex;
@@ -505,16 +508,11 @@ footer{
 .footer_sns li:nth-of-type(5) a{
     background-position-x: -278px;
 }
-footer #go-top{
+footer #go-top svg{
     position: fixed;
     top:80%;
     left:80%;
-    background-image: url(../image/icons/top.png);
-    text-indent: -9999em ;
-    width: 57px;
-    height: 57px;
-    background-repeat: no-repeat;
     text-indent: -9999em;
-    outline: none;
-    border: none;
+    width: 70px;
+    height: 70px;
 }

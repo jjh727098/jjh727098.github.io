@@ -16,10 +16,13 @@
     margin-bottom: 50px;
     justify-content: center;
     align-items: center;
+    gap: 30px;
 }
 .faq_tabs ul li{
     border: 1px solid #ebebeb;
-    padding: 20px 100px;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
 }
 .faq_wrap .tabs_content{
     text-align: left;
@@ -145,7 +148,8 @@
 }
 .hotel_mixer button{
     border: 1px solid #ebebeb;
-    padding: 20px 80px;
+    width: 200px;
+    height: 50px;
     cursor: pointer;
 }
 .hotel_mixer button.mixitup-control-active{
@@ -335,10 +339,16 @@ span.bad-input{
 }
 .land_map_ping {
     border-bottom: 2px solid #c2c2c2;
-    padding-bottom: 20px;
+}
+.land_map_ping svg{
+    margin-bottom: 20px;
+}
+.land_map_ping p {
+    margin-bottom: 20px;
 }
 .transport h4{
-    color: var(--primary-c)
+    color: var(--primary-c);
+    margin-bottom: 20px;
 }
 .transport .train p:after{
     position: absolute;
@@ -375,4 +385,7 @@ span.bad-input{
 }
 .busan h5{
     color: green;
+}
+.land_map_ping{
+    margin-top: 50px;
 }
