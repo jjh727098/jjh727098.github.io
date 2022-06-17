@@ -38,7 +38,7 @@ $(function(){
 		}
     });
 
-    $('nav ul:nth-child(1) li').hover(
+    $('nav ul:nth-child(1)').hover(
         function(){		
             $header.stop().animate({height:newHeight});
         },
@@ -49,12 +49,20 @@ $(function(){
     
 
       /* -------------------------- search --------------------------- */
-    $('.top_links > li:nth-child(2)').click(function(){
-        $('.header_search').toggleClass('active'); 
-        $('.top_links > li:nth-child(2) a svg').toggleClass('active'); 
-        $('.top_links li:nth-child(2) span').toggleClass('active');
-    });
+    // $('.top_links > li:nth-child(2)').click(function(){
+    //     $('.header_search').toggleClass('active'); 
+    //     $('.top_links > li:nth-child(2) a svg').toggleClass('active'); 
+    //     $('.top_links li:nth-child(2) span').toggleClass('active');
+    // });
 
+    $('.top_links li:nth-child(2)').click(function(){
+        $('.header_search').fadeIn().addClass('active'); 
+        $('.search_close').fadeIn().addClass('active'); 
+    });
+    $('.search_close span').click(function(){
+        $('.header_search').fadeOut().removeClass('active'); 
+        $('.search_close').fadeOut().removeClass('active'); 
+    });
 
       /* -------------------------- hamburger --------------------------- */
     $('.top_links li:nth-child(3)').click(function(){

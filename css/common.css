@@ -174,10 +174,6 @@ button{
     margin-right: 50px;
     position: relative;
 }
-.page-header nav > ul > li:nth-child(2){
-    position: unset;
-}
-
 nav > ul > li ul{ 
     width:100%;  
     position: absolute;
@@ -232,35 +228,25 @@ header.active .top_links li a{
 }
 /*----------------------- search ---------------------------*/
 .header_search{
-    position: absolute;
-    left:50%;
-    width: 100%;
-    top: calc(30% - 110px);
-    transform: translateX(-50%);
-    z-index: 102;
     display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+    background: rgba(0,0,0, 0.5);
 }
 .header_search.active{
     display: block;
 }
-.header_search span{
-    background: linear-gradient(#fff 5%, rgba(0,0,0,.8) 5%);
-    position: absolute;
-    text-indent: -9999em;
-    width: 100vw;
-    bottom: -5000%;
-    left: 0;
-    top:-60%;
-}
 .header_search input{
-    position: relative;
+    position: absolute;
+    top:50%;
     width: 50%;
     margin: 0 auto;
     line-height: 85px;
     text-align: center;
     border: none;
-    left:20%;
-    border-bottom: 3px solid var(--secondary-c);
+    left: 25%;
 }
 .header_search label{
     opacity: 0;
@@ -271,8 +257,8 @@ header.active .top_links li a{
 }
 .header_search button{
     position: absolute;
-    top:50%;
-    left: 65%;
+    top:55%;
+    left:70%;
     transform: translateY(-50%);
     cursor: pointer;
     border: none;    
@@ -282,24 +268,45 @@ header.active .top_links li a{
     width: 20px;
     height: 20px;
 }
-
-.first.active{
+.search_close{
+    position: absolute;
+    z-index: 101;
+    cursor: pointer;
+    top: 10%;
+    left:80%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c2c2c2;
+    display: none;
+}
+.search_close svg{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.search_close.active{
+    display: block;
+}
+/* .first.active{
     transform: rotate(45deg);
 }
 .second.active{
     transform: rotate(-45deg);
-}
-.top_links > li:nth-child(2) a svg.active{
+} */
+/* .top_links > li:nth-child(2) a svg.active{
     opacity: 0;
 }
 .top_links > li:nth-child(2) a svg{
     opacity: 1;
+    z-index: 103;
 }
 .top_links > li:nth-child(2) span.active{
     opacity: 1;
     position: absolute;
     top:50%;
     left:calc(80% - 50px);
+    z-index: 103;
 }
 .top_links > li:nth-child(2) span{
     width: 20px;
@@ -307,8 +314,9 @@ header.active .top_links li a{
     height: 3px;
     transform-origin: center;
     opacity: 0;
-    transition: transform 0.5s
-}
+    transition: transform 0.5s;
+    z-index: 103;
+} */
 /*----------------------- hamburger ---------------------------*/
 .toggle{
     display: none;

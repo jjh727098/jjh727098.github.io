@@ -206,6 +206,10 @@
     height: 200px;
     padding-left: 10px;
 }
+.sub_content img{
+    width: 100%;
+    display: none;
+}
 .sub_content:nth-of-type(1){
     background: var(--primary-c);
 }
@@ -250,8 +254,16 @@
     padding: 40px 0;
     font-size: 24px;
 }
-.sub_content .hover_contents{
+.Investment_info{
     display: none;
+}
+.hover_contents img{
+    width: 100%;
+}
+.hover_contents{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .sub_content .hover_contents a{
     color: #fff;
@@ -272,19 +284,97 @@
 /*------------------------- NewsRoom ---------------------------*/
 .NewsRoom_wrap{
     background-image: url(../image/banner_slide/newsroom.bg.png);
+    padding-bottom: 100px;
 }
 .NewsRoom_content{
+    display: flex;
+    gap: 30px;
+    position: relative;
+    top:50%;
+}
+.NewsRoom_content li{
+    width: 330px;
+    height: 440px;
+    margin: 0 auto;
+}
+.photo img{
     width: 100%;
+    transition: 0.3s;
+}
+.photo{
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+}
+.photo svg{
+    position: absolute;
+    color: #fff;
+    top:50%;
+    left:50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    opacity: 0;
+}
+.photo::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+.caption{
+    background: #fff;
+    border: 1px solid #e5e1e1;
+    padding: 20px;
+    transition: 0.3s;
+}
+.caption h3{
+    font-size: 14px;
+}
+.caption p{
+    font-size: 12px;
+    color: #909090;
+    margin-bottom: 30px;
+}
+.caption a{
+    margin-bottom: 30px;
+    color: #909090;
+    font-size: 12px;
     position: relative;
 }
-.NewsRoom_wrap > .container{
-    position:relative;
-    cursor: pointer;
-    height: 500px;
-    width: 300px;
+.caption svg{
+    font-size: 12px;
 }
-
-
+.NewsRoom_content li:hover .photo img{
+    transform: scale(1.1);
+}
+.NewsRoom_content li:hover .photo:after{
+    opacity: 1;
+}
+.NewsRoom_content li:hover .photo svg{
+    opacity: 1;
+}
+.NewsRoom_content li:hover .caption{
+    background: #252525;
+    border: none;
+}
+.NewsRoom_content li:hover .caption h3{
+    color: var(--secondary-c);
+}
+.NewsRoom_content li:hover .caption p{
+    color: #fff;
+}
+.NewsRoom_content li:hover .caption a{
+    color: var(--secondary-c);
+}
+.NewsRoom_content li:hover .caption svg{
+    color: var(--secondary-c);
+}
 /*------------------------- infomation ---------------------------*/
 .infomation_wrap{
     display: flex;

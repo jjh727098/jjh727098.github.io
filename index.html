@@ -12,10 +12,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/main.css">
-    <title>강원랜드</title>
+    <title>2차 포트폴리오-강원랜드</title>
 
 
 
@@ -75,8 +74,6 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa-solid fa-magnifying-glass">search</i></a>
-                    <span class="first"></span>
-                    <span class="second"></span>
                 </li>
                 <li class=>
                     <a href="#"><i class="fa-solid fa-bars">hamburger</i></a>
@@ -86,9 +83,8 @@
     </div>
     </header>
 
-    <span class="target"></span>
+
     <div class="header_search">
-        <span>search back</span>
         <form action="#" method="post">
             <label for="search">검색어 입력</label>
             <input type="search" id="search" placeholder="검색어를 입력하세요." required  >
@@ -96,6 +92,9 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
+        <div class="search_close">
+            <span><i class="fa-solid fa-xmark">close</i></span>
+        </div>
     </div>
     <div class="toggle">
         <div class="flex_box">
@@ -269,14 +268,14 @@
         </div>
         <div class="Investment_content">
             <div class="sub_content animate__animated" data-effect="animate__fadeInBottomLeft">
-                <span class="sub_title">투자정보</span>
-                <h3>공고</h3>
-                <span>2022-04-30~2022-06-16</span>
+                <div class="Investment_info">
+                    <span class="sub_title">투자정보</span>
+                    <h3>공고</h3>
+                    <span>2022-04-30~2022-06-16</span>
                 <span><i class="fa-solid fa-user"></i></span>
+                </div>
                 <div class="hover_contents">
-                    <p>
-                        <a href="#">자세히보기<i class="fa-solid fa-magnifying-glass-plus"></i></a>
-                    </p>
+                    <img src="image/Investment/work.png" alt="">
                 </div>
             </div>  
             
@@ -318,32 +317,50 @@
                 <ul class="NewsRoom_content">
                     <li>
                         <div class="photo">
-                            <img src="" alt="">
+                            <img src="image/news/hotel_news.png" alt="">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                         <div class="caption">
-                            <h3></h3>
-                            <p></p>
-                            <a href=""></a>
+                            <h3>불꽃과 어우러진 멀티미디어 드론쇼</h3>
+                            <p>“낮에는 들꽃, 밤에는 불꽃 구경 오세요”
+                                불꽃과 어우러진 멀티미디어 드론쇼, 하이원리조트 새로운 시그니처 이벤트로 호평
+                                
+                                새로운 즐길거리로 자리잡은 멀티미디어 드론쇼가 고객들로부터 좋은 반응을 얻고 있다.
+                                </p>
+                                <a href="">자세히보기</a>
+                            <i class="fa-solid fa-caret-right"></i>
                         </div>
                     </li>
                     <li>
                         <div class="photo">
-                            <img src="" alt="">
+                            <img src="image/news/cafe_news.png" alt="">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                         <div class="caption">
-                            <h3></h3>
-                            <p></p>
-                            <a href=""></a>
+                            <h3>하이원리조트, ‘운암정’에 전통주점</h3>
+                            <p>“전통주 마시며 이야기에 취하다”
+                                하이원리조트, ‘운암정’에 전통주점 ‘운암작가’ 오픈
+                                
+                                하이원리조트(대표 이삼걸)가 한옥 베이커리 카페로 운영되던 ‘운암정’에 전통주 주점 ‘운암작가’를 오픈했다고 1일 밝혔다.
+                            </p>
+                            <a href="">자세히보기</a>
+                            <i class="fa-solid fa-caret-right"></i>
                         </div>
                     </li>
                     <li>
                         <div class="photo">
-                            <img src="" alt="">
+                            <img src="image/news/golf_news.png" alt="">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                         <div class="caption">
-                            <h3></h3>
-                            <p></p>
-                            <a href=""></a>
+                            <h3>하이원리조트, 오는 18일 ‘하이원CC’</h3>
+                            <p>“봄옷으로 갈아입은 하이원CC로 오세요”
+                                하이원리조트, 오는 18일 ‘하이원CC’ 2022년 시즌 개장
+                                
+                                우리나라에서 가장 높은 곳에 있는 골프장으로 유명한 하이원CC가 겨우내 재정비를 마치고 오는 18일 개장한다.
+                                </p>
+                                <a href="">자세히보기</a>
+                                <i class="fa-solid fa-caret-right"></i>
                         </div>
                     </li>
                 </ul>
@@ -426,9 +443,7 @@
     </footer>
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
-    integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/vendor/modernizr.custom.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     
