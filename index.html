@@ -215,96 +215,98 @@
 
     <section class="Business_Areas">
         <div class="container">
-            <div class="title">
+            <div class="title animate__animated"  data-effect="animate__fadeInLeft">
                 <h2 class="main_tt">사업분야</h2>
                 <span class="sub_tt">Business Areas</span>
+                <p>국내 17개의 카지노 중 유일하게 내국인 출입이 가능한 카지노를 운영 중입니다.</p>
             </div>
-        <div class="slides-wrapper pager animate__animated" data-effect="animate__fadeInRight">
+            <div class="animate__animated"  data-effect="animate__fadeInRight"">
+        <div class="slides-wrapper pager">
             <div class="slides">
                     <div>
                         <img src="image/slide/ski.png" alt="">
                         <h2>01</h2>
                         <p>스키장</p>
-                        <a href="#">more</a>
+                        <a href="land.html">
+                            <span>more+</span>     
+                        </a>
                     </div>
                     <div>
                         <h2>02</h2>
                         <p>워터월드</p>
-                        <a href="#">more</a>
                         <img src="image/slide/waterworld.png" alt="">
+                        <a href="#">
+                            <span>more+</span>     
+                        </a>
                     </div>
                     <div>
                         <img src="image/slide/casino.png" alt="">
                         <h2>03</h2>
                         <p class="casino_p">카지노</p>
-                        <a href="#">more</a>
+                        <a href="#">
+                            <span>more+</span>     
+                        </a>
                     </div>
                     <div>
                         <img src="image/slide/golf.png" alt="">
                         <h2 id="golf_h2">04</h2>
                         <p>골프</p>
-                        <a href="#"></a>
+                        <a href="#">
+                            <span>more+</span>     
+                        </a>
                     </div>
                     <div>
                         <img src="image/slide/hotel.png" alt="">
                         <h2>05</h2>
                         <p>호텔</p>
-                        <a href="#"></a>
+                        <a href="#">
+                            <span>more+</span>     
+                        </a>
                     </div>
                     <div>
                         <img src="image/slide/cook.png" alt="">
                         <h2>06</h2>
                         <p class="casino_p">식당</p>
-                        <a href="#"></a>
+                        <a href="#">
+                            <span>more+</span>     
+                        </a>
                     </div>
             </div>   
         </div>
+    </div>
     </section>
 
-    <section class="Investment_wrap container">
+    <section class="Investment_wrap">
         <div class="title">
             <h2 class="main_tt">투자정보</h2>
             <span class="sub_tt">Investment</span>
         </div>
-        <div class="Investment_content">
-            <div class="sub_content animate__animated" data-effect="animate__fadeInBottomLeft">
-                <div class="Investment_info">
-                    <span class="sub_title">투자정보</span>
-                    <h3>공고</h3>
-                    <span>2022-04-30~2022-06-16</span>
-                <span><i class="fa-solid fa-user"></i></span>
-                </div>
-                <div class="hover_contents">
-                    <img src="image/Investment/work.png" alt="">
-                </div>
-            </div>  
-            
-            <div class="sub_content animate__animated" data-effect="animate__fadeInUpBig">
-                <span class="sub_title">투자정보</span>
-                <h3>제무정보</h3>
-                <span>2022-04-30~2022-06-16</span>
-                <span><i class="fa-solid fa-chart-simple"></i></span>
-                <div class="hover_contents">
-                    <p>
-                        <a href="#">자세히보기<i class="fa-solid fa-magnifying-glass-plus"></i></a>
-                    </p>
-                </div>
-            </div>  
-            
-
-            <div class="sub_content animate__animated" data-effect="animate__fadeInBottomRight">
-                <span class="sub_title">투자정보</span>
-                <h3>주식정보</h3>
-                <span>2022-04-30~2022-06-16</span>
-                <span><i class="fa-solid fa-chart-line"></i></span>
-                <div class="hover_contents">
-                    <p>
-                        <a href="#">자세히보기<i class="fa-solid fa-magnifying-glass-plus"></i></a>
-                    </p>
-                </div>
-            </div>  
-            
-        </div>
+        <ul class="Investment_content container">
+                <li class="sub_content animate__animated" data-effect="animate__fadeInBottomLeft">
+                    <a href="">
+                        <h3>공고</h3>
+                        <spna class="detail">자세히보기</spna>
+                        <i class="fa-solid fa-caret-right"></i>
+                        <span class="icons"><i class="fa-solid fa-user"></i></span>
+                    </a>
+                </li>  
+            <li class="sub_content animate__animated" data-effect="animate__fadeInUpBig">
+                <a href="">
+                    <h3>제무정보</h3>
+                    <spna class="detail">자세히보기</spna>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <span class="icons"><i class="fa-solid fa-chart-simple"></i></span>
+                </a>
+            </li>  
+            <li class="sub_content animate__animated" data-effect="animate__fadeInBottomRight">
+                <a href="">
+                    <h3>주식정보</h3>
+                    <spna class="detail">자세히보기</spna>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <span class="icons"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                </a>
+            </li>  
+        </ul>
     </section>
 
     <section class="NewsRoom_wrap">
@@ -453,8 +455,9 @@
 
     <script>
     $('.counter').countUp({
-        'time': 10000,
-        'delay': 10
+        time: 10000,
+        delay: 10,
+        stop: 0
     });
 
     $('.pager_slider').bxSlider({
@@ -474,7 +477,7 @@
         controls:true,
 		autoHover:true,
 		speed:1000,
-        easing:'linear'
+        easing:'linear',
 	});
 
     </script>

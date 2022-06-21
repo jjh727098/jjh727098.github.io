@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .main_tt{
     font-size:calc(var(--body-fz)*3.25);
-    font-weight: 400;
+    font-weight: bold;
     line-height: calc(var(--line-height)*4);
 }
 .sub_tt{
@@ -288,35 +288,6 @@ header.active .top_links li a{
 .search_close.active{
     display: block;
 }
-/* .first.active{
-    transform: rotate(45deg);
-}
-.second.active{
-    transform: rotate(-45deg);
-} */
-/* .top_links > li:nth-child(2) a svg.active{
-    opacity: 0;
-}
-.top_links > li:nth-child(2) a svg{
-    opacity: 1;
-    z-index: 103;
-}
-.top_links > li:nth-child(2) span.active{
-    opacity: 1;
-    position: absolute;
-    top:50%;
-    left:calc(80% - 50px);
-    z-index: 103;
-}
-.top_links > li:nth-child(2) span{
-    width: 20px;
-    background: #fff;
-    height: 3px;
-    transform-origin: center;
-    opacity: 0;
-    transition: transform 0.5s;
-    z-index: 103;
-} */
 /*----------------------- hamburger ---------------------------*/
 .toggle{
     display: none;
