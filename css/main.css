@@ -38,6 +38,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 200px;
 }
 .form_wrap{
     display: flex;
@@ -123,22 +124,22 @@
     width: 200px;
     position: relative;
 }
+.slides div a{
+    display: block;
+}
 .slides div img{
+    display: block;
     transition: 0.3s;
 }
-.slides div:hover img{
-    transform: scale(1.1);
-}
-.slides div > a{
+.slides div span{
     position: absolute;
     top: 85%;
     left: 50%;
     transform: translateY(-50%);
     border: 1px solid #ebebeb;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 2;
 }
-.slides div a:hover{
+.slides div:hover span{
     background: var(--primary-c);
 }
 .slides div a span{
@@ -165,6 +166,7 @@
     font-size: 20px;
     font-weight: 600;
     line-height: calc(var(--line-height)*2);
+    color: #fff;
 }
 .casino_p{
     color: #fff;
@@ -208,15 +210,15 @@
 .bx-wrapper .bx-viewport .slides div{
     position: relative;
 }
-.bx-wrapper .bx-viewport .slides div::after{
+.bx-wrapper .bx-viewport .slides div::before{
     content: '';
     background: rgba(0, 0, 0, 0.5);
     top:0; bottom: 0; left: 0; right: 0;
     position: absolute;
+    transition: 0.5s;
     opacity: 1;
-    transition: 0.3s;
 }
-.bx-wrapper .bx-viewport .slides div:hover:after{
+.bx-wrapper .bx-viewport .slides div:hover::before{
     opacity: 0;
 }
 .bx-wrapper .bx-viewport .slides div:hover h2{
@@ -277,6 +279,9 @@
 .NewsRoom_wrap{
     background-image: url(../image/banner_slide/newsroom.bg.png);
     padding-bottom: 100px;
+}
+.NewsRoom_wrap .title h2{
+    padding-top: 100px;
 }
 .NewsRoom_content{
     display: flex;
@@ -378,7 +383,7 @@
 .counter_list{
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 150px;
     text-align: center;
 }
 .counter_list li{
@@ -411,9 +416,6 @@
     height: 100px;
     color: #000;
 }
-
-
-
 [data-effect^="animate__fadeIn"]{
     opacity: 0;
 }
