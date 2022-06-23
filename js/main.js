@@ -67,49 +67,33 @@ $(function(){
     });
 
     /* -------------------------- scroll event animation --------------------------- */
-    // let animateTarget = document.querySelectorAll('[data-effect]');
 
-// window.addEventListener('scroll', function(){
-//     let sct = window.scrollY;
-    
-//     animateTarget.forEach(function(item,index){
-//         let targetOst = item.offsetTop - 600;
+    let animateTarget = $('.animate__animated[data-effect]');
 
-//         if(sct>targetOst){                
-//             let targetClass = item.getAttribute('data-effect');
-//             item.classList.add(targetClass);  
-//         }
-//     });    
-    
-    let animateTarget = $('.animate__animated').attr('data-effect');
-
-
-    $(window).scroll(function(){
+        $(window).scroll(function(){
         let sct = $(this).scrollTop();
 
-        animateTarget.each(function(item,index){
-            let targetOst = item.offset().top - 800;
-            
-    
-            if(sct>targetOst){                
-                let targetClass = item.attr('data-effect');
-                item.addClass(targetClass);  
-            }
-    });
+        animateTarget.each(function(){
+        let targetOst = $(this).offset().top - 800;
+
+
+        if(sct>targetOst){
+        let targetClass = $(this).attr('data-effect');
+        $(this).addClass(targetClass);
+        }
+        });
+
 
     let winSCT = $(window).scrollTop();
-    let counters = $('.counter_list');
-    let counterNums = counters.find('li h3');
-
-//counters가 화면 상단에서 떨어진 거리를 변수 courtersOST에 저장, 콘솔에서 확인
-let courtersOST = counters.offset().top - 700;
-//윈도우에 스크롤이 생기면 그 양을 변수 winSCT에 저장, winSCT의 값이 courtersOST보다 크다면 할일
-let excuted = false;
+    let counters = $('.infomation_conuters');
+    let counterNums = counters.find('.counter_list h3');
+    let courtersOST = counters.offset().top - 700;
+    let excuted = false;
 
     if(winSCT>courtersOST){
         if(!excuted){
-            counterNums.each(item=>{
-                let targetNum = item.attr('data-target');
+            counterNums.each(function(){
+                let targetNum = $(this).attr('data-target');
                 let speed = 30;
                 let add = 5;
 
@@ -130,7 +114,7 @@ let excuted = false;
                             num = targetNum;
                             clearInterval(numAnime);
                         }
-                        item.innerText =  num;
+                        $(this).innerText =  num;
                         
                     }, speed);                 
                 
@@ -142,13 +126,6 @@ let excuted = false;
     }); //scroll event
 
        /* -------------------------- count up --------------------------- */
-
-
-    // $('.counter').countUp({
-    //     time: 10000,
-    //     delay: 10,
-    //     stop: 0
-    // });
 
     $('.pager_slider').bxSlider({
 		controls:false,
