@@ -105,6 +105,10 @@ $(function(){
                     speed = 1;
                     add = 5;
                 }
+                if(targetNum > 10000){
+                    speed = 1;
+                    add = 100;
+                }
                 let num = 0;
                 
                     let numAnime = setInterval(()=>{
@@ -137,8 +141,8 @@ $(function(){
 		minSlides:1,
 		maxSlides:3,
 		moveSlides:1,
-		slideWidth:200,
-        slideMargin: 100,
+		slideWidth:270,
+        slideMargin: 30,
 		auto:true,
         pager:true,
         controls:true,

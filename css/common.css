@@ -142,7 +142,7 @@ button{
     display: block;
 }
 .page-header{
-    background:linear-gradient(rgba(0,0,0, 0.5) 70px, rgba(255,255,255,0.5) 70px);
+    background:linear-gradient(rgba(0,0,0, 0.5) 70px, rgba(0,0,0,0.5) 70px);
     position: absolute;
 	left: 0;
 	right: 0;
@@ -160,8 +160,8 @@ button{
 
 .page-header nav{
     display: flex;
-    width:960px; 
-    color: #fff;
+    width:960px;
+    color: #fff; 
 }
 .page-header nav > ul{
     margin: 0 auto;
@@ -224,6 +224,15 @@ header.active .top_links li a{
 .page-header nav > ul > li:hover:after{
     width: 100%;
     opacity: 1;
+}
+.page-header nav ul li ul li{
+    color: #909090;
+}
+.page-header nav ul li ul a{
+    color: #fff;
+}
+.page-header.active nav ul li ul a{
+    color: #000;
 }
 /*----------------------- search ---------------------------*/
 .header_search{
@@ -396,6 +405,9 @@ footer{
     height: 100%;
     position: relative;
 }
+footer .container{
+    margin-left: 350px;
+}
 footer div span{
     color: #ebebeb;
 }
@@ -431,6 +443,7 @@ footer div span{
 }
 .footer_logo{
     display: flex;
+    margin-right: 50px;
 }
 .footer_logo li{
     background-repeat:no-repeat ;
@@ -458,7 +471,7 @@ footer div span{
 }
 .footer_nav{
     display: flex;
-    margin-left: 350px;
+    margin-left: 300px;
 }
 .footer_sns{
     display: flex;
@@ -493,4 +506,5 @@ footer #go-top svg{
     text-indent: -9999em;
     width: 70px;
     height: 70px;
+    box-shadow: 5px 5px 30px #fff ;
 }

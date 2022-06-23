@@ -44,6 +44,7 @@
     display: flex;
     padding: 50px 40px;
     border: solid 2px;
+    align-items: center;
 }
 .select_wrap{
     position: relative;
@@ -102,6 +103,9 @@
 .form_wrap li:nth-child(2) label{
     color: var(--primary-c);
 }
+.form_wrap label{
+    font-size: 18px;
+}
 
 /*-------------------------Business Areas---------------------------*/
 .Business_Areas{
@@ -121,7 +125,7 @@
     font-weight: bold;
 }
 .slides div{
-    width: 200px;
+    width: 270px;
     position: relative;
 }
 .slides div a{
@@ -138,22 +142,20 @@
     transform: translateY(-50%);
     border: 1px solid #ebebeb;
     background: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    display: inline-block;
+    color: #fff;
 }
 .slides div:hover span{
     background: var(--primary-c);
-}
-.slides div a span{
-    padding: 20px;
-    display: inline-block;
-    color: #fff;
 }
 .slides li:nth-child(3) p{
     color: #ebebeb;
 }
 .slides-wrapper h2{
     position: absolute;
-    top:0;
-    right: 0;
+    top: 5%;
+    left: 10%;
     color: rgba(255,255,255,0.5);
     font-size: 48px;
     font-weight: bold;
@@ -175,37 +177,40 @@
     color: rgba(0, 0, 0, 0.5);
 }
 .bx-next{
-    background-image: url(../image/icons/right.png);
-    height: 57px;
-    width: 57px;
+    background-image: url(../image/icons/chevron-right-solid.svg);
+    height: 50px;
+    width: 50px;
     display: block;
     background-repeat: no-repeat;
     text-indent: -999em;
 }
 .bx-prev{
-    background-image: url(../image/icons/left.png);
-    height: 57px;
-    width: 57px;
+    background-image: url(../image/icons/chevron-left-solid.svg);
+    height: 50px;
+    width: 50px;
     display: block;
     background-repeat: no-repeat;
     text-indent: -999em;
 }
 .slides-wrapper .bx-wrapper{
-    margin-left: 350px;
+    margin-left: 300px;
     position: relative;
-    padding: 200px 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 .slides-wrapper .bx-wrapper .bx-controls-direction{
     position: absolute;
-    top:60%;
-    left: -40%;
+    top:55%;
+    right: 115%;
     display: flex;
     gap: 50px;
 }
 .slides-wrapper .bx-wrapper .bx-default-pager{
     position: absolute;
-    left: -35%;
+    right: 115%;
+    top: 70%;
     display: flex;
+    gap: 10px;
 }
 .bx-wrapper .bx-viewport .slides div{
     position: relative;
@@ -291,7 +296,6 @@
 }
 .NewsRoom_content li{
     width: 330px;
-    height: 440px;
     margin: 0 auto;
 }
 .photo img{
