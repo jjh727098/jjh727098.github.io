@@ -69,6 +69,7 @@ $(function(){
     /* -------------------------- scroll event animation --------------------------- */
 
     let animateTarget = $('.animate__animated[data-effect]');
+    let excuted = false;
 
         $(window).scroll(function(){
         let sct = $(this).scrollTop();
@@ -88,18 +89,17 @@ $(function(){
     let counters = $('.infomation_conuters');
     let counterNums = counters.find('.counter_list h3');
     let courtersOST = counters.offset().top - 700;
-    let excuted = false;
 
     if(winSCT>courtersOST){
         if(!excuted){
             counterNums.each(function(){
                 let targetNum = $(this).attr('data-target');
-                let speed = 30;
+                let speed = 1;
                 let add = 5;
 
                 if(targetNum > 900){
-                    speed = 5;
-                    add = 2;
+                    speed = 1;
+                    add = 5;
                 }
                 if(targetNum > 2000){
                     speed = 1;
@@ -114,7 +114,7 @@ $(function(){
                             num = targetNum;
                             clearInterval(numAnime);
                         }
-                        $(this).innerText =  num;
+                        $(this).text(num);
                         
                     }, speed);                 
                 

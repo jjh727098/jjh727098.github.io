@@ -458,10 +458,10 @@ footer div span{
 }
 .footer_nav{
     display: flex;
+    margin-left: 350px;
 }
 .footer_sns{
     display: flex;
-    margin-left: 70px;
 }
 .footer_sns li a{
     background-image: url(../image/icons/ns.png);
