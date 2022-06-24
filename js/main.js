@@ -149,7 +149,8 @@ $(function(){
 		autoHover:true,
 		speed:500,
         easing:'linear',
-        touchEnabled : false
+        touchEnabled : false,
+        responsive: true
 	});
 
  /* ------------------------- land --------------------------- */

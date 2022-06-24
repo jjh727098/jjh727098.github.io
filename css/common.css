@@ -508,3 +508,95 @@ footer #go-top svg{
     height: 70px;
     box-shadow: 5px 5px 30px #fff ;
 }
+
+/* 반응형 */
+@media (max-width:1170px){
+    .container{
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    header nav{
+        gap: 30px;
+    }
+    header nav ul{
+        gap: 10px;
+    }
+    .con-pd{
+        padding: calc(var(--line-height)*3) 10px;
+    }
+}
+@media (max-width:768px){
+    header nav ul:nth-child(1){
+        display: none;
+    }
+    header .container{
+        justify-content: center;
+    }
+    header .logo{
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    header nav li:nth-child(3){
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        
+    }
+    header nav li:nth-child(2){
+        position: absolute;
+        top: 10%;
+        right: 0;
+        
+    }
+    header nav li:nth-child(1){
+        display: none;
+    }
+    .flex_box{
+        height: 100%;
+        position: relative;
+    }
+    .flex_box .site_map{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 13%;
+        text-align: center;
+        padding: 30px;
+    }
+    .flex_box > div{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .flex_box .land{
+        top: 0;
+        right: 0;
+    }
+    .flex_box .service{
+        top:20%;
+        right: 0;
+    }
+    .flex_box .marketing{
+        top:40%;
+        right: 0;
+    }
+    .flex_box .investment{
+        top:60%;
+        right: 0;
+    }
+    .flex_box .business{
+        top:80%;
+        right: 0;
+    }
+    .close{
+        top:0;
+        left: 80%;
+    }
+}

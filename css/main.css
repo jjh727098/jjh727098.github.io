@@ -32,6 +32,12 @@
 .bx-controls .bx-pager a.active{
     background: rgba(255,255,255,1);
 }
+@media (max-width:768px){
+    .slide_wrapper .bx-wrapper{
+        width: 100vw;  
+    }
+}
+
 /*--------------------------reservation---------------------------*/
 .reservation{
     display: flex;
