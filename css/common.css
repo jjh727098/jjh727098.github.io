@@ -507,6 +507,7 @@ footer #go-top svg{
     width: 70px;
     height: 70px;
     box-shadow: 5px 5px 30px #fff ;
+    border-radius: 50%;
 }
 
 /* 반응형 */
@@ -516,16 +517,28 @@ footer #go-top svg{
         padding: 0 10px;
         box-sizing: border-box;
     }
+    header .container{
+        margin-left: 50px;
+    }
     header nav{
         gap: 30px;
     }
     header nav ul{
         gap: 10px;
     }
-    .con-pd{
-        padding: calc(var(--line-height)*3) 10px;
+    .flex_box .text_box h2{
+        font-size: 22px;
+    }
+    .close{
+        left: 90%;
+    }
+    footer .container{
+        margin-left: 60px;
     }
 }
+
+/* 1170 이하 */
+
 @media (max-width:768px){
     header nav ul:nth-child(1){
         display: none;
@@ -600,3 +613,19 @@ footer #go-top svg{
         left: 80%;
     }
 }
+
+/* 768 이하 */
+
+@media (max-width:480px){
+
+}
+
+
+/* 480 이하 */
+
+
+@media (max-width:320px){
+
+}
+
+/* 320 이하 */

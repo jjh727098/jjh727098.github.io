@@ -137,21 +137,74 @@ $(function(){
         autoHover:true
 	});
 
-    $('.slides').bxSlider({
-		minSlides:1,
-		maxSlides:3,
-		moveSlides:1,
-		slideWidth:270,
-        slideMargin: 30,
-		auto:true,
-        pager:true,
-        controls:true,
-		autoHover:true,
-		speed:500,
-        easing:'linear',
-        touchEnabled : false,
-        responsive: true
-	});
+    let $slider;
+
+    function buildSliderConfiguration() {
+
+        let deviceWidth = $(window).width();
+        
+        /* 반응형으로 설정할 옵션 정의 */
+        let slideNum;
+        let slideMargin;
+    
+        /* 화면 사이즈별 슬라이드 갯수, 마진 설정, 기타 옵션도 설정 가능 */
+        if (deviceWidth < 480) {
+            slideNum = 1;
+            slideMargin = 30;
+        } else if (deviceWidth < 768) {
+            slideNum = 1;
+            slideMargin = 30;
+        } else if (deviceWidth < 1170) {
+            slideNum = 2;
+            slideMargin = 30;
+        } else {
+            slideNum = 3;
+            slideMargin = 30;
+        }
+    
+        return {
+            slideWidth: 270,
+            autoControls: false,
+            auto: true,
+            autoHover: true,
+            adaptiveHeight: true,
+            pager: true,
+            moveSlides: 1,
+            slideMargin: slideMargin, 
+            minSlides: slideNum,  
+            maxSlides: slideNum,
+            responsive: true  ,  
+            touchEnabled: false
+        };
+    }
+    
+    function configureSlider() {
+        var config = buildSliderConfiguration();
+    
+        if ($slider && $slider.reloadSlider) {
+            $slider.reloadSlider(config);
+        } else {
+            $slider = $('.slides').bxSlider(config);  /* 슬라이더 클래스 또는 아이디 입력 */
+        }
+    }
+
+    $(window).on("orientationchange resize", configureSlider);
+    configureSlider();
+    // $('.slides').bxSlider({
+	// 	minSlides:1,
+	// 	maxSlides:3,
+	// 	moveSlides:1,
+	// 	slideWidth:270,
+    //     slideMargin: 30,
+	// 	auto:true,
+    //     pager:true,
+    //     controls:true,
+	// 	autoHover:true,
+	// 	speed:500,
+    //     easing:'linear',
+    //     touchEnabled : false,
+    //     responsive: true
+	// });
 
  /* ------------------------- land --------------------------- */
 

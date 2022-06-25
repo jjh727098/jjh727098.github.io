@@ -32,11 +32,6 @@
 .bx-controls .bx-pager a.active{
     background: rgba(255,255,255,1);
 }
-@media (max-width:768px){
-    .slide_wrapper .bx-wrapper{
-        width: 100vw;  
-    }
-}
 
 /*--------------------------reservation---------------------------*/
 .reservation{
@@ -432,3 +427,162 @@
 .animate__animated {
     animation-duration: 0.5s;
 }
+
+/* 반응형 */
+@media (max-width:1170px){
+    .slides-wrapper .bx-wrapper{
+        margin-left: 450px;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction{
+        position: absolute;
+        top:55%;
+        right: 135%;
+        display: flex;
+        gap: 50px;
+    }
+    .slides-wrapper .bx-wrapper .bx-default-pager{
+        left: 70%;
+    }
+    .Business_Areas .title{
+        position: absolute;
+        left: 10%;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction{
+        right: 130%;
+    }
+    .slides-wrapper .bx-wrapper .bx-default-pager{
+        right: 0;
+        left: -50%;
+    }
+    .Investment_content{
+        gap: 0;
+    }
+    .NewsRoom_content{
+        gap: 0;
+    }
+}
+
+
+/* 1170 이하 */
+
+@media (max-width:768px){
+    fieldset .form_wrap{
+        display: flex;
+        padding: 200px 60px;
+        border: 2px solid;
+        flex-direction: column;
+        align-items: center;
+        white-space: nowrap;
+        position: unset;
+        position: relative;
+    }
+    fieldset  .form_wrap li:nth-child(1){
+        position: absolute;
+        top: 0;
+        left: 30%;
+    }
+    fieldset  .form_wrap li:nth-child(2){
+        position: absolute;
+        top: 20%;
+    }
+    fieldset  .form_wrap li:nth-child(3){
+        position:  relative;
+        top: -30px;
+        left: -60px;
+    }
+    fieldset  .form_wrap li:nth-child(4){
+        position: relative;
+        top: 0px;
+        left: -60px;
+    }
+    fieldset  .form_wrap li:last-child{
+        position: absolute;
+        bottom: 10%;
+        left: 30%;
+    }
+    fieldset  .form_cell{
+        position: unset;
+        padding: 0;
+        border-left: 0;
+    }
+    .form_cell input{
+        border:1px solid #000;
+        width: auto;
+    }
+    .slide_wrapper .bx-wrapper img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .Business_Areas .title{
+        display: none;
+    }
+    .slides-wrapper .bx-wrapper{
+        margin-left: 150px;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction{
+        right:20%;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction .bx-next{
+        position: relative;
+        left: 150px;
+        bottom: 80px;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction .bx-prev{
+        position: relative;
+        right: 150px;
+        bottom: 80px;
+    }
+    .slides-wrapper .bx-wrapper .bx-default-pager{
+        display: none;
+    }
+    .Investment_content{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .NewsRoom_content{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .counter_list{
+        flex-wrap: wrap;
+        flex: auto;
+    }
+    .footer_contents{
+        display: flex;
+        white-space: nowrap;
+        flex-direction: column;
+    }
+    footer{
+        position: relative;
+    }
+    footer .footer_contents_adress{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+    }
+    .footer_nav{
+        margin-left: 0;
+    }
+    .footer_logo{
+        display: none;
+    }
+}
+/* 768 이하 */
+
+@media (max-width:480px){
+    .slides-wrapper .bx-wrapper{
+        margin-left: 0;
+        margin: 0 auto;
+    }
+}
+
+
+/* 480 이하 */
+
+
+@media (max-width:320px){
+
+}
+
+/* 320 이하 */
