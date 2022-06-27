@@ -18,11 +18,11 @@
     align-items: center;
     gap: 30px;
 }
-.faq_tabs ul li{
+.faq_tabs ul a{
     border: 1px solid #ebebeb;
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
+    display: block;
+    padding: 25px 75px;
+    box-sizing: border-box;
 }
 .faq_wrap .tabs_content{
     text-align: left;
@@ -50,7 +50,6 @@
     padding: 0 20px;
     transition: 0.3s;
 }
-
 .answer {
 	display:none;
 }
@@ -145,6 +144,11 @@
     width: 23%;
     margin: 1em 1%;
     padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.mix img{
+    width: 100%;
 }
 .hotel_mixer button{
     border: 1px solid #ebebeb;
@@ -155,6 +159,30 @@
 .hotel_mixer button.mixitup-control-active{
     background: var(--primary-c);
     color:#fff;
+}
+.mix::after{
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    opacity: 0;
+}
+.mix:hover:after{
+    opacity: 1;
+}
+.mix:hover svg{
+    opacity: 1;
+}
+.mix svg{
+    position: absolute;
+    left: 50%; top:50%;
+    transform: translate(-50%);
+    opacity: 0;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
 }
 /* ------------------------ service -------------------------*/
 .service_content{
@@ -320,8 +348,8 @@ span.bad-input{
 }
 .road_wrap .container svg{
     color: var(--primary-c);
-    width: 80px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 .road_wrap h3{
     color:#000;
@@ -368,24 +396,30 @@ span.bad-input{
     display: flex;
     gap: 30px;
 }
-.kang h5{
-    color: red;
-}
 .seoul{
     display: flex;
     gap: 30px;
     margin: 20px 0;
 }
-.seoul h5{
-    color: blue;
-}
 .busan{
     display: flex;
     gap: 30px;
 }
-.busan h5{
-    color: green;
-}
 .land_map_ping{
     margin-top: 50px;
 }
+/* 반응형 */
+
+@media (max-width:1170px){
+
+
+}
+
+
+/* 1170 이하 */
+
+@media (max-width:768px){
+
+}
+
+/* 768 이하 */

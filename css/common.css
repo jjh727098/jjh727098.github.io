@@ -152,6 +152,9 @@ button{
 	overflow:hidden;
     z-index: 100;
 }
+.page-header .top_links li:hover a{
+    color:var(--secondary-c);
+}
 .page-header > div{
     display: flex;
     justify-content: space-between;
@@ -285,7 +288,6 @@ header.active .top_links li a{
     left:80%;
     width: 50px;
     height: 50px;
-    border: 1px solid #c2c2c2;
     display: none;
 }
 .search_close svg{
@@ -333,6 +335,7 @@ header.active .top_links li a{
 .flex_box > div h2{
     font-size: 30px;
     line-height: calc(var(--line-height)*2);
+    font-weight: bold;
 }
 .flex_box div li{
     color: #c2c2c2;
@@ -562,52 +565,39 @@ footer #go-top svg{
         
     }
     header nav li:nth-child(1){
-        display: none;
-    }
-    .flex_box{
-        height: 100%;
-        position: relative;
-    }
-    .flex_box .site_map{
         position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 13%;
-        text-align: center;
-        padding: 30px;
+        top: 10%;
+        right: 10%;
     }
-    .flex_box > div{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: flex;
-        justify-content: center;
+    .flex_box div{
+        font-size: 14px;
         white-space: nowrap;
     }
-    .flex_box .land{
-        top: 0;
-        right: 0;
-    }
-    .flex_box .service{
-        top:20%;
-        right: 0;
-    }
-    .flex_box .marketing{
-        top:40%;
-        right: 0;
-    }
-    .flex_box .investment{
-        top:60%;
-        right: 0;
-    }
-    .flex_box .business{
-        top:80%;
-        right: 0;
+    .flex_box .site_map{
+        padding: 10px;
     }
     .close{
-        top:0;
-        left: 80%;
+        top:10%;
+        left: 90%;
+    }
+    .footer_contents{
+        display: flex;
+        white-space: nowrap;
+        flex-direction: column;
+    }
+    footer{
+        position: relative;
+    }
+    footer .footer_contents_adress{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+    }
+    .footer_nav{
+        margin-left: 0;
+    }
+    .footer_logo{
+        display: none;
     }
 }
 

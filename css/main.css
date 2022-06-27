@@ -11,6 +11,7 @@
     background: #fff;
     text-align: left;
     border-radius: 15px;
+    display: none;
 }
 .modal_tt{
     font-size: 20px;
@@ -535,39 +536,47 @@
 /* 1170 이하 */
 
 @media (max-width:768px){
+    fieldset{
+        position: relative;
+    }
     fieldset .form_wrap{
         display: flex;
-        padding: 200px 60px;
+        padding: 200px 350px;
         border: 2px solid;
         flex-direction: column;
         align-items: center;
         white-space: nowrap;
         position: unset;
-        position: relative;
     }
     fieldset  .form_wrap li:nth-child(1){
         position: absolute;
         top: 0;
-        left: 30%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     fieldset  .form_wrap li:nth-child(2){
         position: absolute;
-        top: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
     }
     fieldset  .form_wrap li:nth-child(3){
-        position:  relative;
-        top: -30px;
-        left: -60px;
+        position:  absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30%;
     }
     fieldset  .form_wrap li:nth-child(4){
-        position: relative;
-        top: 0px;
-        left: -60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10%;
     }
     fieldset  .form_wrap li:last-child{
         position: absolute;
         bottom: 10%;
-        left: 30%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     fieldset  .form_cell{
         position: unset;
@@ -587,7 +596,7 @@
         display: none;
     }
     .slides-wrapper .bx-wrapper{
-        margin-left: 150px;
+        margin: 0 auto;
     }
     .slides-wrapper .bx-wrapper .bx-controls-direction{
         right:20%;
@@ -617,31 +626,11 @@
         flex-wrap: wrap;
         flex: auto;
     }
-    .footer_contents{
-        display: flex;
-        white-space: nowrap;
-        flex-direction: column;
-    }
-    footer{
-        position: relative;
-    }
-    footer .footer_contents_adress{
-        position: absolute;
-        top: 5%;
-        left: 50%;
-    }
-    .footer_nav{
-        margin-left: 0;
-    }
-    .footer_logo{
-        display: none;
-    }
 }
 /* 768 이하 */
 
 @media (max-width:480px){
     .slides-wrapper .bx-wrapper{
-        margin-left: 0;
         margin: 0 auto;
     }
 }

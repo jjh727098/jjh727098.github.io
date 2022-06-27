@@ -52,18 +52,22 @@ $(function(){
     $('.top_links li:nth-child(2)').click(function(){
         $('.header_search').fadeIn().addClass('active'); 
         $('.search_close').fadeIn().addClass('active'); 
+        $('body').css({overflow:'hidden'});
     });
     $('.search_close span').click(function(){
         $('.header_search').fadeOut().removeClass('active'); 
         $('.search_close').fadeOut().removeClass('active'); 
+        $('body').css({overflow:'auto'});
     });
 
       /* -------------------------- hamburger --------------------------- */
     $('.top_links li:nth-child(3)').click(function(){
         $('.toggle').fadeIn().addClass('active'); 
+        $('body').css({overflow:'hidden'});
     });
     $('.toggle div:nth-child(2) span').click(function(){
-        $('.toggle').fadeOut().removeClass('active'); 
+        $('.toggle').fadeOut().removeClass('active');
+        $('body').css({overflow:'auto'});
     });
 
     /* -------------------------- scroll event animation --------------------------- */
@@ -273,5 +277,7 @@ let popup = $('.modal_box');
                 delCookie('ABC','Main Page');
             }
         });
+        
 
+        
 }); //ready
