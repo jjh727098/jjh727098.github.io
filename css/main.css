@@ -1,6 +1,75 @@
 @import url(common.css);
 
-
+/*----------------------------modal---------------------------*/
+.modal_box{
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    box-shadow: 0 0 5px var(--primary-c);
+    padding: 40px;
+    z-index: 2;
+    background: #fff;
+    text-align: left;
+    border-radius: 15px;
+}
+.modal_tt{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.modal_content{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c2c2c2;
+}
+.modal_box .modal_content em{
+    color: var(--secondary-c);
+}
+.modal_box em{
+    color: #000;
+}
+.m_bottom{
+    margin-bottom: 10px;
+}
+.end_page a{
+    border-bottom: 1px solid var(--primary-c);
+    font-weight: bold;
+}
+.end_page a:hover{
+    color: var(--primary-c);
+}
+.my_name a{
+    color: var(--primary-c);
+}
+.my_name {
+    border-bottom: 1px solid #c2c2c2;
+    padding-bottom: 10px;
+}
+.plan a{
+    font-weight: bold;
+}
+.plan a:hover{
+    color: var(--primary-c);
+}
+.intro_modal_close{
+    position: absolute;
+    top:90%;
+    left: 90%;
+}
+.intro_modal_close span{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+.intro_modal_close svg{
+    width: 25px;
+    height: 25px;
+}
+.intro_modal_close:hover{
+    color: var(--primary-c);
+}
 /*----------------------------Banner---------------------------*/
 .slide_wrapper{
     width:100%;

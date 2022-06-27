@@ -50,6 +50,7 @@ h1,h2,h3,h4,h5,h6{
 }
 em{
     color:var(--secondary-c);
+    font-weight: bold;
 }
 .link{
     color:var(--secondary-c);
@@ -350,7 +351,6 @@ header.active .top_links li a{
     left:95%;
     width: 50px;
     height: 50px;
-    border: 1px solid #c2c2c2;
 }
 .close svg{
     color: #000;
@@ -404,9 +404,6 @@ footer{
     align-items: center;
     height: 100%;
     position: relative;
-}
-footer .container{
-    margin-left: 350px;
 }
 footer div span{
     color: #ebebeb;
