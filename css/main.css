@@ -11,7 +11,7 @@
     background: #fff;
     text-align: left;
     border-radius: 15px;
-    display: none;
+    /* display: none; */
 }
 .modal_tt{
     font-size: 20px;
@@ -540,45 +540,38 @@
         position: relative;
     }
     fieldset .form_wrap{
-        display: flex;
         padding: 200px 200px;
-        border: 2px solid;
-        flex-direction: column;
-        align-items: center;
         white-space: nowrap;
-        position: unset;
+        text-align: left;
+    }
+    fieldset  .form_wrap li{
+        position: absolute;
+        transform: translate(-50%);
     }
     fieldset  .form_wrap li:nth-child(1){
-        position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
     }
     fieldset  .form_wrap li:nth-child(2){
-        position: absolute;
         top: 30%;
-        transform: translate(-50%);
         left: 50%;
     }
     fieldset  .form_wrap li:nth-child(3){
-        position:  absolute;
         top: 40%;
-        transform: translate(-50%);
+        left: 40%;
     }
     fieldset  .form_wrap li:nth-child(4){
-        position: absolute;
         top: 50%;
-        transform: translateX(-50%);
+        left: 40%;
     }
     fieldset  .form_wrap li:last-child{
-        position: absolute;
         bottom: 10%;
         left: 50%;
-        transform: translate(-50%);
     }
     fieldset  .form_cell{
         padding: 0;
-        border-left: 0;
+        margin: 0;
+        text-align: left;
     }
     .form_cell input{
         border:1px solid #000;
@@ -622,6 +615,12 @@
     .counter_list{
         flex-wrap: wrap;
         flex: auto;
+    }
+    .modal_box{
+        display: flex;
+        left: 8%;
+        right: 8%;
+        top: 10%;
     }
 }
 /* 768 이하 */

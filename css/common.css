@@ -561,13 +561,13 @@ footer #go-top svg{
     header nav li:nth-child(2){
         position: absolute;
         top: 10%;
-        right: 0;
+        left: 90%;
         
     }
     header nav li:nth-child(1){
         position: absolute;
         top: 10%;
-        right: 10%;
+        left: 75%;
     }
     .flex_box{
         position: relative;
@@ -576,12 +576,12 @@ footer #go-top svg{
     .site_map{
         top: 0;
         bottom:0;
-        padding: 20px;
+        padding: 40px;
     }
     .site_map p{
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 10px;
     }
     .flex_box > div{
         padding-left: 0;
@@ -624,7 +624,7 @@ footer #go-top svg{
     }
     footer .footer_contents_adress{
         position: absolute;
-        top: 5%;
+        top: calc(5% - 7px);
         left: 60%;
     }
     .footer_nav{
@@ -632,6 +632,9 @@ footer #go-top svg{
     }
     .footer_logo{
         display: none;
+    }
+    .footer_contents_call{
+        margin-top: 20px;
     }
     .header_search input{
         width: 80vw;
