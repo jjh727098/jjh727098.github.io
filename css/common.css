@@ -569,15 +569,49 @@ footer #go-top svg{
         top: 10%;
         right: 10%;
     }
-    .flex_box div{
-        font-size: 14px;
+    .flex_box{
+        position: relative;
         white-space: nowrap;
     }
-    .flex_box .site_map{
-        padding: 10px;
+    .site_map{
+        top: 0;
+        bottom:0;
+        padding: 20px;
+    }
+    .site_map p{
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    .flex_box > div{
+        padding-left: 0;
+        border: none;
+        display: inline-block;
+        position: absolute;
+    }
+    .toggle .land{
+        top: 10%;
+        left: 40%;
+    }
+    .toggle .business{
+        top: 10%;
+        left: 70%;
+    }
+    .toggle .investment{
+        top: 40%;
+        left: 40%;
+    }
+    }
+    .toggle .marketing{
+        top: 40%;
+        left: 70%;
+    }
+    .toggle .service{
+        top: 70%;
+        left: 60%;
     }
     .close{
-        top:10%;
+        top:5%;
         left: 90%;
     }
     .footer_contents{
@@ -591,7 +625,7 @@ footer #go-top svg{
     footer .footer_contents_adress{
         position: absolute;
         top: 5%;
-        left: 50%;
+        left: 60%;
     }
     .footer_nav{
         margin-left: 0;
@@ -599,7 +633,14 @@ footer #go-top svg{
     .footer_logo{
         display: none;
     }
-}
+    .header_search input{
+        width: 80vw;
+        left: 10%;
+    }
+    .header_search button svg{
+        position: relative;
+        left: 60px;
+    }
 
 /* 768 이하 */
 

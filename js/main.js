@@ -53,6 +53,7 @@ $(function(){
         $('.header_search').fadeIn().addClass('active'); 
         $('.search_close').fadeIn().addClass('active'); 
         $('body').css({overflow:'hidden'});
+        $('.header_search input').focus();
     });
     $('.search_close span').click(function(){
         $('.header_search').fadeOut().removeClass('active'); 

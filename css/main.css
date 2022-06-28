@@ -541,7 +541,7 @@
     }
     fieldset .form_wrap{
         display: flex;
-        padding: 200px 350px;
+        padding: 200px 200px;
         border: 2px solid;
         flex-direction: column;
         align-items: center;
@@ -556,30 +556,27 @@
     }
     fieldset  .form_wrap li:nth-child(2){
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 10px;
+        top: 30%;
+        transform: translate(-50%);
+        left: 50%;
     }
     fieldset  .form_wrap li:nth-child(3){
         position:  absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 30%;
+        top: 40%;
+        transform: translate(-50%);
     }
     fieldset  .form_wrap li:nth-child(4){
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        right: 10%;
+        transform: translateX(-50%);
     }
     fieldset  .form_wrap li:last-child{
         position: absolute;
         bottom: 10%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%);
     }
     fieldset  .form_cell{
-        position: unset;
         padding: 0;
         border-left: 0;
     }
@@ -603,12 +600,12 @@
     }
     .slides-wrapper .bx-wrapper .bx-controls-direction .bx-next{
         position: relative;
-        left: 150px;
+        left: 130px;
         bottom: 80px;
     }
     .slides-wrapper .bx-wrapper .bx-controls-direction .bx-prev{
         position: relative;
-        right: 150px;
+        right: 130px;
         bottom: 80px;
     }
     .slides-wrapper .bx-wrapper .bx-default-pager{
