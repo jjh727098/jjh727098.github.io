@@ -90,6 +90,10 @@ $(function(){
         });
 
 
+    /* -------------------------- count up --------------------------- */
+    if($('.infomation_conuters').length){
+
+    
     let winSCT = $(window).scrollTop();
     let counters = $('.infomation_conuters');
     let counterNums = counters.find('.counter_list h3');
@@ -131,17 +135,22 @@ $(function(){
             excuted = true;
         }
     }
+}
 
     }); //scroll event
 
-       /* -------------------------- count up --------------------------- */
+       /* -------------------------- slide --------------------------- */
+    if($('.pager_slider').length){
+        $('.pager_slider').bxSlider({
+            controls:false,
+            auto:true,
+            autoHover:true
+        });
+    }
 
-    $('.pager_slider').bxSlider({
-		controls:false,
-        auto:true,
-        autoHover:true
-	});
+    if($('.slides').length){
 
+    
     let $slider;
 
     function buildSliderConfiguration() {
@@ -195,6 +204,8 @@ $(function(){
 
     $(window).on("orientationchange resize", configureSlider);
     configureSlider();
+
+}
     // $('.slides').bxSlider({
 	// 	minSlides:1,
 	// 	maxSlides:3,
@@ -210,6 +221,15 @@ $(function(){
     //     touchEnabled : false,
     //     responsive: true
 	// });
+
+/*---------------------------- land -------------------------*/
+if($('.landbg').length){
+
+        $('.landbg').parallax({
+        
+        });
+
+}
 
 /*---------------------------- popup -------------------------*/
 let popup = $('.modal_box');

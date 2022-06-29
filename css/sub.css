@@ -131,6 +131,10 @@
     width: 100%;
     opacity: 1;
 }
+.container .land_img{
+    display: flex;
+    gap: 10px;
+}
 
 /* ------------------------ hotel -------------------------*/
 .mix-wrapper{

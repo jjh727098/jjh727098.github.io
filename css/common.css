@@ -411,72 +411,72 @@ footer{
 footer div span{
     color: #ebebeb;
 }
-.footer_contents{
+footer .container .footer_contents{
     margin-top: 20px;
 }
-.footer_contents span{
+footer .container .footer_contents span{
     margin-right: 20px;
 }
-.footer_contents_main{
+footer .container .footer_contents_main{
     display: flex;
     margin-top: 20px;
 }
-.footer_contents_adress{
+footer .container .footer_contents_adress{
     display: flex;
     flex-direction: column;
     margin-right: 80px;
 }
-.footer_contents_call{
+footer .container .footer_contents_call{
     display: flex;
     flex-direction: column;
 }
-.footer_contents span{
+footer .container .footer_contents span{
     font-size: 14px;
 }
-.footer_contents_adress span{
+footer .container .footer_contents_adress span{
     margin-bottom: 10px;
     font-size: 12px;
 }
-.footer_contents_call span{
+footer .container .footer_contents_call span{
     margin-bottom: 10px;
     font-size: 12px;
 }
-.footer_logo{
+footer  .container .footer_logo{
     display: flex;
     margin-right: 50px;
 }
-.footer_logo li{
+footer .footer_logo li{
     background-repeat:no-repeat ;
     text-indent: -9999em;
     background-size: cover;
     display: block;
 }
-.footer_logo li:nth-of-type(1){
+footer .footer_logo li:nth-of-type(1){
     background-image: url(../image/logo/logo.png);
     width: 127px;
     height: 45px;
     position: relative;
     top:10px;
 }
-.footer_logo li:nth-of-type(2){
+footer .footer_logo li:nth-of-type(2){
     background-image: url(../image/logo/safe.png);
     width: 70px;
     height: 70px;
     margin: 0 10px;
 }
-.footer_logo li:nth-of-type(3){
+footer .footer_logo li:nth-of-type(3){
     background-image: url(../image/logo/web.png);
     width: 100px;
     height: 71px;
 }
-.footer_nav{
+footer .container .footer_nav{
     display: flex;
     margin-left: 300px;
 }
-.footer_sns{
+footer .container .footer_sns{
     display: flex;
 }
-.footer_sns li a{
+footer .footer_sns li a{
     background-image: url(../image/icons/ns.png);
         background-repeat: no-repeat;
         width: 55px;
@@ -508,6 +508,8 @@ footer #go-top svg{
     height: 70px;
     box-shadow: 5px 5px 30px #fff ;
     border-radius: 50%;
+    color:#fff;
+    background: #000;
 }
 
 /* 반응형 */
@@ -581,7 +583,7 @@ footer #go-top svg{
     .site_map p{
         position: absolute;
         top: 50%;
-        left: 10px;
+        left: 0;
     }
     .flex_box > div{
         padding-left: 0;
@@ -601,7 +603,6 @@ footer #go-top svg{
         top: 40%;
         left: 40%;
     }
-    }
     .toggle .marketing{
         top: 40%;
         left: 70%;
@@ -614,7 +615,16 @@ footer #go-top svg{
         top:5%;
         left: 90%;
     }
-    .footer_contents{
+    .header_search input{
+        width: 80vw;
+        left: 10%;
+    }
+    .header_search button svg{
+        position: relative;
+        left: 50px;
+        top:50%;
+    }
+    footer .container  .footer_contents{
         display: flex;
         white-space: nowrap;
         flex-direction: column;
@@ -622,28 +632,21 @@ footer #go-top svg{
     footer{
         position: relative;
     }
-    footer .footer_contents_adress{
+    footer .container  .footer_contents_adress{
         position: absolute;
         top: calc(5% - 7px);
         left: 60%;
     }
-    .footer_nav{
+    footer .container  .footer_nav{
         margin-left: 0;
     }
-    .footer_logo{
+    footer .container  .footer_logo{
         display: none;
     }
-    .footer_contents_call{
+    footer .container  .footer_contents_call{
         margin-top: 20px;
     }
-    .header_search input{
-        width: 80vw;
-        left: 10%;
-    }
-    .header_search button svg{
-        position: relative;
-        left: 60px;
-    }
+}
 
 /* 768 이하 */
 
