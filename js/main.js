@@ -225,8 +225,9 @@ $(function(){
 /*---------------------------- land -------------------------*/
 if($('.landbg').length){
 
-        $('.landbg').parallax({
-        
+        $('[data-parallax]').parallax({
+            datanaturalWidth:'auto',
+            naturalHeight:'auto'
         });
 
 }
@@ -237,7 +238,7 @@ let popup = $('.modal_box');
         let popupClose = popup.find('.intro_modal_close');
 
 
-        /*
+    
         //쿠키 생성 함수
         function setCookie(name,value,day){
             let date = new Date();
@@ -249,7 +250,7 @@ let popup = $('.modal_box');
 
             $(document).cookie = cookieContent;
         }
-        */
+        
 
         /*
         쿠키체크 
@@ -261,11 +262,10 @@ let popup = $('.modal_box');
             체크하고 닫으면 - 쿠키생성
         */
 
-        /*
         //쿠키 확인 함수
         function getCookie(name){
             let visited = false;
-            let cookies = $(document).cookie.string.split(';'); //문자열 ; 구분해서 배열 생성
+            let cookies = $(document).cookie.split(';'); //문자열 ; 구분해서 배열 생성
 
             for(let cookie of cookies){
                 if(cookie.indexOf(name) > -1){
@@ -280,9 +280,6 @@ let popup = $('.modal_box');
         }        
         getCookie('ABC');
 
-        */
-
-        /*
         //쿠키 삭제 함수
         function delCookie(name,value){           
 
@@ -294,8 +291,7 @@ let popup = $('.modal_box');
             cookieContent += `Expires=${date.toUTCString()}`;            
 
             $(document).cookie = cookieContent;
-        }     
-        */       
+        }          
         
 
         popupClose.click(function(){

@@ -81,10 +81,17 @@
 .landbg{
     height: 821px;
     position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    background: center/cover;
 }
 .land_content a{
     color: #fff;
     position: relative;
+}
+.parallax-mirror img{
+    object-fit: cover;
 }
 .landbg .container{
     display: flex;
@@ -423,7 +430,48 @@ span.bad-input{
 /* 1170 이하 */
 
 @media (max-width:768px){
-
+.land_content{
+    left: 0;
+}
+.land_wrap_golf h2{
+    position: relative;
+    right: 10px;
+}
+.mix{
+    width: 100%;
+}
+.hotel_mixer{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.tabs_nav{
+    white-space: nowrap;
+    flex-direction: column;
+}
+.login_wrap form{
+    width: 80%;
+    margin: 0 auto;
+}
+.login_find_wrap{
+    width: 80%;
+    margin-left: 50px;
+}
+.transport{
+    gap:0;
+}
+.bus p{
+    font-size: 14px;
+}
+.train p{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+.bus div{
+    display: flex;
+    flex-direction: column;
 }
 
-/* 768 이하 */
+} /* 768 이하 */
