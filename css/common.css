@@ -73,9 +73,17 @@ em{
 }
 .btn{
     border-radius:3px;
-    display: inline-block;
-    font-size: calc(var(--body-fz)*.875);
-    vertical-align: bottom;
+    font-size: calc(var(--body-fz));
+    height: 53px;
+    line-height: 53px;
+    position: relative;
+    border: none;
+    padding: 0 40px;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: var(--primary-c);
+    color: #fff;
 }
 .primary.btn{
     height: 53px;
@@ -537,9 +545,118 @@ footer #go-top svg{
     footer .container{
         margin-left: 60px;
     }
-}
+} /* 1170 이하 */
 
-/* 1170 이하 */
+
+@media (max-width:900px){
+    header nav ul:nth-child(1){
+        display: none;
+    }
+    header nav li:nth-child(3){
+        position: absolute;
+        top: 10%;
+        left: 5%;
+    }
+    header .logo{
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    header nav li:nth-child(2){
+        position: absolute;
+        top: 10%;
+        left: 10%; 
+    }
+    header .top_links li:nth-child(1){
+        position: absolute;
+        top: 10%;
+        right: 0; 
+    }
+    .flex_box{
+        position: relative;
+        white-space: nowrap;
+    }
+    .site_map{
+        top: 0;
+        bottom:0;
+        padding: 40px;
+    }
+    .site_map p{
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    .flex_box > div{
+        padding-left: 0;
+        border: none;
+        display: inline-block;
+        position: absolute;
+    }
+    .toggle .land{
+        top: 10%;
+        left: 40%;
+    }
+    .toggle .business{
+        top: 10%;
+        left: 70%;
+    }
+    .toggle .investment{
+        top: 40%;
+        left: 40%;
+    }
+    .toggle .marketing{
+        top: 40%;
+        left: 70%;
+    }
+    .toggle .service{
+        top: 70%;
+        left: 60%;
+    }
+    .close{
+        top:5%;
+        left: 90%;
+    }
+    footer .container  .footer_contents{
+        display: flex;
+        white-space: nowrap;
+        flex-direction: column;
+    }
+    footer{
+        position: relative;
+    }
+    footer .container  .footer_contents_adress{
+        position: absolute;
+        top: calc(5% - 7px);
+        left: 60%;
+    }
+    footer .container  .footer_nav{
+        margin-left: 0;
+    }
+    footer .container  .footer_logo{
+        display: none;
+    }
+    footer .container  .footer_contents_call{
+        margin-top: 20px;
+    }
+    .footer_sns{
+        position: relative;
+        left: 400px;
+        bottom: 80px;
+    }
+    .header_search input{
+        width: 60vw;
+        left: 10%;
+    }
+    .header_search button svg{
+        position: relative;
+        left: 50px;
+        top:80%;
+    }
+}
+ /* 900 이하 */
+
+
 
 @media (max-width:768px){
     header nav ul:nth-child(1){
@@ -557,14 +674,12 @@ footer #go-top svg{
     header nav li:nth-child(3){
         position: absolute;
         top: 10%;
-        left: 5%;
-        
+        left: 5%; 
     }
     header nav li:nth-child(2){
         position: absolute;
         top: 10%;
-        left: 90%;
-        
+        left: 90%; 
     }
     header nav li:nth-child(1){
         position: absolute;
@@ -646,9 +761,12 @@ footer #go-top svg{
     footer .container  .footer_contents_call{
         margin-top: 20px;
     }
-}
-
-/* 768 이하 */
+    .footer_sns{
+        position: relative;
+        left: 0;
+        bottom: 0;
+    }
+} /* 768 이하 */
 
 @media (max-width:480px){
 

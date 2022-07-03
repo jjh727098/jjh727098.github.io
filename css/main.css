@@ -154,7 +154,6 @@
     border: #fff;
     background: #fff;
 }
-
 .select_wrap button.active{
     display: block;
     width: 100%;
@@ -530,48 +529,75 @@
     .NewsRoom_content{
         gap: 0;
     }
-}
+}/* 1170 이하 */
 
-
-/* 1170 이하 */
-
-@media (max-width:768px){
-    fieldset{
+@media (max-width:900px){
+    form{
         position: relative;
     }
-    fieldset .form_wrap{
-        padding: 200px 200px;
-        white-space: nowrap;
-        text-align: left;
-    }
-    fieldset  .form_wrap li{
-        position: absolute;
-        transform: translate(-50%);
-    }
-    fieldset  .form_wrap li:nth-child(1){
-        top: 0;
-        left: 50%;
-    }
-    fieldset  .form_wrap li:nth-child(2){
-        top: 30%;
-        left: 50%;
-    }
-    fieldset  .form_wrap li:nth-child(3){
-        top: 40%;
-        left: 40%;
-    }
-    fieldset  .form_wrap li:nth-child(4){
-        top: 50%;
-        left: 40%;
-    }
-    fieldset  .form_wrap li:last-child{
-        bottom: 10%;
-        left: 50%;
-    }
-    fieldset  .form_cell{
+    .form_cell{
         padding: 0;
-        margin: 0;
+        width: auto;
+    }
+    .form_cell input{
+        widows: inherit;
+    }
+    fieldset  .form_wrap{
+        white-space: nowrap;
+        padding: 100px 100px;
+        align-items: unset;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .slides-wrapper .bx-wrapper .bx-default-pager{
+        display: none;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction .bx-next{
+        position: relative;
+        right: 100px;
+        bottom: 20px;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction .bx-prev{
+        position: relative;
+        right: 130px;
+        bottom: 20px;
+    }
+    .Investment_content{
+        display: inline-flex;
+        gap: 30px;
+    }
+    .Investment_content li:last-child{
+        display: none;
+    }
+    .NewsRoom_content{
+        display: inline-flex;
+        gap: 30px;
+        margin-left: 55px;
+    }
+    .NewsRoom_content li:last-child{
+        display: none;
+    }
+    .counter_list{
+        gap: 250px;
+        flex-wrap: wrap;
+    }
+}
+/* 900 이하 */
+
+
+@media (max-width:768px){
+    form{
+        margin: 0 auto;
+    }
+    fieldset .form_wrap{
+        white-space: nowrap;
+        gap: 20px;
+    }
+    .form_cell h3{
         text-align: left;
+    }
+    .form_wrap{
+        flex-direction: column;
     }
     .form_cell input{
         border:1px solid #000;
@@ -621,6 +647,18 @@
         left: 8%;
         right: 8%;
         top: 10%;
+    }
+    .Investment_content li:last-child{
+        display: block;
+    }
+    .NewsRoom_content li:last-child{
+        display: block;
+    }
+    fieldset  .form_wrap li:nth-child(1) h3{
+        display: block;
+    }
+    .NewsRoom_content{
+        margin-left: 60px;
     }
 }
 /* 768 이하 */

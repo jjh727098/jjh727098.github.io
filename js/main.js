@@ -70,6 +70,10 @@ $(function(){
         $('.toggle').fadeOut().removeClass('active');
         $('body').css({overflow:'auto'});
     });
+      /* -------------------------- login --------------------------- */
+    $('.login_input').click(function(){
+        $(this).toggleClass('focus');
+    });
 
     /* -------------------------- scroll event animation --------------------------- */
 
@@ -168,7 +172,11 @@ $(function(){
         } else if (deviceWidth < 768) {
             slideNum = 1;
             slideMargin = 30;
-        } else if (deviceWidth < 1170) {
+        } else if (deviceWidth < 900){
+            slideNum = 1;
+            slideMargin = 30;
+        }
+        else if (deviceWidth < 1170) {
             slideNum = 2;
             slideMargin = 30;
         } else {
@@ -239,59 +247,59 @@ let popup = $('.modal_box');
 
 
     
-        //쿠키 생성 함수
-        function setCookie(name,value,day){
-            let date = new Date();
-            date.setDate(date.getDate() + day);
+        // //쿠키 생성 함수
+        // function setCookie(name,value,day){
+        //     let date = new Date();
+        //     date.setDate(date.getDate() + day);
 
-            let cookieContent = '';
-            cookieContent += `${name}=${value};`;
-            cookieContent += `Expires=${date.toUTCString()}`;            
+        //     let cookieContent = '';
+        //     cookieContent += `${name}=${value};`;
+        //     cookieContent += `Expires=${date.toUTCString()}`;            
 
-            $(document).cookie = cookieContent;
-        }
+        //     $(document).cookie = cookieContent;
+        // }
         
 
-        /*
-        쿠키체크 
-            쿠키 있다면 - 팝업이 안보인다.
-            쿠키 없다면 - 팝업이 보인다.
+        // /*
+        // 쿠키체크 
+        //     쿠키 있다면 - 팝업이 안보인다.
+        //     쿠키 없다면 - 팝업이 보인다.
 
-        닫기 버큰을 클릭하면 할일
-            하루안보기 체크안하고 닫으면 - 쿠키지운다.
-            체크하고 닫으면 - 쿠키생성
-        */
+        // 닫기 버큰을 클릭하면 할일
+        //     하루안보기 체크안하고 닫으면 - 쿠키지운다.
+        //     체크하고 닫으면 - 쿠키생성
+        // */
 
-        //쿠키 확인 함수
-        function getCookie(name){
-            let visited = false;
-            let cookies = $(document).cookie.split(';'); //문자열 ; 구분해서 배열 생성
+        // //쿠키 확인 함수
+        // function getCookie(name){
+        //     let visited = false;
+        //     let cookies = $(document).cookie.split(';'); //문자열 ; 구분해서 배열 생성
 
-            for(let cookie of cookies){
-                if(cookie.indexOf(name) > -1){
-                    visited = true;
-                }
-            }
-            if(visited){
-                popup.css({display:'none'}); //재방문
-            }else{
-                popup.css({display:'block'}); //첫방문, 안보기 체크안하고 닫기,
-            }
-        }        
-        getCookie('ABC');
+        //     for(let cookie of cookies){
+        //         if(cookie.indexOf(name) > -1){
+        //             visited = true;
+        //         }
+        //     }
+        //     if(visited){
+        //         popup.css({display:'none'}); //재방문
+        //     }else{
+        //         popup.css({display:'block'}); //첫방문, 안보기 체크안하고 닫기,
+        //     }
+        // }        
+        // getCookie('ABC');
 
-        //쿠키 삭제 함수
-        function delCookie(name,value){           
+        // //쿠키 삭제 함수
+        // function delCookie(name,value){           
 
-            let date = new Date();
-            date.setDate(date.getDate() - 1);
+        //     let date = new Date();
+        //     date.setDate(date.getDate() - 1);
 
-            let cookieContent = '';
-            cookieContent += `${name}=${value};`;
-            cookieContent += `Expires=${date.toUTCString()}`;            
+        //     let cookieContent = '';
+        //     cookieContent += `${name}=${value};`;
+        //     cookieContent += `Expires=${date.toUTCString()}`;            
 
-            $(document).cookie = cookieContent;
-        }          
+        //     $(document).cookie = cookieContent;
+        // }          
         
 
         popupClose.click(function(){
