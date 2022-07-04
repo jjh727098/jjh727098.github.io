@@ -244,23 +244,6 @@
 .service_content .wirte{
     width: 50%;
 }
-.service_content .service_btn{
-    border-top: 2px solid #000;
-    padding-top: 20px;
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.service_btn button{
-    border: none;
-    padding: 20px 60px;
-    margin: 0 30px;
-    cursor: pointer;
-}
-.service_btn button:nth-child(1){
-    background: var(--primary-c);
-    color: #fff;
-}
 .service_btn button:nth-child(2){
     background: #c2c2c2;
     color: #000;
@@ -287,10 +270,20 @@ span.bad-input{
     line-height: calc(var(--line-height)*2);
 }
 .service_wrap p input:focus{
-    box-shadow: 0px 0px 10px var(--primary-c) inset,0px 0px 5px rgba(200,200,200,0.5);   
+    box-shadow: 2px 3px 5px 0px var(--primary-c);
 }
 .service_wrap p textarea:focus{
-    box-shadow: 0px 0px 10px var(--primary-c) inset,0px 0px 5px rgba(200,200,200,0.5);   
+    box-shadow: 2px 3px 5px 0px var(--primary-c);
+}
+.service_btn{
+    border-top: 2px solid #000;
+    text-align: center;
+}
+.service_btn .btn{
+    margin-top: 10px;
+}
+.service_content p:last-of-type label{
+    font-size: 12px;
 }
 /* ------------------------- login -------------------------*/
 .login_wrap{
@@ -303,7 +296,7 @@ span.bad-input{
     height: 100%;
     border-bottom: 3px solid #c2c2c2;
 }
-.login_wrap .login_input.focus{
+.login_wrap .login_input:focus-within{
     border-bottom: 3px solid var(--primary-c);
 }
 .login_wrap form input{
@@ -427,17 +420,6 @@ span.bad-input{
     color: var(--primary-c);
     margin-bottom: 20px;
 }
-.transport .train p:after{
-    position: absolute;
-    content: '';
-    background: blue;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    left:-5%;
-    top:50%;
-    transform: translateY(-50%);
-}
 .transport .train p{
     position: relative;
 }
@@ -462,10 +444,7 @@ span.bad-input{
 @media (max-width:1170px){
 
 
-}
-
-
-/* 1170 이하 */
+}/* 1170 이하 */
 
 @media (max-width:768px){
 .land_content{
@@ -511,5 +490,58 @@ span.bad-input{
     display: flex;
     flex-direction: column;
 }
-
 } /* 768 이하 */
+
+@media (max-width:900px){
+    .faq_tabs div{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .service_content{
+        width: 80%;
+    }
+    .transport{
+        white-space: nowrap;
+        gap:10px;
+    }
+}/* 900 이하 */
+
+@media (max-width:480px){
+    .login_wrap form{
+        width: 60%;
+        margin-left: 50px;
+    }
+    .login_find_wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .keep_check{
+        text-align: left;
+        width: 100%;
+    }
+    .faq_tabs h3{
+        font-size: 14px;
+    }
+    .faq_tabs p{
+        font-size: 14px;
+    }
+    .faq_tabs{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .land_content h2{
+        font-size: calc(var(--body-fz)*2);
+    }
+    .land_content p{
+        font-size: calc(var(--body-fz));
+    }
+    .land_content .land_img img{
+        width: 30%;
+    }
+    .land_content .land_img img:not(:first-child){
+        margin-left: 10px;
+    }
+    .land_content .land_img{
+        display: inline-block;
+    }
+}

@@ -110,6 +110,9 @@ em{
     background: var(--primary-c);
     color: var(--white);
 }
+input, button, select{
+    outline: none;
+}
 /* ------------------------- LAYOUT ------------------------- */
 .container{
     width: var(--con-width);
@@ -163,6 +166,12 @@ button{
 .page-header .top_links li:hover a{
     color:var(--secondary-c);
 }
+.page-header nav li:hover {
+    color:var(--secondary-c);
+}
+.page-header nav li ul li:hover a{
+    color:var(--secondary-c);
+}
 .page-header > div{
     display: flex;
     justify-content: space-between;
@@ -203,6 +212,9 @@ nav > ul > li ul li{
     color:#8c8c8c;
 }
 .page-header.active nav ul li:hover{
+    color:var(--secondary-c);
+}
+.page-header.active nav li ul li:hover a{
     color:var(--secondary-c);
 }
 .active .logo a {
@@ -264,9 +276,12 @@ header.active .top_links li a{
     width: 50%;
     margin: 0 auto;
     line-height: 85px;
-    text-align: center;
+    text-align: left;
     border: none;
     left: 25%;
+}
+.header_search input::placeholder{
+    text-align: center;
 }
 .header_search label{
     opacity: 0;
@@ -512,12 +527,12 @@ footer #go-top svg{
     top:80%;
     left:80%;
     text-indent: -9999em;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     box-shadow: 5px 5px 30px #fff ;
     border-radius: 50%;
-    color:#fff;
-    background: #000;
+    color:#000;
+    background: #fff;
 }
 
 /* 반응형 */
@@ -645,14 +660,18 @@ footer #go-top svg{
         bottom: 80px;
     }
     .header_search input{
-        width: 60vw;
-        left: 10%;
+        width: 50%;
+        margin: 0 auto;
     }
     .header_search button svg{
         position: relative;
-        left: 50px;
-        top:80%;
+        right: 0;
+        top: 50%;
     }
+    .form_wrap li:first-child h3{
+        text-align: left;
+    }
+
 }
  /* 900 이하 */
 
@@ -769,11 +788,14 @@ footer #go-top svg{
 } /* 768 이하 */
 
 @media (max-width:480px){
-
-}
-
-
-/* 480 이하 */
+    footer .container{
+        margin-left: 30px;
+    }
+    .close{
+        left: 80%;
+        top: 5%;
+    }
+}/* 480 이하 */
 
 
 @media (max-width:320px){

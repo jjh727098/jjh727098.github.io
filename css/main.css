@@ -532,7 +532,7 @@
 }/* 1170 이하 */
 
 @media (max-width:900px){
-    form{
+    .reservation form{
         position: relative;
     }
     .form_cell{
@@ -570,9 +570,8 @@
         display: none;
     }
     .NewsRoom_content{
-        display: inline-flex;
+        display: flex;
         gap: 30px;
-        margin-left: 55px;
     }
     .NewsRoom_content li:last-child{
         display: none;
@@ -657,9 +656,6 @@
     fieldset  .form_wrap li:nth-child(1) h3{
         display: block;
     }
-    .NewsRoom_content{
-        margin-left: 60px;
-    }
 }
 /* 768 이하 */
 
@@ -667,10 +663,63 @@
     .slides-wrapper .bx-wrapper{
         margin: 0 auto;
     }
-}
-
-
-/* 480 이하 */
+    .modal_box{
+        display: none;
+    }
+    .counter_list li:nth-child(1){
+        padding-bottom: 40px;
+    }
+    .counter_list li:nth-child(even){
+        padding-left: 40px;
+    }
+    .counter_list li:hover::after{
+        display: none;
+    }
+    form .form_wrap{
+        padding: 30px 50px;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction .bx-next{
+        left: 120px;
+    }
+    .slides-wrapper .bx-wrapper .bx-controls-direction .bx-prev{
+        right: 160px;
+        bottom: 75px;
+    }
+    .title{
+        margin-bottom: calc(var(--line-height));
+        margin-top: calc(var(--line-height));
+    }
+    .reservation{
+        margin-bottom: 50px;
+    }
+    .slides-wrapper .bx-wrapper{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .NewsRoom_wrap .title h2{
+        padding: 0;
+    }
+    .NewsRoom_wrap{
+        padding-bottom: 50px;
+    }
+    .infomation_wrap{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .form_wrap li{
+        padding-bottom: 20px;
+    }
+    .form_wrap li:nth-child(3) label{
+        padding-right: 20px;
+    }
+    .counter_list li svg{
+        width: 70px;
+        width: 70px;
+    }
+    .counter_list li h3{
+        font-size: calc(var(--body-fz)*2);
+    }
+}/* 480 이하 */
 
 
 @media (max-width:320px){

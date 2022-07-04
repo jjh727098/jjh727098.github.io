@@ -71,9 +71,9 @@ $(function(){
         $('body').css({overflow:'auto'});
     });
       /* -------------------------- login --------------------------- */
-    $('.login_input').click(function(){
-        $(this).toggleClass('focus');
-    });
+    // $('.login_input').click(function(){
+    //     $(this).toggleClass('focus');
+    // });
 
     /* -------------------------- scroll event animation --------------------------- */
 
