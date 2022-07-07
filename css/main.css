@@ -52,23 +52,23 @@
 .plan a:hover{
     color: var(--primary-c);
 }
-.intro_modal_close{
+.box_modal_close{
     position: absolute;
     top:90%;
     left: 90%;
 }
-.intro_modal_close span{
+.box_modal_close span{
     position: absolute;
     opacity: 0;
     visibility: hidden;
     width: 1px;
     height: 1px;
 }
-.intro_modal_close svg{
+.box_modal_close svg{
     width: 25px;
     height: 25px;
 }
-.intro_modal_close:hover{
+.box_modal_close:hover{
     color: var(--primary-c);
 }
 /*----------------------------Banner---------------------------*/

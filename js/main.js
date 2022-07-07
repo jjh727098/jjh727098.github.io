@@ -241,75 +241,72 @@ if($('.landbg').length){
 }
 
 /*---------------------------- popup -------------------------*/
-let popup = $('.modal_box');
-        let popupCheckBox = $('#intro_modal_close');
-        let popupClose = popup.find('.intro_modal_close');
+let popup = document.querySelector('.modal_box');
+let popupCheckBox = document.querySelector('#box_modal_close');
+let popupClose = popup.querySelector('.box_modal_close');
+
+//쿠키 생성 함수
+function setCookie(name,value,day){
+    let date = new Date();
+    date.setDate(date.getDate() + day);
+
+    let cookieContent = '';
+    cookieContent += `${name}=${value};`;
+    cookieContent += `Expires=${date.toUTCString()}`;            
+
+    document.cookie = cookieContent;
+}
+/*
+쿠키체크 
+    쿠키 있다면 - 팝업이 안보인다.
+    쿠키 없다면 - 팝업이 보인다.
+
+닫기 버큰을 클릭하면 할일
+    하루안보기 체크안하고 닫으면 - 쿠키지운다.
+    체크하고 닫으면 - 쿠키생성
+*/
 
 
-    
-        // //쿠키 생성 함수
-        // function setCookie(name,value,day){
-        //     let date = new Date();
-        //     date.setDate(date.getDate() + day);
+//쿠키 확인 함수
+function getCookie(name){
+    let visited = false;
+    let cookies = document.cookie.split(';'); //문자열 ; 구분해서 배열 생성
 
-        //     let cookieContent = '';
-        //     cookieContent += `${name}=${value};`;
-        //     cookieContent += `Expires=${date.toUTCString()}`;            
+    for(let cookie of cookies){
+        if(cookie.indexOf(name) > -1){
+            visited = true;
+        }
+    }
+    if(visited){
+        popup.style.display = 'none'; //재방문
+    }else{
+        popup.style.display = 'block'; //첫방문, 안보기 체크안하고 닫기,
+    }
+}        
+getCookie('ABC_2');
 
-        //     $(document).cookie = cookieContent;
-        // }
-        
+//쿠키 삭제 함수
+function delCookie(name,value){           
 
-        // /*
-        // 쿠키체크 
-        //     쿠키 있다면 - 팝업이 안보인다.
-        //     쿠키 없다면 - 팝업이 보인다.
+    let date = new Date();
+    date.setDate(date.getDate() - 1);
 
-        // 닫기 버큰을 클릭하면 할일
-        //     하루안보기 체크안하고 닫으면 - 쿠키지운다.
-        //     체크하고 닫으면 - 쿠키생성
-        // */
+    let cookieContent = '';
+    cookieContent += `${name}=${value};`;
+    cookieContent += `Expires=${date.toUTCString()}`;            
 
-        // //쿠키 확인 함수
-        // function getCookie(name){
-        //     let visited = false;
-        //     let cookies = $(document).cookie.split(';'); //문자열 ; 구분해서 배열 생성
+    document.cookie = cookieContent;
+}            
 
-        //     for(let cookie of cookies){
-        //         if(cookie.indexOf(name) > -1){
-        //             visited = true;
-        //         }
-        //     }
-        //     if(visited){
-        //         popup.css({display:'none'}); //재방문
-        //     }else{
-        //         popup.css({display:'block'}); //첫방문, 안보기 체크안하고 닫기,
-        //     }
-        // }        
-        // getCookie('ABC');
 
-        // //쿠키 삭제 함수
-        // function delCookie(name,value){           
-
-        //     let date = new Date();
-        //     date.setDate(date.getDate() - 1);
-
-        //     let cookieContent = '';
-        //     cookieContent += `${name}=${value};`;
-        //     cookieContent += `Expires=${date.toUTCString()}`;            
-
-        //     $(document).cookie = cookieContent;
-        // }          
-        
-
-        popupClose.click(function(){
-            popup.css({display:'none'});
-            if(popupCheckBox.prop('checked',true)){ //체크되었다면, 팝업을 다시 안보겠다, 쿠키생성
-                setCookie('ABC','Main Page',1);
-            }else{//체크x, 팝업을 다시 보겠다, 쿠키제거
-                delCookie('ABC','Main Page');
-            }
-        });
+popupClose.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+    if(popupCheckBox.checked){ //체크되었다면, 팝업을 다시 안보겠다, 쿠키생성
+        setCookie('ABC_2','Main Page',1);
+    }else{//체크x, 팝업을 다시 보겠다, 쿠키제거
+        delCookie('ABC_2','Main Page');
+    }
+});
         
 
         
