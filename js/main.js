@@ -241,6 +241,7 @@ if($('.landbg').length){
 }
 
 /*---------------------------- popup -------------------------*/
+if($('.modal_box').length){
 let popup = document.querySelector('.modal_box');
 let popupCheckBox = document.querySelector('#box_modal_close');
 let popupClose = popup.querySelector('.box_modal_close');
@@ -307,7 +308,8 @@ popupClose.addEventListener('click', ()=>{
         delCookie('ABC_2','Main Page');
     }
 });
-        
+
+} //popup
 
         
 }); //ready

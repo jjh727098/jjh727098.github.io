@@ -11,7 +11,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/main.css">
@@ -113,7 +112,7 @@
                 <li>
                     <a href="#"><i class="fa-solid fa-magnifying-glass">search</i></a>
                 </li>
-                <li class=>
+                <li>
                     <a href="#"><i class="fa-solid fa-bars">hamburger</i></a>
                 </li>
             </ul>
@@ -215,7 +214,7 @@
             <h2 class="main_tt">예약하기</h2>
             <span class="sub_tt">reservation</span>
         </div>
-        <form action="#" name="" class="animate__animated"  data-effect="animate__fadeInLeft">
+        <form action="#" method="post" class="animate__animated"  data-effect="animate__fadeInLeft">
             <fieldset>
                 <legend class="hidden">바로 예약하기</legend>
                 <ul class="form_wrap">
@@ -223,8 +222,8 @@
                         <h3 class="content_sub_tt">바로 예약하기</h3>
                     </li>
                     <li>
-                        <label for="plack_slelect">예약장소</label>
-                        <select name="" id="select_wrap">
+                        <label for="select_wrap">예약장소</label>
+                        <select name="select_wrap" id="select_wrap">
                             <option value="">그랜드호텔</option>
                             <option value="">팰리스호텔</option>
                             <option value="">마운틴콘도</option>
@@ -233,13 +232,12 @@
                         </select>
                     </li>
                     <li class="form_cell">
-                        <label for="">체크인</label>
-                        <input type="date" name="check_in" id="check_in" placeholder="2022-05-17" required>
+                        <label for="check_in">체크인</label>
+                        <input type="date" name="check_in" id="check_in" required>
                     </li>
                     <li class="form_cell">
-                        <label for="">체크아웃</label>
-                        <input type="date" name="check_out" id="check_out" placeholder="2022-05-18" required>
-                        </div>
+                        <label for="check_out">체크아웃</label>
+                        <input type="date" name="check_out" id="check_out" required>
                     </li>
                     <li>
                         <div>
@@ -259,59 +257,60 @@
                 <p>국내 17개의 카지노 중 유일하게 내국인 출입이 가능한 카지노를 운영 중입니다.</p>
             </div>
             <div class="animate__animated"  data-effect="animate__fadeInRightBig">
-                <div class="slides-wrapper pager">
-                    <div class="slides">
-                            <div>
-                                <a href="#">
-                                    <img src="image/slide/ski.png" alt="">
-                                    <h2>01</h2>
-                                    <p>스키장</p>
-                                    <span>more+</span>     
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <h2>02</h2>
-                                    <p>워터월드</p>
-                                    <img src="image/slide/water_woirld.png" alt="">
-                                    <span>more+</span>
-                                </a>     
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <img src="image/slide/casino.png" alt="">
-                                    <h2>03</h2>
-                                    <p class="casino_p">카지노</p>
-                                    <span>more+</span>     
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <img src="image/slide/golf.png" alt="">
-                                    <h2 id="golf_h2">04</h2>
-                                    <p>골프</p>
-                                    <span>more+</span>     
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <img src="image/slide/hotel.png" alt="">
-                                    <h2>05</h2>
-                                    <p>호텔</p>
-                                    <span>more+</span>     
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <img src="image/slide/cock.png" alt="">
-                                    <h2>06</h2>
-                                    <p class="casino_p">식당</p>
-                                    <span>more+</span>     
-                                </a>
-                            </div>
-                    </div>   
+                    <div class="slides-wrapper pager">
+                        <div class="slides">
+                                <div>
+                                    <a href="#">
+                                        <img src="image/slide/ski.png" alt="">
+                                        <h2>01</h2>
+                                        <p>스키장</p>
+                                        <span>more+</span>     
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <h2>02</h2>
+                                        <p>워터월드</p>
+                                        <img src="image/slide/water_woirld.png" alt="">
+                                        <span>more+</span>
+                                    </a>     
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="image/slide/casino.png" alt="">
+                                        <h2>03</h2>
+                                        <p class="casino_p">카지노</p>
+                                        <span>more+</span>     
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="image/slide/golf.png" alt="">
+                                        <h2 id="golf_h2">04</h2>
+                                        <p>골프</p>
+                                        <span>more+</span>     
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="image/slide/hotel.png" alt="">
+                                        <h2>05</h2>
+                                        <p>호텔</p>
+                                        <span>more+</span>     
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="image/slide/cock.png" alt="">
+                                        <h2>06</h2>
+                                        <p class="casino_p">식당</p>
+                                        <span>more+</span>     
+                                    </a>
+                                </div>
+                        </div>   
+                    </div>
                 </div>
-    </div>
+            </div>
     </section>
 
     <section class="Investment_wrap">
@@ -323,7 +322,7 @@
                 <li class="sub_content animate__animated" data-effect="animate__fadeInBottomLeft">
                     <a href="#">
                         <h3>공고</h3>
-                        <spna class="detail">자세히보기</spna>
+                        <span class="detail">자세히보기</span>
                         <i class="fa-solid fa-caret-right"></i>
                         <span class="icons"><i class="fa-solid fa-user"></i></span>
                     </a>
@@ -331,7 +330,7 @@
             <li class="sub_content animate__animated" data-effect="animate__fadeInUpBig">
                 <a href="#">
                     <h3>제무정보</h3>
-                    <spna class="detail">자세히보기</spna>
+                    <span class="detail">자세히보기</span>
                     <i class="fa-solid fa-caret-right"></i>
                     <span class="icons"><i class="fa-solid fa-chart-simple"></i></span>
                 </a>
@@ -339,7 +338,7 @@
             <li class="sub_content animate__animated" data-effect="animate__fadeInBottomRight">
                 <a href="#">
                     <h3>주식정보</h3>
-                    <spna class="detail">자세히보기</spna>
+                    <span class="detail">자세히보기</span>
                     <i class="fa-solid fa-caret-right"></i>
                     <span class="icons"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
                 </a>
@@ -415,27 +414,28 @@
         </div>
         <div class="infomation_wrap animate__animated" data-effect="animate__fadeInDown">
             <ul class="counter_list">
-            <li>
-                <span><i class="fa-solid fa-circle-info"></i></span>
-                <h3 class="counter main_tt" data-target=26700>0</h3>
-                <h4>추가정보</h4>
-            </li>
-            <li>
-                <span><i class="fa-solid fa-credit-card"></i></span>
-                <h3 class="counter main_tt" data-target=2421>0</h3>
-                <h4>대출억</h4>
-            </li>
-            <li>
-                <span><i class="fa-solid fa-user"></i></span>
-                <h3 class="counter main_tt" data-target=160>0</h3>
-                <h4>채용인원</h4>
-            </li>
-            <li>
-                <span><i class="fa-solid fa-sack-dollar"></i></span>
-                <h3 class="counter main_tt" data-target=69756>0</h3>
-                <h4>직원 평균보수</h4>
-            </li>
-        </ul>
+                <li>
+                    <span><i class="fa-solid fa-circle-info"></i></span>
+                    <h3 class="counter main_tt" data-target=26700>0</h3>
+                    <h4>추가정보</h4>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-credit-card"></i></span>
+                    <h3 class="counter main_tt" data-target=2421>0</h3>
+                    <h4>대출억</h4>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-user"></i></span>
+                    <h3 class="counter main_tt" data-target=160>0</h3>
+                    <h4>채용인원</h4>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-sack-dollar"></i></span>
+                    <h3 class="counter main_tt" data-target=69756>0</h3>
+                    <h4>직원 평균보수</h4>
+                </li>
+            </ul>
+        </div>
     </section>
     
     <footer>
@@ -469,6 +469,11 @@
                 <li>logo</li>
                 <li>safe</li>
                 <li>web</li>
+                <p>
+                    <a href="http://validator.kldp.org/check?uri=referer"
+                    onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+                    src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+                </p>
             </ul>
             <ul class="footer_sns">
                 <li><a href="#">facebook</a></li>
@@ -483,17 +488,9 @@
     </footer>
 
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/modernizr-custom.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-    <script>
-  
-
-    </script>
-    
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3Q27PZCVX"></script>
@@ -505,6 +502,7 @@
     gtag('config', 'G-S3Q27PZCVX');
     </script>
 
+    <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
 
 
