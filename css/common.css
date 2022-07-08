@@ -558,7 +558,7 @@ footer #go-top svg{
         left: 90%;
     }
     footer .container{
-        margin-left: 60px;
+        padding: 0 16px;
     }
 } /* 1170 이하 */
 

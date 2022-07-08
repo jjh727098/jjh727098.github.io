@@ -270,10 +270,10 @@ span.bad-input{
     line-height: calc(var(--line-height)*2);
 }
 .service_wrap p input:focus{
-    box-shadow: 2px 3px 5px 0px var(--primary-c);
+    border: 2px solid var(--primary-c);
 }
 .service_wrap p textarea:focus{
-    box-shadow: 2px 3px 5px 0px var(--primary-c);
+    border: 2px solid var(--primary-c);
 }
 .service_btn{
     border-top: 2px solid #000;
@@ -443,9 +443,20 @@ span.bad-input{
 
 @media (max-width:1170px){
 
-
 }/* 1170 이하 */
-
+@media (max-width:900px){
+    .faq_tabs div{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .service_content{
+        width: 80%;
+    }
+    .transport{
+        white-space: nowrap;
+        gap:10px;
+    }
+}/* 900 이하 */
 @media (max-width:768px){
 .land_content{
     left: 0;
@@ -456,12 +467,15 @@ span.bad-input{
 }
 .mix{
     width: 100%;
+    margin: 0.25em 1%;
 }
 .hotel_mixer{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+}
+.mix-wrapper{
+    margin: 1em auto;
+    gap: 10px;
 }
 .tabs_nav{
     white-space: nowrap;
@@ -490,22 +504,35 @@ span.bad-input{
     display: flex;
     flex-direction: column;
 }
+.transport{
+    white-space:unset;
+}
+.service_content p:nth-child(3) input:nth-child(3){
+    margin-left: 55px;
+}
+.service_content p:nth-child(3) input:nth-child(4){
+    margin-left: 55px;
+}
+.service_content textarea{
+    padding-left: 120px;
+}
+.tabs_nav{
+    flex-direction:unset;
+}
+.faq_tabs ul a{
+    padding: 25px 45px;
+}
+.faq_tabs ul{
+    gap: 10px;
+}
+.faq_wrap .tabs_content div{
+    padding: 30px 37px;
+    overflow: hidden;
+}
+.land_content{
+    padding: 0 5px;
+}
 } /* 768 이하 */
-
-@media (max-width:900px){
-    .faq_tabs div{
-        width: 80%;
-        margin: 0 auto;
-    }
-    .service_content{
-        width: 80%;
-    }
-    .transport{
-        white-space: nowrap;
-        gap:10px;
-    }
-}/* 900 이하 */
-
 @media (max-width:480px){
     .login_wrap form{
         width: 60%;
