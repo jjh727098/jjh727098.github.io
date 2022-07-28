@@ -1,0 +1,112 @@
+@import url(common.css);
+
+.faq_wrap .faq_sub_title{
+    display: block;
+    margin-bottom: 50px;
+}
+.faq_wrap .faq_sub_title p{
+    color: #000;
+}
+.faq_tabs{
+    display: block;
+}
+.faq_tabs ul{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.faq_tabs ul a{
+    border: 1px solid #ebebeb;
+    display: block;
+    padding: 25px 75px;
+    box-sizing: border-box;
+}
+.faq_wrap .tabs_content{
+    text-align: left;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    margin-bottom: 70px;
+}
+.tabs_content h3{
+    padding: 28px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.tabs_content h3 span{
+    color: var(--primary-c);
+}
+.tabs_content div{
+    padding: 30px 60px;
+    display: none;
+}
+.tabs_content div p{
+    color: #000;
+}
+.tabs_content h3 svg{
+    float: right;
+    text-align: right;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+.answer {
+	display:none;
+}
+.question{
+	border-bottom:2px solid #ccc;
+	transition:0.35s;
+}
+.question.ui-state-active{
+	border-bottom:2px solid var(--primary-c);
+}
+.question .svg{
+	transform:rotate(0deg);
+	transition:0.35s;
+}
+.question.ui-state-active svg{
+	transform:rotate(180deg);
+}
+.qna_list{
+	width:80%;
+	margin:0 auto;
+}
+.tabs_nav li.ui-state-active{
+	background: var(--primary-c);
+}
+.tabs_nav li.ui-state-active a{
+    color: #fff;
+}
+
+@media (max-width:900px){
+    .faq_tabs div{
+        width: 80%;
+        margin: 0 auto;
+    }
+}/* 900 이하 */
+@media (max-width:768px){
+    .tabs_nav{
+        flex-direction:unset;
+    }
+    .faq_tabs ul a{
+        padding: 25px 45px;
+    }
+    .faq_tabs ul{
+        gap: 10px;
+    }
+    .faq_wrap .tabs_content div{
+        padding: 30px 37px;
+        overflow: hidden;
+    }
+    } /* 768 이하 */
+    @media (max-width:480px){
+        .faq_tabs h3{
+            font-size: 14px;
+        }
+        .faq_tabs p{
+            font-size: 14px;
+        }
+        .faq_tabs{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }

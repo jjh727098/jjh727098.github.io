@@ -1,0 +1,67 @@
+@import url(common.css);
+
+.mix-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:3em auto;
+    gap: 30px;
+}
+.mix{
+    width: 23%;
+    margin: 1em 1%;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.mix img{
+    width: 100%;
+}
+.hotel_mixer button{
+    border: 1px solid #ebebeb;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+}
+.hotel_mixer button.mixitup-control-active{
+    background: var(--primary-c);
+    color:#fff;
+}
+.mix::after{
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    opacity: 0;
+}
+.mix:hover:after{
+    opacity: 1;
+}
+.mix:hover svg{
+    opacity: 1;
+}
+.mix svg{
+    position: absolute;
+    left: 50%; top:50%;
+    transform: translate(-50%);
+    opacity: 0;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+}
+@media (max-width:768px){
+    .mix{
+        width: 100%;
+        margin: 0.25em 1%;
+    }
+    .hotel_mixer{
+        display: flex;
+        align-items: center;
+    }
+    .mix-wrapper{
+        margin: 1em auto;
+        gap: 10px;
+    }
+    } /* 768 이하 */

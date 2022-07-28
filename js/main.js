@@ -70,11 +70,6 @@ $(function(){
         $('.toggle').fadeOut().removeClass('active');
         $('body').css({overflow:'auto'});
     });
-      /* -------------------------- login --------------------------- */
-    // $('.login_input').click(function(){
-    //     $(this).toggleClass('focus');
-    // });
-
     /* -------------------------- scroll event animation --------------------------- */
 
     let animateTarget = $('.animate__animated[data-effect]');
@@ -161,11 +156,9 @@ $(function(){
 
         let deviceWidth = $(window).width();
         
-        /* 반응형으로 설정할 옵션 정의 */
         let slideNum;
         let slideMargin;
     
-        /* 화면 사이즈별 슬라이드 갯수, 마진 설정, 기타 옵션도 설정 가능 */
         if (deviceWidth < 480) {
             slideNum = 1;
             slideMargin = 30;
@@ -206,7 +199,7 @@ $(function(){
         if ($slider && $slider.reloadSlider) {
             $slider.reloadSlider(config);
         } else {
-            $slider = $('.slides').bxSlider(config);  /* 슬라이더 클래스 또는 아이디 입력 */
+            $slider = $('.slides').bxSlider(config);
         }
     }
 
@@ -214,21 +207,6 @@ $(function(){
     configureSlider();
 
 }
-    // $('.slides').bxSlider({
-	// 	minSlides:1,
-	// 	maxSlides:3,
-	// 	moveSlides:1,
-	// 	slideWidth:270,
-    //     slideMargin: 30,
-	// 	auto:true,
-    //     pager:true,
-    //     controls:true,
-	// 	autoHover:true,
-	// 	speed:500,
-    //     easing:'linear',
-    //     touchEnabled : false,
-    //     responsive: true
-	// });
 
 /*---------------------------- land -------------------------*/
 if($('.landbg').length){
@@ -246,7 +224,6 @@ let popup = document.querySelector('.modal_box');
 let popupCheckBox = document.querySelector('#box_modal_close');
 let popupClose = popup.querySelector('.box_modal_close');
 
-//쿠키 생성 함수
 function setCookie(name,value,day){
     let date = new Date();
     date.setDate(date.getDate() + day);
@@ -257,21 +234,10 @@ function setCookie(name,value,day){
 
     document.cookie = cookieContent;
 }
-/*
-쿠키체크 
-    쿠키 있다면 - 팝업이 안보인다.
-    쿠키 없다면 - 팝업이 보인다.
 
-닫기 버큰을 클릭하면 할일
-    하루안보기 체크안하고 닫으면 - 쿠키지운다.
-    체크하고 닫으면 - 쿠키생성
-*/
-
-
-//쿠키 확인 함수
 function getCookie(name){
     let visited = false;
-    let cookies = document.cookie.split(';'); //문자열 ; 구분해서 배열 생성
+    let cookies = document.cookie.split(';');
 
     for(let cookie of cookies){
         if(cookie.indexOf(name) > -1){
@@ -279,9 +245,9 @@ function getCookie(name){
         }
     }
     if(visited){
-        popup.style.display = 'none'; //재방문
+        popup.style.display = 'none'; 
     }else{
-        popup.style.display = 'block'; //첫방문, 안보기 체크안하고 닫기,
+        popup.style.display = 'block'; 
     }
 }        
 getCookie('ABC_2');
@@ -302,9 +268,9 @@ function delCookie(name,value){
 
 popupClose.addEventListener('click', ()=>{
     popup.style.display = 'none';
-    if(popupCheckBox.checked){ //체크되었다면, 팝업을 다시 안보겠다, 쿠키생성
+    if(popupCheckBox.checked){ 
         setCookie('ABC_2','Main Page',1);
-    }else{//체크x, 팝업을 다시 보겠다, 쿠키제거
+    }else{
         delCookie('ABC_2','Main Page');
     }
 });

@@ -1,0 +1,83 @@
+@import url(common.css);
+
+
+#map{
+    height: 600px;
+}
+.road_wrap .container svg{
+    color: var(--primary-c);
+    width: 50px;
+    height: 50px;
+}
+.road_wrap h3{
+    color:#000;
+}
+.transport{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 30px 0;
+}
+.transport svg{
+    border: 3px solid var(--primary-c);
+    padding: 20px;
+    border-radius: 50%;
+}
+.land_map_ping {
+    border-bottom: 2px solid #c2c2c2;
+}
+.land_map_ping svg{
+    margin-bottom: 20px;
+}
+.land_map_ping p {
+    margin-bottom: 20px;
+}
+.transport h4{
+    color: var(--primary-c);
+    margin-bottom: 20px;
+}
+.transport .train p{
+    position: relative;
+}
+.kang{
+    display: flex;
+    gap: 30px;
+}
+.seoul{
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+.busan{
+    display: flex;
+    gap: 30px;
+}
+.land_map_ping{
+    margin-top: 50px;
+}
+@media (max-width:900px){
+    .transport{
+        white-space: nowrap;
+        gap:10px;
+    }
+}/* 900 이하 */
+@media (max-width:768px){
+    .transport{
+        gap:0;
+    }
+    .bus p{
+        font-size: 14px;
+    }
+    .train p{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+    .bus div{
+        display: flex;
+        flex-direction: column;
+    }
+    .transport{
+        white-space:unset;
+    }
+    } /* 768 이하 */

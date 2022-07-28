@@ -1,0 +1,121 @@
+@import url(common.css);
+
+.service_content{
+    text-align: left;
+}
+.service_content h3{
+    margin-top: 30px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.service_content p{
+    border-bottom: 1px solid #ebebeb;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.service_content form label{
+    width: 15%;
+    line-height: calc(var(--line-height)*2);
+}
+.service_content form input{
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 1px solid #ebebeb;
+    padding: 0 15px;
+    line-height: calc(var(--line-height)*2);
+}
+.service_content label span{
+    color: red;
+}
+.service_content small span{
+    color: red;
+}
+.service_content span.error{
+    color: red;
+    line-height: calc(var(--line-height)*2);
+    padding-left: 20px;
+}
+.service_content textarea{
+    height: 500px;
+    width: 85%;
+    resize: none;
+    display: inline-block;
+}
+.service_content .wirte{
+    width: 50%;
+}
+.service_btn button:nth-child(2){
+    background: #c2c2c2;
+    color: #000;
+}
+.service_content p:nth-child(3) span{
+        background: #c2c2c2;
+        color: #000;
+        border: 1px solid  #c2c2c2;
+        padding: 10px 20px;
+        cursor: pointer;
+}
+#adress_detail{
+    margin: 15px 15% 0;
+    width: 60%;
+    height: 50px;
+}
+#file{
+    padding: 20px 15px;
+    line-height: 20px;
+}
+span.bad-input{
+    color:red;
+    padding-left: 20px;
+    line-height: calc(var(--line-height)*2);
+}
+.service_wrap p input:focus{
+    border: 2px solid var(--primary-c);
+}
+.service_wrap p textarea:focus{
+    border: 2px solid var(--primary-c);
+}
+.service_btn{
+    border-top: 2px solid #000;
+    text-align: center;
+}
+.service_btn .btn{
+    margin-top: 10px;
+}
+.service_content p:last-of-type label{
+    font-size: 12px;
+}
+
+@media (max-width:900px){
+    .service_content{
+        width: 80%;
+    }
+    .service_content form input{
+        padding: 0;
+    }
+}/* 900 이하 */
+
+@media (max-width:768px){
+    .service_content p:nth-child(3) input:nth-child(4){
+        margin-left: 88px;
+    }
+    .service_content textarea{
+        padding-left: 120px;
+    }
+    .service_content form input{
+        padding: 0 15px;
+    }
+    } /* 768 이하 */
+
+    @media (max-width:480px){
+        .service_content p:nth-child(3) input:nth-child(3){
+            margin-left: 55px;
+        }
+        .service_content p:nth-child(3) input:nth-child(4){
+            margin-left: 55px;
+        }
+    }
